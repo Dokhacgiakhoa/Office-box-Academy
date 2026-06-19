@@ -11,6 +11,11 @@ import * as L10 from "./content/level-10-n8n-tiktok";
 import * as L11 from "./content/level-11-n8n-email";
 import * as L12 from "./content/level-12-n8n-tele";
 import * as L13 from "./content/level-13-n8n-crm";
+import * as L14 from "./content/level-14-vibe-landing";
+import * as L15 from "./content/level-15-vibe-game";
+import * as L16 from "./content/level-16-vibe-ecommerce";
+import * as L17 from "./content/level-17-vibe-chatbot";
+import * as L18 from "./content/level-18-vibe-saas";
 
 export interface Skill {
   id: string;
@@ -332,9 +337,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["claude", "stitch", "vercel"],
     tier: "EXPERT",
     skills: [
-      { id: "sk-14-1", title: "[Claude] 30% Lý thuyết: Cấu trúc chuẩn SEO của một trang Landing Page (Hero, Tính năng...)", duration: "5 phút đọc" },
-      { id: "sk-14-2", title: "[Stitch] 70% Thực hành: Ra lệnh cho AI tự động dựng bố cục giao diện siêu tốc", duration: "5 phút đọc" },
-      { id: "sk-14-3", title: "[Vercel] 70% Thực hành: Tải mã nguồn về và đưa trang web lên Internet với một cú click", duration: "5 phút đọc" }
+      { id: "sk-14-1", title: "[Claude] 30% Lý thuyết: Cấu trúc chuẩn SEO của một trang Landing Page (Hero, Tính năng...)", duration: "5 phút đọc", content: L14.sk_14_1 },
+      { id: "sk-14-2", title: "[Stitch] 70% Thực hành: Ra lệnh cho AI tự động dựng bố cục giao diện siêu tốc", duration: "5 phút đọc", content: L14.sk_14_2 },
+      { id: "sk-14-3", title: "[Vercel] 70% Thực hành: Tải mã nguồn về và đưa trang web lên Internet với một cú click", duration: "5 phút đọc", content: L14.sk_14_3 }
     ]
   },
   {
@@ -347,9 +352,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["claude"],
     tier: "EXPERT",
     skills: [
-      { id: "sk-15-1", title: "[Claude] 30% Lý thuyết: Hiểu quy luật tọa độ và khung hình (Canvas) trong lập trình Game", duration: "5 phút đọc" },
-      { id: "sk-15-2", title: "[Claude] 70% Thực hành: Viết Prompt mô tả luật chơi và yêu cầu AI tự sinh mã nguồn", duration: "5 phút đọc" },
-      { id: "sk-15-3", title: "[Claude] 70% Thực hành: Kỹ năng gỡ rối: Chơi thử game, copy lỗi ném cho AI để nhờ vá lỗi", duration: "5 phút đọc" }
+      { id: "sk-15-1", title: "[Claude] 30% Lý thuyết: Hiểu quy luật tọa độ và khung hình (Canvas) trong lập trình Game", duration: "5 phút đọc", content: L15.sk_15_1 },
+      { id: "sk-15-2", title: "[Claude] 70% Thực hành: Viết Prompt mô tả luật chơi và yêu cầu AI tự sinh mã nguồn", duration: "5 phút đọc", content: L15.sk_15_2 },
+      { id: "sk-15-3", title: "[Claude] 70% Thực hành: Kỹ năng gỡ rối: Chơi thử game, copy lỗi ném cho AI để nhờ vá lỗi", duration: "5 phút đọc", content: L15.sk_15_3 }
     ]
   },
   {
@@ -362,9 +367,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["claude", "stitch", "antigravity"],
     tier: "EXPERT",
     skills: [
-      { id: "sk-16-1", title: "[Claude] 30% Lý thuyết: Cấu trúc và luồng dữ liệu của một trang Giỏ hàng trực tuyến", duration: "5 phút đọc" },
-      { id: "sk-16-2", title: "[Stitch] 70% Thực hành: Nhờ AI dựng giao diện trang danh sách sản phẩm và thẻ Card", duration: "5 phút đọc" },
-      { id: "sk-16-3", title: "[Antigravity] 70% Thực hành: Tạo bảng cơ sở dữ liệu để lưu trữ đơn hàng thực tế của khách", duration: "5 phút đọc" }
+      { id: "sk-16-1", title: "[Claude] 30% Lý thuyết: Cấu trúc và luồng dữ liệu của một trang Giỏ hàng trực tuyến", duration: "5 phút đọc", content: L16.sk_16_1 },
+      { id: "sk-16-2", title: "[Stitch] 70% Thực hành: Nhờ AI dựng giao diện trang danh sách sản phẩm và thẻ Card", duration: "5 phút đọc", content: L16.sk_16_2 },
+      { id: "sk-16-3", title: "[Antigravity] 70% Thực hành: Tạo bảng cơ sở dữ liệu để lưu trữ đơn hàng thực tế của khách", duration: "5 phút đọc", content: L16.sk_16_3 }
     ]
   },
   {
@@ -377,9 +382,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["claude", "vercel"],
     tier: "EXPERT",
     skills: [
-      { id: "sk-17-1", title: "[Claude] 30% Lý thuyết: Nguyên lý Website trò chuyện với bộ não ChatGPT qua API", duration: "5 phút đọc" },
-      { id: "sk-17-2", title: "[Claude] 70% Thực hành: Lấy mã khóa API (Secret Key) và ghép thành công vào giao diện chat", duration: "5 phút đọc" },
-      { id: "sk-17-3", title: "[Vercel] 70% Thực hành: Cấu hình ẩn mã khóa (Bảo mật biến môi trường) trước khi tung lên mạng", duration: "5 phút đọc" }
+      { id: "sk-17-1", title: "[Claude] 30% Lý thuyết: Nguyên lý Website trò chuyện với bộ não ChatGPT qua API", duration: "5 phút đọc", content: L17.sk_17_1 },
+      { id: "sk-17-2", title: "[Claude] 70% Thực hành: Lấy mã khóa API (Secret Key) và ghép thành công vào giao diện chat", duration: "5 phút đọc", content: L17.sk_17_2 },
+      { id: "sk-17-3", title: "[Vercel] 70% Thực hành: Cấu hình ẩn mã khóa (Bảo mật biến môi trường) trước khi tung lên mạng", duration: "5 phút đọc", content: L17.sk_17_3 }
     ]
   },
   {
@@ -392,9 +397,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["claude", "stitch", "antigravity"],
     tier: "EXPERT",
     skills: [
-      { id: "sk-18-1", title: "[Claude] 30% Lý thuyết: Luồng người dùng (Đăng ký, Đăng nhập, Thêm, Sửa, Xóa dữ liệu)", duration: "5 phút đọc" },
-      { id: "sk-18-2", title: "[Stitch] 70% Thực hành: Thiết kế Bảng điều khiển (Dashboard) trực quan, có biểu đồ", duration: "5 phút đọc" },
-      { id: "sk-18-3", title: "[Antigravity] 70% Thực hành: Cấu hình phân quyền dữ liệu (Nhân viên chỉ được thấy việc của họ)", duration: "5 phút đọc" }
+      { id: "sk-18-1", title: "[Claude] 30% Lý thuyết: Luồng người dùng (Đăng ký, Đăng nhập, Thêm, Sửa, Xóa dữ liệu)", duration: "5 phút đọc", content: L18.sk_18_1 },
+      { id: "sk-18-2", title: "[Stitch] 70% Thực hành: Thiết kế Bảng điều khiển (Dashboard) trực quan, có biểu đồ", duration: "5 phút đọc", content: L18.sk_18_2 },
+      { id: "sk-18-3", title: "[Antigravity] 70% Thực hành: Cấu hình phân quyền dữ liệu (Nhân viên chỉ được thấy việc của họ)", duration: "5 phút đọc", content: L18.sk_18_3 }
     ]
   }
 ];
