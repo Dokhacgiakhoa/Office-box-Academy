@@ -13,6 +13,7 @@ export interface Course {
   title: string;
   description: string;
   thumbnailUrl: string;
+  youtubeVideoId?: string;
   targetRoleIds: string[];
   targetToolIds: string[];
   tier: Tier; 

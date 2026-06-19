@@ -22,6 +22,9 @@ export function CoursePlayer({ course }: { course: Course }) {
     allSkills[0] ??
     null;
 
+  // Sử dụng video chung cho toàn bộ khóa học (video của bài đầu tiên hoặc của khóa học)
+  const courseVideoId = course.youtubeVideoId || allSkills[0]?.youtubeVideoId;
+
   // Stagger cho danh sách bài học (Slide up nhẹ từng dòng).
   const listContainer: Variants = {
     hidden: {},
@@ -44,12 +47,12 @@ export function CoursePlayer({ course }: { course: Course }) {
         className="lg:col-span-8"
       >
         <div className="aspect-video w-full rounded-xl overflow-hidden bg-slate-900 shadow-lg">
-          {activeSkill?.youtubeVideoId ? (
+          {courseVideoId ? (
             <iframe
-              key={activeSkill.id}
+              key={course.id}
               className="w-full h-full"
-              src={`https://www.youtube.com/embed/${activeSkill.youtubeVideoId}`}
-              title={activeSkill.title}
+              src={`https://www.youtube.com/embed/${courseVideoId}`}
+              title={course.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
