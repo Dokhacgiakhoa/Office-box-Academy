@@ -42,3 +42,24 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# --- Added for Cleanup ---
+# Root images and design references
+/*.jpg
+/*.png
+/*.webp
+
+# AI Agent logs, reports and directories
+BAO_CAO_NGHIEM_THU_*.md
+BAO_CAO_NGHIEM_THU.md
+.dev-err.txt
+.dev-log.txt
+.agents/
+.claude/
+
+# Temporary screenshots
+.screenshots/
+
+# Misc scripts & logs
+download-logos.js
+skills-lock.json
