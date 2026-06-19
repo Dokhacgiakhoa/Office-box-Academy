@@ -5,6 +5,12 @@ import * as L4 from "./content/level-4-excel";
 import * as L5 from "./content/level-5-podcast";
 import * as L6 from "./content/level-6-image";
 import * as L7 from "./content/level-7-video";
+import * as L8 from "./content/level-8-n8n-intro";
+import * as L9 from "./content/level-9-n8n-fb";
+import * as L10 from "./content/level-10-n8n-tiktok";
+import * as L11 from "./content/level-11-n8n-email";
+import * as L12 from "./content/level-12-n8n-tele";
+import * as L13 from "./content/level-13-n8n-crm";
 
 export interface Skill {
   id: string;
@@ -234,9 +240,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-8-1", title: "[n8n] 30% Lý thuyết: Hiểu nguyên lý cốt lõi của một luồng tự động (Trigger & Action)", duration: "5 phút đọc" },
-      { id: "sk-8-2", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Cloud (Đám mây) nhanh chóng", duration: "5 phút đọc" },
-      { id: "sk-8-3", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Local (Máy cá nhân vĩnh viễn)", duration: "5 phút đọc" }
+      { id: "sk-8-1", title: "[n8n] 30% Lý thuyết: Hiểu nguyên lý cốt lõi của một luồng tự động (Trigger & Action)", duration: "5 phút đọc", content: L8.sk_8_1 },
+      { id: "sk-8-2", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Cloud (Đám mây) nhanh chóng", duration: "5 phút đọc", content: L8.sk_8_2 },
+      { id: "sk-8-3", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Local (Máy cá nhân vĩnh viễn)", duration: "5 phút đọc", content: L8.sk_8_3 }
     ]
   },
   {
@@ -249,9 +255,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n", "gpt"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-9-1", title: "[n8n] 30% Lý thuyết: Hướng dẫn cách lấy mã khóa liên kết (Token) từ tài khoản Facebook", duration: "5 phút đọc" },
-      { id: "sk-9-2", title: "[n8n] 70% Thực hành: Viết luồng cào tin tức báo chí, đưa cho AI xào nấu lại văn phong", duration: "5 phút đọc" },
-      { id: "sk-9-3", title: "[n8n] 70% Thực hành: Thiết lập hẹn giờ (Schedule) tự động đăng bài lúc 8h sáng mỗi ngày", duration: "5 phút đọc" }
+      { id: "sk-9-1", title: "[n8n] 30% Lý thuyết: Hướng dẫn cách lấy mã khóa liên kết (Token) từ tài khoản Facebook", duration: "5 phút đọc", content: L9.sk_9_1 },
+      { id: "sk-9-2", title: "[n8n] 70% Thực hành: Viết luồng cào tin tức báo chí, đưa cho AI xào nấu lại văn phong", duration: "5 phút đọc", content: L9.sk_9_2 },
+      { id: "sk-9-3", title: "[n8n] 70% Thực hành: Thiết lập hẹn giờ (Schedule) tự động đăng bài lúc 8h sáng mỗi ngày", duration: "5 phút đọc", content: L9.sk_9_3 }
     ]
   },
   {
@@ -264,9 +270,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n", "veo3"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-10-1", title: "[n8n] 30% Lý thuyết: Bóc tách luồng làm video ngắn (Kịch bản -> Giọng đọc -> Hình ảnh)", duration: "5 phút đọc" },
-      { id: "sk-10-2", title: "[n8n] 70% Thực hành: Dùng n8n kết nối API sinh kịch bản và đọc giọng nói nhân tạo", duration: "5 phút đọc" },
-      { id: "sk-10-3", title: "[n8n] 70% Thực hành: Ghép hình ảnh/âm thanh và tự động đẩy file video lên kênh TikTok", duration: "5 phút đọc" }
+      { id: "sk-10-1", title: "[n8n] 30% Lý thuyết: Bóc tách luồng làm video ngắn (Kịch bản -> Giọng đọc -> Hình ảnh)", duration: "5 phút đọc", content: L10.sk_10_1 },
+      { id: "sk-10-2", title: "[n8n] 70% Thực hành: Dùng n8n kết nối API sinh kịch bản và đọc giọng nói nhân tạo", duration: "5 phút đọc", content: L10.sk_10_2 },
+      { id: "sk-10-3", title: "[n8n] 70% Thực hành: Ghép hình ảnh/âm thanh và tự động đẩy file video lên kênh TikTok", duration: "5 phút đọc", content: L10.sk_10_3 }
     ]
   },
   {
@@ -279,9 +285,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n", "gemini"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-11-1", title: "[n8n] 30% Lý thuyết: Cách kết nối n8n với hòm thư Gmail/Outlook bảo mật", duration: "5 phút đọc" },
-      { id: "sk-11-2", title: "[n8n] 70% Thực hành: Lên sơ đồ bắt AI đọc nội dung Email và phân loại mức độ khẩn cấp", duration: "5 phút đọc" },
-      { id: "sk-11-3", title: "[n8n] 70% Thực hành: Dạy AI tự động soạn trước bản nháp phản hồi và lưu vào thư mục Draft", duration: "5 phút đọc" }
+      { id: "sk-11-1", title: "[n8n] 30% Lý thuyết: Cách kết nối n8n với hòm thư Gmail/Outlook bảo mật", duration: "5 phút đọc", content: L11.sk_11_1 },
+      { id: "sk-11-2", title: "[n8n] 70% Thực hành: Lên sơ đồ bắt AI đọc nội dung Email và phân loại mức độ khẩn cấp", duration: "5 phút đọc", content: L11.sk_11_2 },
+      { id: "sk-11-3", title: "[n8n] 70% Thực hành: Dạy AI tự động soạn trước bản nháp phản hồi và lưu vào thư mục Draft", duration: "5 phút đọc", content: L11.sk_11_3 }
     ]
   },
   {
@@ -294,9 +300,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-12-1", title: "[n8n] 30% Lý thuyết: Khái niệm về HTTP Request và cách gọi API lấy dữ liệu", duration: "5 phút đọc" },
-      { id: "sk-12-2", title: "[n8n] 70% Thực hành: Cấu hình lấy dữ liệu giá Vàng/Coin theo mốc thời gian thực 1 phút/lần", duration: "5 phút đọc" },
-      { id: "sk-12-3", title: "[n8n] 70% Thực hành: Rẽ nhánh - Nếu giá biến động > 5%, tự động bắn tin nhắn vào nhóm", duration: "5 phút đọc" }
+      { id: "sk-12-1", title: "[n8n] 30% Lý thuyết: Khái niệm về HTTP Request và cách gọi API lấy dữ liệu", duration: "5 phút đọc", content: L12.sk_12_1 },
+      { id: "sk-12-2", title: "[n8n] 70% Thực hành: Cấu hình lấy dữ liệu giá Vàng/Coin theo mốc thời gian thực 1 phút/lần", duration: "5 phút đọc", content: L12.sk_12_2 },
+      { id: "sk-12-3", title: "[n8n] 70% Thực hành: Rẽ nhánh - Nếu giá biến động > 5%, tự động bắn tin nhắn vào nhóm", duration: "5 phút đọc", content: L12.sk_12_3 }
     ]
   },
   {
@@ -309,9 +315,9 @@ Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
     targetToolIds: ["n8n"],
     tier: "MARKETING",
     skills: [
-      { id: "sk-13-1", title: "[n8n] 30% Lý thuyết: Cấu trúc dữ liệu chuẩn của một thẻ khách hàng (Lead, Deal)", duration: "5 phút đọc" },
-      { id: "sk-13-2", title: "[n8n] 70% Thực hành: Tự động gom đơn hàng từ Website đẩy gọn gàng sang Google Sheets", duration: "5 phút đọc" },
-      { id: "sk-13-3", title: "[n8n] 70% Thực hành: Chấm điểm khách VIP và tự động chia luân phiên cho nhân viên Sale", duration: "5 phút đọc" }
+      { id: "sk-13-1", title: "[n8n] 30% Lý thuyết: Cấu trúc dữ liệu chuẩn của một thẻ khách hàng (Lead, Deal)", duration: "5 phút đọc", content: L13.sk_13_1 },
+      { id: "sk-13-2", title: "[n8n] 70% Thực hành: Tự động gom đơn hàng từ Website đẩy gọn gàng sang Google Sheets", duration: "5 phút đọc", content: L13.sk_13_2 },
+      { id: "sk-13-3", title: "[n8n] 70% Thực hành: Chấm điểm khách VIP và tự động chia luân phiên cho nhân viên Sale", duration: "5 phút đọc", content: L13.sk_13_3 }
     ]
   },
 
