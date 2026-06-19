@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { PlayCircle, Clock, CheckCircle2 } from "lucide-react";
 import type { Course } from "@/data/courses";
+import ReactMarkdown from "react-markdown";
 
 /**
  * Trình xem khóa học: bố cục 2 cột (video player + syllabus).
@@ -74,6 +75,19 @@ export function CoursePlayer({ course }: { course: Course }) {
         <p className="mt-4 text-slate-600 leading-relaxed">
           {course.description}
         </p>
+
+        {activeSkill?.content && (
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            key={activeSkill.id + "-content"}
+            className="mt-10 pt-10 border-t border-slate-200"
+          >
+            <div className="prose prose-slate max-w-none prose-headings:text-navy prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-navy prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-pre:bg-slate-900 prose-pre:text-slate-50">
+              <ReactMarkdown>{activeSkill.content}</ReactMarkdown>
+            </div>
+          </motion.div>
+        )}
       </motion.div>
 
       {/* CỘT PHẢI: Syllabus (4/12) */}

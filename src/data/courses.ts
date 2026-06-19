@@ -5,6 +5,7 @@ export interface Skill {
   title: string;
   duration: string;
   youtubeVideoId: string;
+  content?: string;
 }
 
 export interface Course {
@@ -30,11 +31,97 @@ export const courses: Course[] = [
     targetToolIds: ["gemini", "gpt"],
     tier: "OFFICE",
     skills: [
-      { id: "sk-1-1", title: "[Gemini] Yêu cầu chuẩn bị: Đăng ký và sử dụng tài khoản miễn phí", duration: "15:00", youtubeVideoId: "dQw4w9WgXcQ" },
-      { id: "sk-1-2", title: "[Gemini] Công thức Prompt: Thiết lập vai trò và văn phong doanh nghiệp", duration: "15:00", youtubeVideoId: "dQw4w9WgXcQ" },
-      { id: "sk-1-3", title: "[Gemini] Ví dụ minh họa: Soạn Email báo giá và xin lỗi khách hàng", duration: "15:00", youtubeVideoId: "dQw4w9WgXcQ" },
-      { id: "sk-1-4", title: "[ChatGPT] Công thức Prompt: Xây dựng chuỗi Email chăm sóc khách hàng", duration: "15:00", youtubeVideoId: "dQw4w9WgXcQ" },
-      { id: "sk-1-5", title: "[ChatGPT] Ví dụ minh họa: Lên kịch bản phản hồi tự động", duration: "15:00", youtubeVideoId: "dQw4w9WgXcQ" }
+      { 
+        id: "sk-1-1", 
+        title: "Khởi động Trợ lý Gemini Pro ngay trong hòm thư Gmail", 
+        duration: "10:00", 
+        youtubeVideoId: "dQw4w9WgXcQ",
+        content: `### 1. Gemini Pro trong Gmail là gì?
+Tính năng trợ lý tích hợp ở thanh bên (Side panel) này là đặc quyền của gói **Google One AI Premium (Gemini Advanced/Pro)**. Điểm mạnh nhất của nó là khả năng tự động quét, đọc và hiểu ngữ cảnh của hàng ngàn email cá nhân mà không cần copy/paste.
+
+### 2. Cách khởi động
+- Mở Gmail trên trình duyệt máy tính.
+- Nhìn sang góc trên cùng bên phải, bấm vào biểu tượng hình **Ngôi sao lấp lánh (Gemini)**.
+- Cửa sổ Side panel sẽ mở ra với dòng chữ "Hỏi Gemini".
+
+> **Lưu ý:** Nếu bạn không thấy biểu tượng này, hãy chắc chắn bạn đang dùng tài khoản đã đăng ký gói Google One AI Premium và cài đặt ngôn ngữ English (hoặc hỗ trợ tiếng Việt tùy khu vực).`
+      },
+      { 
+        id: "sk-1-2", 
+        title: "Tóm tắt chuỗi Email dài và Tìm kiếm thông minh", 
+        duration: "15:00", 
+        youtubeVideoId: "dQw4w9WgXcQ",
+        content: `### 1. Vấn đề của dân văn phòng
+Khi một email được CC/Reply qua lại giữa nhiều phòng ban, bạn sẽ mất rất nhiều thời gian để đọc lại từ đầu. Gemini Pro có thể giúp bạn giải quyết việc này trong 5 giây.
+
+### 2. Thực hành: Tóm tắt
+Mở chuỗi email dài đó ra, mở panel Gemini và nhập lệnh:
+\`\`\`text
+Tóm tắt 3 yêu cầu quan trọng nhất trong chuỗi email này, liệt kê rõ ai là người chịu trách nhiệm cho từng việc.
+\`\`\`
+
+### 3. Thực hành: Tìm kiếm thông minh
+Thay vì dùng thanh tìm kiếm cơ bản của Gmail, bạn có thể hỏi Gemini:
+\`\`\`text
+Hãy tìm email báo giá tớ đã gửi cho công ty ABC vào tháng trước, tổng giá trị hợp đồng là bao nhiêu?
+\`\`\``
+      },
+      { 
+        id: "sk-1-3", 
+        title: "Soạn thư mới siêu tốc với tính năng Help me write", 
+        duration: "15:00", 
+        youtubeVideoId: "dQw4w9WgXcQ",
+        content: `### 1. Help me write (Giúp tôi viết)
+Ngay khi bạn bấm nút **Soạn thư mới**, sẽ có một biểu tượng cây bút lấp lánh hiện ra. Đây là tính năng sinh văn bản nháp trực tiếp vào khung soạn thảo.
+
+### 2. Công thức Prompt chuẩn: R-T-F (Role - Task - Format)
+Để AI viết hay, bạn cần đưa đủ 3 yếu tố:
+- **Role (Vai trò):** Bạn là ai? (Ví dụ: Giám đốc Kinh doanh chuyên nghiệp)
+- **Task (Nhiệm vụ):** Viết về cái gì? (Ví dụ: Báo giá dịch vụ thiết kế website)
+- **Format (Định dạng):** Văn phong thế nào? (Ví dụ: Ngắn gọn, lịch sự, đính kèm ưu đãi)
+
+### 3. Copy mẫu sau vào Help me write:
+\`\`\`text
+Đóng vai một Giám đốc Kinh doanh chuyên nghiệp. Hãy soạn một email báo giá dịch vụ thiết kế website cho khách hàng. Giọng văn lịch sự, tự tin. Đính kèm ưu đãi giảm 10% nếu khách hàng phản hồi và ký hợp đồng trong tuần này. Trình bày rõ ràng bằng gạch đầu dòng.
+\`\`\``
+      },
+      { 
+        id: "sk-1-4", 
+        title: "Tự động soạn phản hồi (Reply) cực nhạy", 
+        duration: "10:00", 
+        youtubeVideoId: "dQw4w9WgXcQ",
+        content: `### 1. Lên kịch bản trả lời thư khó
+Khi nhận được thư phàn nàn của khách hoặc thư giục việc của sếp, bạn dễ bị rối trí. Hãy để Gemini đọc thư đó và tạo bản nháp trả lời tức thì một cách khéo léo nhất.
+
+### 2. Cách thực hiện
+- Mở email khách hàng đang phàn nàn (ví dụ: giao hàng chậm).
+- Bấm Reply (Trả lời).
+- Nhấp vào biểu tượng Gemini (Help me write).
+- Gõ Prompt sau:
+
+\`\`\`text
+Hãy viết thư xin lỗi khách hàng dựa trên ngữ cảnh email họ vừa gửi. Giải thích lý do chậm tiến độ là do đối tác vận chuyển gặp sự cố thời tiết. Đưa ra hướng giải quyết là miễn phí vận chuyển cho đơn hàng này và cam kết giao trong 24h tới. Văn phong chân thành, hạ mình.
+\`\`\`
+
+Bạn sẽ thấy Gemini đọc đúng tên khách hàng và mã đơn hàng từ email gốc để đưa vào thư xin lỗi một cách mượt mà!`
+      },
+      { 
+        id: "sk-1-5", 
+        title: "Tinh chỉnh văn phong hoàn hảo", 
+        duration: "10:00", 
+        youtubeVideoId: "dQw4w9WgXcQ",
+        content: `### 1. Không bao giờ gửi bản nháp đầu tiên
+AI tạo ra bản nháp rất nhanh, nhưng đôi khi hơi máy móc hoặc quá dài. Bạn cần sử dụng các công cụ tinh chỉnh có sẵn của Google Workspace.
+
+### 2. Các nút tinh chỉnh thần thánh
+Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
+- **Formalize:** Làm cho văn phong trở nên trang trọng, nghiêm túc (Phù hợp gửi sếp, đối tác lớn).
+- **Elaborate:** Viết dài ra, diễn giải chi tiết hơn (Khi bạn chỉ gõ 1 câu ngắn gọn, AI sẽ tự bơm thêm ý).
+- **Shorten:** Làm ngắn gọn lại, súc tích, đi thẳng vào vấn đề.
+- **I'm Feeling Lucky:** Để AI tự do sáng tạo một văn phong vui nhộn, bất ngờ.
+
+*Hãy bấm thử nút **Shorten** để xem Gemini cắt gọt nội dung thư xin lỗi ở Bài 4 như thế nào nhé!*`
+      }
     ]
   },
   {
