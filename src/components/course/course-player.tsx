@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { PlayCircle, Clock, CheckCircle2 } from "lucide-react";
+import { PlayCircle, Clock, CheckCircle2, BookOpen } from "lucide-react";
 import type { Course } from "@/data/courses";
 import ReactMarkdown from "react-markdown";
 
@@ -124,7 +124,7 @@ export function CoursePlayer({ course }: { course: Course }) {
                         {isActive ? (
                           <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
                         ) : (
-                          <PlayCircle className="h-5 w-5 shrink-0 text-slate-400" />
+                          <BookOpen className="h-4 w-4 shrink-0 text-slate-400" />
                         )}
                         <span
                           className={`flex-1 text-sm font-medium ${
