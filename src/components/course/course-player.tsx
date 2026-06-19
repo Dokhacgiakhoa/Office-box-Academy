@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { PlayCircle, Clock, CheckCircle2, BookOpen } from "lucide-react";
+import { PlayCircle, Clock, CheckCircle2, BookOpen, ArrowLeft, ArrowRight } from "lucide-react";
 import type { Course } from "@/data/courses";
 import ReactMarkdown from "react-markdown";
 
@@ -25,6 +25,11 @@ export function CoursePlayer({ course }: { course: Course }) {
   // Sử dụng video chung cho toàn bộ khóa học (video của bài đầu tiên hoặc của khóa học)
   const courseVideoId = course.youtubeVideoId || allSkills[0]?.youtubeVideoId;
 
+  // Tính toán bài trước/bài sau
+  const currentIndex = allSkills.findIndex((s) => s.id === activeSkillId);
+  const prevSkill = currentIndex > 0 ? allSkills[currentIndex - 1] : null;
+  const nextSkill = currentIndex >= 0 && currentIndex < allSkills.length - 1 ? allSkills[currentIndex + 1] : null;
+
   // Stagger cho danh sách bài học (Slide up nhẹ từng dòng).
   const listContainer: Variants = {
     hidden: {},
@@ -39,14 +44,25 @@ export function CoursePlayer({ course }: { course: Course }) {
 
   return (
     <div className="grid lg:grid-cols-12 gap-8">
-      {/* CỘT TRÁI: Video Player & Info (8/12) */}
+      {/* CỘT TRÁI: Nội dung chính (8/12) */}
       <motion.div
         initial={reduce ? { opacity: 0 } : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 280, damping: 26 }}
         className="lg:col-span-8"
       >
-        <div className="aspect-video w-full rounded-xl overflow-hidden bg-slate-900 shadow-lg">
+        {/* 1. Tiêu đề Khóa học */}
+        <div className="mb-8">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">
+            {course.title}
+          </h1>
+          <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+            {course.description}
+          </p>
+        </div>
+
+        {/* 2. Video Khóa học */}
+        <div className="aspect-video w-full rounded-xl overflow-hidden bg-slate-900 shadow-lg mb-12">
           {courseVideoId ? (
             <iframe
               key={course.id}
@@ -66,30 +82,52 @@ export function CoursePlayer({ course }: { course: Course }) {
           )}
         </div>
 
+        {/* 3. Bài học chi tiết */}
         {activeSkill && (
-          <p className="mt-4 text-sm font-semibold text-primary">
-            Đang học: {activeSkill.title}
-          </p>
-        )}
+          <div className="border-t border-slate-200 pt-10">
+            <h2 className="text-2xl font-bold text-navy mb-8">
+              {activeSkill.title}
+            </h2>
 
-        <h1 className="mt-4 text-2xl md:text-3xl font-extrabold text-navy tracking-tight">
-          {course.title}
-        </h1>
-        <p className="mt-4 text-slate-600 leading-relaxed">
-          {course.description}
-        </p>
+            {activeSkill.content ? (
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                key={activeSkill.id + "-content"}
+              >
+                <div className="prose prose-slate max-w-none prose-headings:text-navy prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-navy prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-pre:bg-slate-900 prose-pre:text-slate-50">
+                  <ReactMarkdown>{activeSkill.content}</ReactMarkdown>
+                </div>
+              </motion.div>
+            ) : (
+              <p className="text-slate-500 italic mb-8">Nội dung bài học đang được cập nhật...</p>
+            )}
 
-        {activeSkill?.content && (
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            key={activeSkill.id + "-content"}
-            className="mt-10 pt-10 border-t border-slate-200"
-          >
-            <div className="prose prose-slate max-w-none prose-headings:text-navy prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-navy prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-pre:bg-slate-900 prose-pre:text-slate-50">
-              <ReactMarkdown>{activeSkill.content}</ReactMarkdown>
+            {/* Navigation Buttons */}
+            <div className="mt-12 pt-8 border-t border-slate-200 flex items-center justify-between gap-4">
+              {prevSkill ? (
+                <button
+                  type="button"
+                  onClick={() => setActiveSkillId(prevSkill.id)}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span className="text-sm font-medium hidden sm:inline">Bài trước</span>
+                </button>
+              ) : <div />}
+              
+              {nextSkill && (
+                <button
+                  type="button"
+                  onClick={() => setActiveSkillId(nextSkill.id)}
+                  className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
+                >
+                  <span className="text-sm font-medium">Bài tiếp theo</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
             </div>
-          </motion.div>
+          </div>
         )}
       </motion.div>
 
