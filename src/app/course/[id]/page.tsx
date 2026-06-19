@@ -57,7 +57,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
       <SiteHeader />
 
       <main className="flex-1 py-10 md:py-14">
-        <div className="mx-auto w-full max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10">
           <TapLink
             href="/#professions"
             className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-primary transition-colors mb-8"
