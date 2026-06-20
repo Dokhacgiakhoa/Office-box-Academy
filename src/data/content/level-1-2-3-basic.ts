@@ -1,6 +1,6 @@
 export const sk_1_1 = `
 ### 🎯 Mục tiêu bài học
-Học cách sử dụng hai bộ công thức Prompt đỉnh cao nhất năm 2024: **RTF** (Chuyên dùng để viết lách) và **CREATE** (Chuyên dùng để vẽ ảnh). Không dùng lẫn lộn!
+Học cách sử dụng hai bộ công thức Prompt đỉnh cao nhất năm 2026: **RTF** (Chuyên dùng để viết lách) và **CREATE** (Chuyên dùng để vẽ ảnh). Không dùng lẫn lộn!
 
 ### 📝 1. Công thức RTF (Dành cho Văn bản)
 RTF là viết tắt của Role - Task - Format. Dùng khi bạn muốn AI viết email, bài blog, kịch bản...

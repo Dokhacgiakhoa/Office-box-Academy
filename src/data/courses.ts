@@ -33,7 +33,7 @@ export const courses: Course[] = [
   // --- GIAI ĐOẠN 1: KỸ THUẬT ĐIỀU KHIỂN AI TỪ A-Z ---
   {
     id: "course-l1-intro",
-    title: "Level 1: Bộ sưu tập Công thức Prompt vạn năng (Cập nhật 2024)",
+    title: "Level 1: Bộ sưu tập Công thức Prompt vạn năng (Cập nhật 2026)",
     description: "Làm chủ các công thức thiết kế lệnh chuẩn quốc tế (RTF, CREATE, CoT) và kỹ thuật đỉnh cao Đảo ngược (Meta-prompting).",
     thumbnailUrl: "/courses/office_level_1.png",
     youtubeVideoId: "dQw4w9WgXcQ", 
