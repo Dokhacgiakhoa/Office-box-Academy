@@ -217,8 +217,8 @@ export const courses: Course[] = [
   // --- GIAI ĐOẠN 3: VIBE CODING (LẬP TRÌNH VỚI ANTIGRAVITY & CLAUDE) ---
   {
     id: "course-l13-vibe-intro",
-    title: "Level 13: Trở thành PM với Antigravity IDE & Claude",
-    description: "Tuyệt đỉnh Vibe Coding với môi trường chuyên nghiệp Antigravity. Cấp quyền cho Đặc vụ Claude kiểm soát Terminal và File máy tính.",
+    title: "Level 13: Trở thành PM & Cấy ghép Trí nhớ cho AI",
+    description: "Tuyệt đỉnh Vibe Coding với Antigravity. Cấp quyền cho Đặc vụ Claude và cấy ghép Trí nhớ dài hạn (Agent Memory) bằng MCP.",
     thumbnailUrl: "/courses/vibecoding_level_3.png",
     youtubeVideoId: "dQw4w9WgXcQ",
     targetRoleIds: ["r-director", "r-admin", "r-marketing"],
@@ -227,7 +227,7 @@ export const courses: Course[] = [
     totalSessions: 2,
     skills: [
       { id: "sk-13-1", title: "Nhập môn Agentic Coding với Antigravity", duration: "8 phút đọc", type: "theory", content: L13_15.sk_13_1 },
-      { id: "sk-13-2", title: "Giao tiếp và Cấp quyền (Workspace) cho Đặc vụ", duration: "8 phút đọc", type: "practice", content: L13_15.sk_13_2 }
+      { id: "sk-13-2", title: "Cấy ghép Trí nhớ cho Đặc vụ (MCP Memory)", duration: "10 phút đọc", type: "practice", content: L13_15.sk_13_2 }
     ]
   },
   {
