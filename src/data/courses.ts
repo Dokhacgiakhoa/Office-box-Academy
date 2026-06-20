@@ -1,21 +1,10 @@
 import type { Tier } from "./tiers";
-import * as L2 from "./content/level-2-calendar";
-import * as L3 from "./content/level-3-docs";
-import * as L4 from "./content/level-4-excel";
-import * as L5 from "./content/level-5-podcast";
-import * as L6 from "./content/level-6-image";
-import * as L7 from "./content/level-7-video";
-import * as L8 from "./content/level-8-n8n-intro";
-import * as L9 from "./content/level-9-n8n-fb";
-import * as L10 from "./content/level-10-n8n-tiktok";
-import * as L11 from "./content/level-11-n8n-email";
-import * as L12 from "./content/level-12-n8n-tele";
-import * as L13 from "./content/level-13-n8n-crm";
-import * as L14 from "./content/level-14-vibe-landing";
-import * as L15 from "./content/level-15-vibe-game";
-import * as L16 from "./content/level-16-vibe-ecommerce";
-import * as L17 from "./content/level-17-vibe-chatbot";
-import * as L18 from "./content/level-18-vibe-saas";
+import * as L1_3 from "./content/level-1-2-3-basic";
+import * as L4_6 from "./content/level-4-5-6-basic";
+import * as L7_9 from "./content/level-7-8-9-auto";
+import * as L10_12 from "./content/level-10-11-12-auto";
+import * as L13_15 from "./content/level-13-14-15-vibe";
+import * as L16_18 from "./content/level-16-17-18-vibe";
 
 export interface Skill {
   id: string;
@@ -41,365 +30,278 @@ export interface Course {
 }
 
 export const courses: Course[] = [
-  // --- NHÁNH 1: AI OFFICE (LEVEL 1-7) ---
+  // --- GIAI ĐOẠN 1: AI CHO DÂN VĂN PHÒNG (LEVEL 1-6) ---
   {
-    id: "course-email-gemini",
-    title: "Level 1: Viết Email chuyên nghiệp và tự động phản hồi khách hàng",
-    description: "Dọn dẹp hòm thư và tự động phản hồi những email thường gặp bằng sức mạnh của trí tuệ nhân tạo.",
+    id: "course-l1-intro",
+    title: "Level 1: Nhập môn AI & Cách ra lệnh (Prompt) cho đúng ý",
+    description: "Hiểu AI là gì, cách nó suy nghĩ và làm chủ công thức viết câu lệnh chuẩn xác để AI luôn trả lời đúng ý bạn.",
     thumbnailUrl: "/courses/office_level_1.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "marketing", "sales", "hr", "finance", "design"],
-    targetToolIds: ["gemini", "gpt"],
+    youtubeVideoId: "dQw4w9WgXcQ", 
+    targetRoleIds: ["r-marketing", "r-sales", "r-hr", "r-admin", "r-director"],
+    targetToolIds: ["t-gemini", "t-chatgpt"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { 
-        id: "sk-1-1", 
-        title: "Khởi động Trợ lý Gemini Pro ngay trong hòm thư Gmail", 
-        duration: "5 phút đọc", 
-        content: `### 1. Gemini Pro trong Gmail là gì?
-Tính năng trợ lý tích hợp ở thanh bên (Side panel) này là đặc quyền của gói **Google One AI Premium (Gemini Advanced/Pro)**. Điểm mạnh nhất của nó là khả năng tự động quét, đọc và hiểu ngữ cảnh của hàng ngàn email cá nhân mà không cần copy/paste.
-
-### 2. Cách khởi động
-- Mở Gmail trên trình duyệt máy tính.
-- Nhìn sang góc trên cùng bên phải, bấm vào biểu tượng hình **Ngôi sao lấp lánh (Gemini)**.
-- Cửa sổ Side panel sẽ mở ra với dòng chữ "Hỏi Gemini".
-
-> **Lưu ý:** Nếu bạn không thấy biểu tượng này, hãy chắc chắn bạn đang dùng tài khoản đã đăng ký gói Google One AI Premium và cài đặt ngôn ngữ English (hoặc hỗ trợ tiếng Việt tùy khu vực).`
-      },
-      { 
-        id: "sk-1-2", 
-        title: "Tóm tắt chuỗi Email dài và Tìm kiếm thông minh", 
-        duration: "5 phút đọc", 
-        content: `### 1. Vấn đề của dân văn phòng
-Khi một email được CC/Reply qua lại giữa nhiều phòng ban, bạn sẽ mất rất nhiều thời gian để đọc lại từ đầu. Gemini Pro có thể giúp bạn giải quyết việc này trong 5 giây.
-
-### 2. Thực hành: Tóm tắt
-Mở chuỗi email dài đó ra, mở panel Gemini và nhập lệnh:
-\`\`\`text
-Tóm tắt 3 yêu cầu quan trọng nhất trong chuỗi email này, liệt kê rõ ai là người chịu trách nhiệm cho từng việc.
-\`\`\`
-
-### 3. Thực hành: Tìm kiếm thông minh
-Thay vì dùng thanh tìm kiếm cơ bản của Gmail, bạn có thể hỏi Gemini:
-\`\`\`text
-Hãy tìm email báo giá tớ đã gửi cho công ty ABC vào tháng trước, tổng giá trị hợp đồng là bao nhiêu?
-\`\`\``
-      },
-      { 
-        id: "sk-1-3", 
-        title: "Soạn thư mới siêu tốc với tính năng Help me write", 
-        duration: "5 phút đọc", 
-        content: `### 1. Help me write (Giúp tôi viết)
-Ngay khi bạn bấm nút **Soạn thư mới**, sẽ có một biểu tượng cây bút lấp lánh hiện ra. Đây là tính năng sinh văn bản nháp trực tiếp vào khung soạn thảo.
-
-### 2. Công thức Prompt chuẩn: R-T-F (Role - Task - Format)
-Để AI viết hay, bạn cần đưa đủ 3 yếu tố:
-- **Role (Vai trò):** Bạn là ai? (Ví dụ: Giám đốc Kinh doanh chuyên nghiệp)
-- **Task (Nhiệm vụ):** Viết về cái gì? (Ví dụ: Báo giá dịch vụ thiết kế website)
-- **Format (Định dạng):** Văn phong thế nào? (Ví dụ: Ngắn gọn, lịch sự, đính kèm ưu đãi)
-
-### 3. Copy mẫu sau vào Help me write:
-\`\`\`text
-Đóng vai một Giám đốc Kinh doanh chuyên nghiệp. Hãy soạn một email báo giá dịch vụ thiết kế website cho khách hàng. Giọng văn lịch sự, tự tin. Đính kèm ưu đãi giảm 10% nếu khách hàng phản hồi và ký hợp đồng trong tuần này. Trình bày rõ ràng bằng gạch đầu dòng.
-\`\`\``
-      },
-      { 
-        id: "sk-1-4", 
-        title: "Tự động soạn phản hồi (Reply) cực nhạy", 
-        duration: "5 phút đọc", 
-        content: `### 1. Lên kịch bản trả lời thư khó
-Khi nhận được thư phàn nàn của khách hoặc thư giục việc của sếp, bạn dễ bị rối trí. Hãy để Gemini đọc thư đó và tạo bản nháp trả lời tức thì một cách khéo léo nhất.
-
-### 2. Cách thực hiện
-- Mở email khách hàng đang phàn nàn (ví dụ: giao hàng chậm).
-- Bấm Reply (Trả lời).
-- Nhấp vào biểu tượng Gemini (Help me write).
-- Gõ Prompt sau:
-
-\`\`\`text
-Hãy viết thư xin lỗi khách hàng dựa trên ngữ cảnh email họ vừa gửi. Giải thích lý do chậm tiến độ là do đối tác vận chuyển gặp sự cố thời tiết. Đưa ra hướng giải quyết là miễn phí vận chuyển cho đơn hàng này và cam kết giao trong 24h tới. Văn phong chân thành, hạ mình.
-\`\`\`
-
-Bạn sẽ thấy Gemini đọc đúng tên khách hàng và mã đơn hàng từ email gốc để đưa vào thư xin lỗi một cách mượt mà!`
-      },
-      { 
-        id: "sk-1-5", 
-        title: "Tinh chỉnh văn phong hoàn hảo", 
-        duration: "5 phút đọc", 
-        content: `### 1. Không bao giờ gửi bản nháp đầu tiên
-AI tạo ra bản nháp rất nhanh, nhưng đôi khi hơi máy móc hoặc quá dài. Bạn cần sử dụng các công cụ tinh chỉnh có sẵn của Google Workspace.
-
-### 2. Các nút tinh chỉnh thần thánh
-Sau khi AI viết xong, dưới chân đoạn text sẽ có các nút:
-- **Formalize:** Làm cho văn phong trở nên trang trọng, nghiêm túc (Phù hợp gửi sếp, đối tác lớn).
-- **Elaborate:** Viết dài ra, diễn giải chi tiết hơn (Khi bạn chỉ gõ 1 câu ngắn gọn, AI sẽ tự bơm thêm ý).
-- **Shorten:** Làm ngắn gọn lại, súc tích, đi thẳng vào vấn đề.
-- **I'm Feeling Lucky:** Để AI tự do sáng tạo một văn phong vui nhộn, bất ngờ.
-
-*Hãy bấm thử nút **Shorten** để xem Gemini cắt gọt nội dung thư xin lỗi ở Bài 4 như thế nào nhé!*`
-      }
+      { id: "sk-1-1", title: "AI thực chất là gì và tại sao nó lại bịa chuyện?", duration: "5 phút đọc", type: "theory", content: L1_3.sk_1_1 },
+      { id: "sk-1-2", title: "Công thức Prompt 4 phần (Công thức CPRF)", duration: "8 phút đọc", type: "practice", content: L1_3.sk_1_2 }
     ]
   },
   {
-    id: "course-calendar-gemini",
-    title: "Level 2: Tự động lên lịch Google Calendar và tóm tắt cuộc họp",
-    description: "Không còn cảnh cặm cụi ghi chép biên bản họp. Hãy để AI làm thư ký đắc lực cho bạn.",
+    id: "course-l2-writing",
+    title: "Level 2: Dùng AI để soạn thảo văn bản, email và báo cáo",
+    description: "Giải phóng bản thân khỏi việc ngồi gõ từng chữ. Nhờ AI viết hộ email, báo cáo và bắt chước đúng giọng văn của bạn.",
     thumbnailUrl: "/courses/office_level_2.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "hr", "sales", "finance"],
-    targetToolIds: ["gemini"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-sales", "r-admin", "r-hr", "r-marketing"],
+    targetToolIds: ["t-gemini", "t-chatgpt", "t-claude"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { id: "sk-2-1", title: "[Gemini] Yêu cầu chuẩn bị: Sử dụng ứng dụng trên Google Workspace", duration: "5 phút đọc", content: L2.sk_2_1 },
-      { id: "sk-2-2", title: "[Gemini] Công thức Prompt: Trích xuất ý chính từ đoạn hội thoại dài", duration: "5 phút đọc", content: L2.sk_2_2 },
-      { id: "sk-2-3", title: "[Gemini] Ví dụ minh họa: Tóm tắt biên bản cuộc họp nội bộ", duration: "5 phút đọc", content: L2.sk_2_3 },
-      { id: "sk-2-4", title: "[Google Calendar] Mẹo: Dùng câu lệnh để AI tự động lên lịch hẹn", duration: "5 phút đọc", content: L2.sk_2_4 }
+      { id: "sk-2-1", title: "Soạn Email xin lỗi, báo giá tự động trong 5 giây", duration: "5 phút đọc", type: "practice", content: L1_3.sk_2_1 },
+      { id: "sk-2-2", title: "Dạy AI cách bắt chước chính xác giọng văn của sếp", duration: "10 phút đọc", type: "theory", content: L1_3.sk_2_2 }
     ]
   },
   {
-    id: "course-docs-claude",
-    title: "Level 3: Soạn thảo hợp đồng và dàn ý văn bản siêu tốc",
-    description: "Phác thảo cấu trúc bài viết, tài liệu hoặc hợp đồng pháp lý chặt chẽ chỉ trong vài giây.",
+    id: "course-l3-reading",
+    title: "Level 3: Tìm kiếm, đọc hiểu và tóm tắt thông tin nhanh chóng",
+    description: "Dùng AI làm thư ký chuyên đọc báo cáo dài hàng trăm trang và tìm kiếm thông tin đối thủ cạnh tranh trên Internet.",
     thumbnailUrl: "/courses/office_level_3.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "hr", "finance", "marketing"],
-    targetToolIds: ["gpt", "claude"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-marketing", "r-sales"],
+    targetToolIds: ["t-claude", "t-perplexity"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { id: "sk-3-1", title: "[ChatGPT] Yêu cầu chuẩn bị: Tài khoản ChatGPT Free hoặc Plus", duration: "5 phút đọc", content: L3.sk_3_1 },
-      { id: "sk-3-2", title: "[ChatGPT] Công thức Prompt: Lập dàn ý bài thuyết trình cấu trúc 3 phần", duration: "5 phút đọc", content: L3.sk_3_2 },
-      { id: "sk-3-3", title: "[Claude] Công thức Prompt: Căn chỉnh lỗi logic và kiểm tra chính tả", duration: "5 phút đọc", content: L3.sk_3_3 },
-      { id: "sk-3-4", title: "[Claude] Ví dụ minh họa: Soạn thảo mẫu hợp đồng dịch vụ chuẩn pháp lý", duration: "5 phút đọc", content: L3.sk_3_4 }
+      { id: "sk-3-1", title: "Tìm kiếm thông minh trên mạng bằng Perplexity AI", duration: "7 phút đọc", type: "practice", content: L1_3.sk_3_1 },
+      { id: "sk-3-2", title: "Tóm tắt tài liệu PDF 100 trang trong 3 phút", duration: "8 phút đọc", type: "theory", content: L1_3.sk_3_2 }
     ]
   },
   {
-    id: "course-excel-deepseek",
-    title: "Level 4: Làm sạch dữ liệu và tự viết hàm Excel phức tạp",
-    description: "Giải quyết các bảng tính rối rắm và tự động tính toán số liệu mà không cần rành về hàm Excel.",
+    id: "course-l4-data",
+    title: "Level 4: Xử lý số liệu và vẽ biểu đồ (Thay thế Excel)",
+    description: "Bỏ qua các hàm VLOOKUP phức tạp. Chỉ cần dán số liệu lộn xộn vào, AI sẽ dọn dẹp, tính toán và vẽ biểu đồ cực chuẩn.",
     thumbnailUrl: "/courses/office_level_4.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["finance", "hr", "c-level", "sales"],
-    targetToolIds: ["deepseek"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-admin", "r-sales", "r-hr"],
+    targetToolIds: ["t-deepseek", "t-chatgpt"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { id: "sk-4-1", title: "[DeepSeek] Yêu cầu chuẩn bị: Đăng ký tài khoản DeepSeek miễn phí", duration: "5 phút đọc", content: L4.sk_4_1 },
-      { id: "sk-4-2", title: "[DeepSeek] Công thức Prompt: Yêu cầu AI viết hàm VLOOKUP, IF lồng nhau", duration: "5 phút đọc", content: L4.sk_4_2 },
-      { id: "sk-4-3", title: "[DeepSeek] Ví dụ minh họa: Dọn dẹp khoảng trắng và gộp cột dữ liệu thô", duration: "5 phút đọc", content: L4.sk_4_3 }
+      { id: "sk-4-1", title: "Làm sạch danh sách dữ liệu (Data Cleaning)", duration: "6 phút đọc", type: "practice", content: L4_6.sk_4_1 },
+      { id: "sk-4-2", title: "Tự động phân tích nguyên nhân và vẽ biểu đồ", duration: "10 phút đọc", type: "practice", content: L4_6.sk_4_2 }
     ]
   },
   {
-    id: "course-podcast-notebooklm",
-    title: "Level 5: Đút file PDF vào để tạo ra bản tin Podcast 2 người trò chuyện",
-    description: "Biến các báo cáo khô khan thành những đoạn hội thoại Audio hấp dẫn để nghe lúc lái xe hoặc tập thể dục.",
+    id: "course-l5-image",
+    title: "Level 5: Tự thiết kế hình ảnh minh họa cực đẹp",
+    description: "Cách dùng ngôn từ để điều khiển các cỗ máy vẽ ảnh. Tạo ảnh quảng cáo sản phẩm sắc nét mà không cần thuê Studio.",
     thumbnailUrl: "/courses/office_level_5.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "marketing", "hr", "sales"],
-    targetToolIds: ["notebooklm"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-marketing", "r-sales"],
+    targetToolIds: ["t-midjourney", "t-flux"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { id: "sk-5-1", title: "[NotebookLM] Yêu cầu chuẩn bị: Truy cập công cụ từ Google", duration: "5 phút đọc", content: L5.sk_5_1 },
-      { id: "sk-5-2", title: "[NotebookLM] Mẹo: Upload nhiều file tài liệu (PDF, Docs) cùng lúc", duration: "5 phút đọc", content: L5.sk_5_2 },
-      { id: "sk-5-3", title: "[NotebookLM] Tính năng Audio Overview: Tạo Podcast tự động", duration: "5 phút đọc", content: L5.sk_5_3 },
-      { id: "sk-5-4", title: "[NotebookLM] Chức năng hỏi đáp: Tóm tắt 100 trang PDF trong 3 câu", duration: "5 phút đọc", content: L5.sk_5_4 }
+      { id: "sk-5-1", title: "Công thức ma thuật để AI vẽ ảnh chuẩn ý đồ", duration: "7 phút đọc", type: "theory", content: L4_6.sk_5_1 },
+      { id: "sk-5-2", title: "Tự chụp Mockup quảng cáo sản phẩm bằng Midjourney", duration: "10 phút đọc", type: "practice", content: L4_6.sk_5_2 }
     ]
   },
   {
-    id: "course-image-flux",
-    title: "Level 6: Tạo ảnh minh họa bài viết siêu tốc",
-    description: "Tự tay thiết kế những bức ảnh quảng cáo đẹp mắt, siêu thực mà không cần kỹ năng Photoshop.",
-    thumbnailUrl: "/courses/office_level_1.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["marketing", "design", "c-level"],
-    targetToolIds: ["freepik", "flux"],
+    id: "course-l6-video",
+    title: "Level 6: Tạo kịch bản âm thanh và Video tự động",
+    description: "Lồng tiếng bản tin bằng AI và biến hình ảnh tĩnh thành video quảng cáo chuyển động sống động y như thật.",
+    thumbnailUrl: "/courses/office_level_6.png",
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-marketing", "r-director"],
+    targetToolIds: ["t-elevenlabs", "t-kling"],
     tier: "OFFICE",
+    totalSessions: 2,
     skills: [
-      { id: "sk-6-1", title: "[Flux] Yêu cầu chuẩn bị: Sử dụng web tạo ảnh miễn phí", duration: "5 phút đọc", content: L6.sk_6_1 },
-      { id: "sk-6-2", title: "[Flux] Công thức Prompt: Mô tả hình ảnh (Chủ thể + Bối cảnh + Phong cách)", duration: "5 phút đọc", content: L6.sk_6_2 },
-      { id: "sk-6-3", title: "[Flux] Mẹo: Chèn chữ tiếng Việt chính xác lên hình ảnh", duration: "5 phút đọc", content: L6.sk_6_3 }
-    ]
-  },
-  {
-    id: "course-video-kling",
-    title: "Level 7: Biến một bức ảnh tĩnh thành video ngắn sinh động",
-    description: "Thổi hồn vào các bức ảnh tĩnh và tạo ra những đoạn video chuyển động mượt mà để đăng mạng xã hội.",
-    thumbnailUrl: "/courses/office_level_2.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["marketing", "design"],
-    targetToolIds: ["kling", "luma", "veo3"],
-    tier: "OFFICE",
-    skills: [
-      { id: "sk-7-1", title: "[Kling AI] Yêu cầu chuẩn bị: Đăng nhập nền tảng tạo video", duration: "5 phút đọc", content: L7.sk_7_1 },
-      { id: "sk-7-2", title: "[Kling AI] Công thức: Prompt điều khiển chuyển động (Camera & Vật thể)", duration: "5 phút đọc", content: L7.sk_7_2 },
-      { id: "sk-7-3", title: "[Kling AI] Thực hành: Biến ảnh tĩnh thành video quảng cáo", duration: "5 phút đọc", content: L7.sk_7_3 }
+      { id: "sk-6-1", title: "Biến văn bản thành Podcast có người thật đọc", duration: "6 phút đọc", type: "practice", content: L4_6.sk_6_1 },
+      { id: "sk-6-2", title: "Biến ảnh tĩnh thành cảnh quay mượt mà (Image-to-Video)", duration: "8 phút đọc", type: "practice", content: L4_6.sk_6_2 }
     ]
   },
 
-  // --- NHÁNH 2: AI AGENT (LEVEL 8-13) (PROJECT-BASED) ---
+  // --- GIAI ĐOẠN 2: TỰ ĐỘNG HÓA CÔNG VIỆC (LEVEL 7-12) ---
   {
-    id: "course-n8n-intro",
-    title: "Level 8: Nhập môn n8n: Hướng dẫn cài đặt và làm quen giao diện kéo thả",
-    description: "Bước chân vào thế giới tự động hóa bằng cách cài đặt công cụ n8n và hiểu cách các nút hoạt động.",
+    id: "course-l7-auto-intro",
+    title: "Level 7: Tự động hóa là gì và cách các phần mềm nối với nhau",
+    description: "Học tư duy làm việc của máy móc. Đập tan rào cản kỹ thuật để tạo ra những đường ống làm việc liên tục 24/7.",
     thumbnailUrl: "/courses/marketing_level_1.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["marketing", "sales", "c-level"],
-    targetToolIds: ["n8n"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-admin"],
+    targetToolIds: ["t-n8n"],
     tier: "MARKETING",
+    totalSessions: 2,
     skills: [
-      { id: "sk-8-1", title: "[n8n] 30% Lý thuyết: Hiểu nguyên lý cốt lõi của một luồng tự động (Trigger & Action)", duration: "5 phút đọc", content: L8.sk_8_1 },
-      { id: "sk-8-2", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Cloud (Đám mây) nhanh chóng", duration: "5 phút đọc", content: L8.sk_8_2 },
-      { id: "sk-8-3", title: "[n8n] 70% Thực hành: Cài đặt n8n phiên bản Local (Máy cá nhân vĩnh viễn)", duration: "5 phút đọc", content: L8.sk_8_3 }
+      { id: "sk-7-1", title: "Thế nào là Trigger và Action trong hệ thống?", duration: "6 phút đọc", type: "theory", content: L7_9.sk_7_1 },
+      { id: "sk-7-2", title: "API và Webhook: Ngôn ngữ giao tiếp của máy tính", duration: "8 phút đọc", type: "theory", content: L7_9.sk_7_2 }
     ]
   },
   {
-    id: "course-n8n-facebook",
-    title: "Level 9: Thực chiến: Xây dựng luồng tự động hóa đăng bài Fanpage Facebook",
-    description: "Luôn giữ cho Fanpage của bạn bận rộn với các bài viết tin tức được xào nấu tự động mỗi ngày.",
+    id: "course-l8-auto-lead",
+    title: "Level 8: Tự động gom thông tin khách hàng (Lead) về một chỗ",
+    description: "Khách điền Form là thông tin tự chui vào Google Sheets và hệ thống tự động gửi Email cảm ơn ngay trong 1 nốt nhạc.",
     thumbnailUrl: "/courses/marketing_level_2.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["marketing", "sales"],
-    targetToolIds: ["n8n", "gpt"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-sales", "r-marketing"],
+    targetToolIds: ["t-n8n", "t-sheets"],
     tier: "MARKETING",
+    totalSessions: 2,
     skills: [
-      { id: "sk-9-1", title: "[n8n] 30% Lý thuyết: Hướng dẫn cách lấy mã khóa liên kết (Token) từ tài khoản Facebook", duration: "5 phút đọc", content: L9.sk_9_1 },
-      { id: "sk-9-2", title: "[n8n] 70% Thực hành: Viết luồng cào tin tức báo chí, đưa cho AI xào nấu lại văn phong", duration: "5 phút đọc", content: L9.sk_9_2 },
-      { id: "sk-9-3", title: "[n8n] 70% Thực hành: Thiết lập hẹn giờ (Schedule) tự động đăng bài lúc 8h sáng mỗi ngày", duration: "5 phút đọc", content: L9.sk_9_3 }
+      { id: "sk-8-1", title: "Hứng thông tin từ Landing Page vào Google Sheets", duration: "10 phút đọc", type: "practice", content: L7_9.sk_8_1 },
+      { id: "sk-8-2", title: "Tự động gửi thư/tin nhắn cảm ơn ngay lập tức", duration: "8 phút đọc", type: "practice", content: L7_9.sk_8_2 }
     ]
   },
   {
-    id: "course-n8n-tiktok",
-    title: "Level 10: Thực chiến: Tạo kênh TikTok hoàn toàn tự động bằng AI",
-    description: "Nhờ hệ thống n8n tự động nghĩ kịch bản, đọc giọng nói, ghép video và upload lên TikTok.",
+    id: "course-l9-auto-email",
+    title: "Level 9: Trợ lý ảo tự đọc và phân loại Email",
+    description: "Nhúng bộ não AI vào hòm thư công ty để nó tự nhận biết thư nào là khiếu nại, thư nào là hỏi giá và soạn sẵn bản nháp.",
     thumbnailUrl: "/courses/marketing_level_3.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["marketing", "design"],
-    targetToolIds: ["n8n", "veo3"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-admin", "r-sales"],
+    targetToolIds: ["t-n8n", "t-openai", "t-gmail"],
     tier: "MARKETING",
+    totalSessions: 2,
     skills: [
-      { id: "sk-10-1", title: "[n8n] 30% Lý thuyết: Bóc tách luồng làm video ngắn (Kịch bản -> Giọng đọc -> Hình ảnh)", duration: "5 phút đọc", content: L10.sk_10_1 },
-      { id: "sk-10-2", title: "[n8n] 70% Thực hành: Dùng n8n kết nối API sinh kịch bản và đọc giọng nói nhân tạo", duration: "5 phút đọc", content: L10.sk_10_2 },
-      { id: "sk-10-3", title: "[n8n] 70% Thực hành: Ghép hình ảnh/âm thanh và tự động đẩy file video lên kênh TikTok", duration: "5 phút đọc", content: L10.sk_10_3 }
+      { id: "sk-9-1", title: "Nhờ AI đọc hiểu và chia loại email (Thư rác/Thư hỏi giá)", duration: "10 phút đọc", type: "practice", content: L7_9.sk_9_1 },
+      { id: "sk-9-2", title: "Tự động soạn sẵn Bản nháp chờ Sếp duyệt", duration: "12 phút đọc", type: "practice", content: L7_9.sk_9_2 }
     ]
   },
   {
-    id: "course-n8n-email",
-    title: "Level 11: Thực chiến: Trợ lý ảo tự động trả lời Email và lọc thư rác",
-    description: "Gắn AI vào hòm thư công ty để tự động đọc nội dung và soạn sẵn bản nháp trả lời hoàn hảo.",
+    id: "course-l10-auto-social",
+    title: "Level 10: Tự động tìm tin tức và đăng bài lên Fanpage",
+    description: "Xây dựng cỗ máy sáng 8h tự đi cào tin nóng hổi, nhờ AI mông má lại văn phong và ấn nút đăng Facebook hoàn toàn tự động.",
     thumbnailUrl: "/courses/marketing_level_4.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "sales", "hr"],
-    targetToolIds: ["n8n", "gemini"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-marketing"],
+    targetToolIds: ["t-n8n", "t-openai"],
     tier: "MARKETING",
+    totalSessions: 2,
     skills: [
-      { id: "sk-11-1", title: "[n8n] 30% Lý thuyết: Cách kết nối n8n với hòm thư Gmail/Outlook bảo mật", duration: "5 phút đọc", content: L11.sk_11_1 },
-      { id: "sk-11-2", title: "[n8n] 70% Thực hành: Lên sơ đồ bắt AI đọc nội dung Email và phân loại mức độ khẩn cấp", duration: "5 phút đọc", content: L11.sk_11_2 },
-      { id: "sk-11-3", title: "[n8n] 70% Thực hành: Dạy AI tự động soạn trước bản nháp phản hồi và lưu vào thư mục Draft", duration: "5 phút đọc", content: L11.sk_11_3 }
+      { id: "sk-10-1", title: "Cào tin tức (RSS) từ các trang báo mạng", duration: "8 phút đọc", type: "practice", content: L10_12.sk_10_1 },
+      { id: "sk-10-2", title: "Bảo AI xào lại bài và hẹn giờ đăng lên Fanpage", duration: "15 phút đọc", type: "practice", content: L10_12.sk_10_2 }
     ]
   },
   {
-    id: "course-n8n-telegram",
-    title: "Level 12: Thực chiến: Bot theo dõi tỷ giá (Vàng, Crypto) báo động qua Telegram",
-    description: "Làm một con Bot tự động bắn tin nhắn báo giá vào nhóm chat mỗi khi thị trường biến động.",
-    thumbnailUrl: "/courses/marketing_level_1.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["finance", "c-level"],
-    targetToolIds: ["n8n"],
+    id: "course-l11-auto-alert",
+    title: "Level 11: Tạo Bot theo dõi giá cả và nhắn tin cảnh báo",
+    description: "Chế tạo Robot soi bảng giá Vàng/Chứng khoán/Tỷ giá liên tục. Nếu giá rớt mạnh thì lập tức bắn tin nhắn hú còi ầm ĩ vào Zalo/Telegram.",
+    thumbnailUrl: "/courses/vibecoding_level_1.png",
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-sales"],
+    targetToolIds: ["t-n8n", "t-telegram"],
     tier: "MARKETING",
+    totalSessions: 2,
     skills: [
-      { id: "sk-12-1", title: "[n8n] 30% Lý thuyết: Khái niệm về HTTP Request và cách gọi API lấy dữ liệu", duration: "5 phút đọc", content: L12.sk_12_1 },
-      { id: "sk-12-2", title: "[n8n] 70% Thực hành: Cấu hình lấy dữ liệu giá Vàng/Coin theo mốc thời gian thực 1 phút/lần", duration: "5 phút đọc", content: L12.sk_12_2 },
-      { id: "sk-12-3", title: "[n8n] 70% Thực hành: Rẽ nhánh - Nếu giá biến động > 5%, tự động bắn tin nhắn vào nhóm", duration: "5 phút đọc", content: L12.sk_12_3 }
+      { id: "sk-11-1", title: "Gọi API kiểm tra thông tin liên tục mỗi phút (Real-time)", duration: "8 phút đọc", type: "practice", content: L10_12.sk_11_1 },
+      { id: "sk-11-2", title: "Chỉ nhắn tin cảnh báo khi thỏa mãn điều kiện (Hàm IF)", duration: "10 phút đọc", type: "practice", content: L10_12.sk_11_2 }
     ]
   },
   {
-    id: "course-n8n-crm",
-    title: "Level 13: Thực chiến: Xây dựng hệ thống quản lý Khách hàng (CRM)",
-    description: "Tự động thu thập Lead từ mọi nguồn, chấm điểm khách VIP và tự động chia đơn cho đội Sale.",
-    thumbnailUrl: "/courses/marketing_level_2.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["sales", "c-level"],
-    targetToolIds: ["n8n"],
+    id: "course-l12-auto-multi",
+    title: "Level 12: Kết nối nhiều AI làm việc nhóm với nhau",
+    description: "Chia việc cho 3 con AI phối hợp nhịp nhàng: Con số 1 viết ý tưởng -> Con số 2 viết thân bài -> Con số 3 vẽ ảnh.",
+    thumbnailUrl: "/courses/vibecoding_level_2.png",
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-marketing"],
+    targetToolIds: ["t-n8n", "t-openai"],
     tier: "MARKETING",
+    totalSessions: 1,
     skills: [
-      { id: "sk-13-1", title: "[n8n] 30% Lý thuyết: Cấu trúc dữ liệu chuẩn của một thẻ khách hàng (Lead, Deal)", duration: "5 phút đọc", content: L13.sk_13_1 },
-      { id: "sk-13-2", title: "[n8n] 70% Thực hành: Tự động gom đơn hàng từ Website đẩy gọn gàng sang Google Sheets", duration: "5 phút đọc", content: L13.sk_13_2 },
-      { id: "sk-13-3", title: "[n8n] 70% Thực hành: Chấm điểm khách VIP và tự động chia luân phiên cho nhân viên Sale", duration: "5 phút đọc", content: L13.sk_13_3 }
+      { id: "sk-12-1", title: "Dựng nhóm làm việc AI (Multi-Agent Workflow)", duration: "10 phút đọc", type: "practice", content: L10_12.sk_12_1 }
     ]
   },
 
-  // --- NHÁNH 3: VIBECODING (LEVEL 14-18) (PROJECT-BASED) ---
+  // --- GIAI ĐOẠN 3: LẬP TRÌNH BẰNG AI (LEVEL 13-18) ---
   {
-    id: "course-vibe-landing",
-    title: "Level 14: Thực chiến: Xây dựng trang Landing Page giới thiệu bản thân / sản phẩm",
-    description: "Nhờ trí tuệ nhân tạo gõ code và dựng nên một website bán hàng tuyệt đẹp chỉ trong 10 phút.",
-    thumbnailUrl: "/courses/vibecoding_level_1.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "marketing"],
-    targetToolIds: ["claude", "stitch", "vercel"],
-    tier: "EXPERT",
-    skills: [
-      { id: "sk-14-1", title: "[Claude] 30% Lý thuyết: Cấu trúc chuẩn SEO của một trang Landing Page (Hero, Tính năng...)", duration: "5 phút đọc", content: L14.sk_14_1 },
-      { id: "sk-14-2", title: "[Stitch] 70% Thực hành: Ra lệnh cho AI tự động dựng bố cục giao diện siêu tốc", duration: "5 phút đọc", content: L14.sk_14_2 },
-      { id: "sk-14-3", title: "[Vercel] 70% Thực hành: Tải mã nguồn về và đưa trang web lên Internet với một cú click", duration: "5 phút đọc", content: L14.sk_14_3 }
-    ]
-  },
-  {
-    id: "course-vibe-game",
-    title: "Level 15: Thực chiến: Lập trình Web Game giải trí (Rắn săn mồi, Flappy Bird)",
-    description: "Giải trí và tư duy logic thông qua việc yêu cầu AI code các trò chơi điện tử quen thuộc.",
-    thumbnailUrl: "/courses/vibecoding_level_2.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level"],
-    targetToolIds: ["claude"],
-    tier: "EXPERT",
-    skills: [
-      { id: "sk-15-1", title: "[Claude] 30% Lý thuyết: Hiểu quy luật tọa độ và khung hình (Canvas) trong lập trình Game", duration: "5 phút đọc", content: L15.sk_15_1 },
-      { id: "sk-15-2", title: "[Claude] 70% Thực hành: Viết Prompt mô tả luật chơi và yêu cầu AI tự sinh mã nguồn", duration: "5 phút đọc", content: L15.sk_15_2 },
-      { id: "sk-15-3", title: "[Claude] 70% Thực hành: Kỹ năng gỡ rối: Chơi thử game, copy lỗi ném cho AI để nhờ vá lỗi", duration: "5 phút đọc", content: L15.sk_15_3 }
-    ]
-  },
-  {
-    id: "course-vibe-ecommerce",
-    title: "Level 16: Thực chiến: Xây dựng Website Bán hàng (E-commerce Mini)",
-    description: "Tự tay làm trang thương mại điện tử nhỏ gọn có danh sách sản phẩm và giỏ hàng thanh toán.",
+    id: "course-l13-vibe-intro",
+    title: "Level 13: Vibe Coding là gì? Cách nhờ AI lập trình thay bạn",
+    description: "Thay vì gõ code, bạn chỉ việc gõ tiếng Việt mô tả. Trở thành Kỹ sư phần mềm chỉ sau 1 khóa học bằng sức mạnh Vibe Coding.",
     thumbnailUrl: "/courses/vibecoding_level_3.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["sales", "c-level"],
-    targetToolIds: ["claude", "stitch", "antigravity"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-admin", "r-marketing"],
+    targetToolIds: ["t-cursor", "t-v0"],
     tier: "EXPERT",
+    totalSessions: 2,
     skills: [
-      { id: "sk-16-1", title: "[Claude] 30% Lý thuyết: Cấu trúc và luồng dữ liệu của một trang Giỏ hàng trực tuyến", duration: "5 phút đọc", content: L16.sk_16_1 },
-      { id: "sk-16-2", title: "[Stitch] 70% Thực hành: Nhờ AI dựng giao diện trang danh sách sản phẩm và thẻ Card", duration: "5 phút đọc", content: L16.sk_16_2 },
-      { id: "sk-16-3", title: "[Antigravity] 70% Thực hành: Tạo bảng cơ sở dữ liệu để lưu trữ đơn hàng thực tế của khách", duration: "5 phút đọc", content: L16.sk_16_3 }
+      { id: "sk-13-1", title: "Hiểu bản chất của Làm Web (Giao diện, Dữ liệu, Logic)", duration: "8 phút đọc", type: "theory", content: L13_15.sk_13_1 },
+      { id: "sk-13-2", title: "Cài đặt môi trường lập trình v0.dev / Bolt.new trong 1 nút bấm", duration: "7 phút đọc", type: "practice", content: L13_15.sk_13_2 }
     ]
   },
   {
-    id: "course-vibe-chatbot",
-    title: "Level 17: Thực chiến: Phát triển Chatbot AI tích hợp trực tiếp lên Website",
-    description: "Nhúng một con Bot tư vấn siêu thông minh vào trang chủ website công ty bạn.",
+    id: "course-l14-vibe-landing",
+    title: "Level 14: Tự thiết kế trang Landing Page bán hàng",
+    description: "Nhờ AI làm một trang web bán hàng đẹp lung linh, đầy đủ Bảng giá, Slogan và đưa thẳng lên Internet cho người khác xem.",
     thumbnailUrl: "/courses/vibecoding_level_4.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "marketing"],
-    targetToolIds: ["claude", "vercel"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-marketing", "r-sales"],
+    targetToolIds: ["t-v0", "t-vercel"],
     tier: "EXPERT",
+    totalSessions: 2,
     skills: [
-      { id: "sk-17-1", title: "[Claude] 30% Lý thuyết: Nguyên lý Website trò chuyện với bộ não ChatGPT qua API", duration: "5 phút đọc", content: L17.sk_17_1 },
-      { id: "sk-17-2", title: "[Claude] 70% Thực hành: Lấy mã khóa API (Secret Key) và ghép thành công vào giao diện chat", duration: "5 phút đọc", content: L17.sk_17_2 },
-      { id: "sk-17-3", title: "[Vercel] 70% Thực hành: Cấu hình ẩn mã khóa (Bảo mật biến môi trường) trước khi tung lên mạng", duration: "5 phút đọc", content: L17.sk_17_3 }
+      { id: "sk-14-1", title: "Đẻ ra giao diện Landing Page cực mượt chỉ bằng Tiếng Việt", duration: "10 phút đọc", type: "practice", content: L13_15.sk_14_1 },
+      { id: "sk-14-2", title: "Phát hành website lên mạng toàn cầu (Deploy lên Vercel)", duration: "8 phút đọc", type: "practice", content: L13_15.sk_14_2 }
     ]
   },
   {
-    id: "course-vibe-saas",
-    title: "Level 18: Thực chiến: Xây dựng Phần mềm Quản lý công việc (SaaS To-do App)",
-    description: "Xây dựng ứng dụng quản trị nội bộ để giao việc, nhắc lịch và theo dõi tiến độ nhân sự.",
+    id: "course-l15-vibe-game",
+    title: "Level 15: Tự làm trò chơi điện tử (Web Game) giải trí",
+    description: "Viết ra các luật chơi chặt chẽ để AI code ra một game giải trí xả stress. Học cách chửi bới AI nếu nó code lỗi.",
     thumbnailUrl: "/courses/vibecoding_level_5.png",
-    youtubeVideoId: "dQw4w9WgXcQ", // 1 video cho cả khóa (placeholder — thay bằng ID thật)
-    targetRoleIds: ["c-level", "hr"],
-    targetToolIds: ["claude", "stitch", "antigravity"],
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-admin", "r-marketing"],
+    targetToolIds: ["t-cursor"],
     tier: "EXPERT",
+    totalSessions: 2,
     skills: [
-      { id: "sk-18-1", title: "[Claude] 30% Lý thuyết: Luồng người dùng (Đăng ký, Đăng nhập, Thêm, Sửa, Xóa dữ liệu)", duration: "5 phút đọc", content: L18.sk_18_1 },
-      { id: "sk-18-2", title: "[Stitch] 70% Thực hành: Thiết kế Bảng điều khiển (Dashboard) trực quan, có biểu đồ", duration: "5 phút đọc", content: L18.sk_18_2 },
-      { id: "sk-18-3", title: "[Antigravity] 70% Thực hành: Cấu hình phân quyền dữ liệu (Nhân viên chỉ được thấy việc của họ)", duration: "5 phút đọc", content: L18.sk_18_3 }
+      { id: "sk-15-1", title: "Code game Rắn săn mồi kinh điển bằng lời nói", duration: "12 phút đọc", type: "practice", content: L13_15.sk_15_1 },
+      { id: "sk-15-2", title: "Kỹ năng 'bắt bệnh' (Debugging) khi AI viết code hỏng", duration: "10 phút đọc", type: "practice", content: L13_15.sk_15_2 }
+    ]
+  },
+  {
+    id: "course-l16-vibe-ecom",
+    title: "Level 16: Tự dựng cửa hàng trực tuyến mini (E-Commerce)",
+    description: "Nâng cấp giao diện trang web. Tự động cộng trừ tiền trong Giỏ hàng và cất thông tin người mua hàng vào một Cơ sở dữ liệu an toàn.",
+    thumbnailUrl: "/courses/office_level_1.png", // Re-use image
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-sales", "r-marketing", "r-director"],
+    targetToolIds: ["t-v0", "t-supabase"],
+    tier: "EXPERT",
+    totalSessions: 2,
+    skills: [
+      { id: "sk-16-1", title: "Phép thuật của nút 'Thêm vào giỏ' và cộng trừ tiền", duration: "12 phút đọc", type: "practice", content: L16_18.sk_16_1 },
+      { id: "sk-16-2", title: "Lưu trữ đơn hàng vào Database khổng lồ (Supabase)", duration: "15 phút đọc", type: "practice", content: L16_18.sk_16_2 }
+    ]
+  },
+  {
+    id: "course-l17-vibe-chatbot",
+    title: "Level 17: Gắn Chatbot tư vấn thông minh vào website",
+    description: "Nhét sức mạnh tư duy của ChatGPT vào website của riêng bạn và học cách bảo mật chìa khóa nhà (API Key) không cho người lạ xài chùa.",
+    thumbnailUrl: "/courses/office_level_2.png", 
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-marketing", "r-sales"],
+    targetToolIds: ["t-openai", "t-v0"],
+    tier: "EXPERT",
+    totalSessions: 2,
+    skills: [
+      { id: "sk-17-1", title: "Cơ chế 'Nhét thư vào phong bì' gọi API của OpenAI", duration: "10 phút đọc", type: "theory", content: L16_18.sk_17_1 },
+      { id: "sk-17-2", title: "Code khung chat và cách giấu nhẹm API Key", duration: "15 phút đọc", type: "practice", content: L16_18.sk_17_2 }
+    ]
+  },
+  {
+    id: "course-l18-vibe-saas",
+    title: "Level 18: Tự làm phần mềm quản lý công việc (SaaS) cho đội nhóm",
+    description: "Khóa học đồ án tốt nghiệp. Làm bảng điều khiển (Dashboard) chia việc cho nhân viên, tích hợp hệ thống Đăng nhập / Phân quyền bảo mật.",
+    thumbnailUrl: "/courses/office_level_3.png",
+    youtubeVideoId: "dQw4w9WgXcQ",
+    targetRoleIds: ["r-director", "r-admin", "r-hr"],
+    targetToolIds: ["t-cursor", "t-supabase", "t-vercel"],
+    tier: "EXPERT",
+    totalSessions: 2,
+    skills: [
+      { id: "sk-18-1", title: "Chìa khóa làm phần mềm: Bộ quy tắc CRUD (Thêm, Đọc, Sửa, Xóa)", duration: "10 phút đọc", type: "theory", content: L16_18.sk_18_1 },
+      { id: "sk-18-2", title: "Làm hệ thống Mật khẩu (Login) và chia quyền cho Giám đốc/Nhân viên", duration: "20 phút đọc", type: "practice", content: L16_18.sk_18_2 }
     ]
   }
 ];
