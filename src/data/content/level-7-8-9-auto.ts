@@ -1,88 +1,89 @@
 export const sk_7_1 = `
 ### 🎯 Mục tiêu bài học
-Quẳng hết mớ lý thuyết khô khan về "Tự động hóa", "Webhook", "API" đi. Không biết thì cứ đem tài liệu hỏi thẳng AI!
+Từ bỏ tư duy "Nối dây kéo thả" (Trigger - Action) nhàm chán của năm cũ. Chào mừng đến kỷ nguyên của **Nhân sự Ảo Tự trị (Autonomous Agents)** trên nền tảng Lindy.ai hoặc n8n Agent.
 
-### ⚙️ Nhờ AI dạy cách bấm nút (n8n/Zapier)
-Sếp yêu cầu bạn: "Làm sao để khi có khách điền Form, thông tin tự chạy vào Google Sheets?". Bạn chưa dùng n8n bao giờ. Thay vì lên mạng đọc hướng dẫn lằng nhằng, hãy mở ChatGPT lên.
+### ⚙️ Tạo Nhân sự Ảo thay vì tạo Webhook
+Ngày xưa, để chuyển dữ liệu từ Facebook sang Google Sheets, bạn phải nối hàng tá node. Nếu cấu trúc thay đổi, luồng sẽ bị gãy (Break).
 
-**Prompt (Meta-prompting):**
-> *"Tôi muốn tự động hóa việc lấy dữ liệu từ Google Form sang Google Sheets bằng nền tảng n8n. Tôi là dân văn phòng không biết lập trình, không hiểu API hay Webhook là gì.*
-> *Đóng vai chuyên gia tự động hóa, hãy giải thích khái niệm cho tôi bằng ngôn ngữ bình dân (ví dụ như ống nước, bưu điện). Sau đó, hãy cầm tay chỉ việc, hướng dẫn tôi từng bước MỘT: bấm vào nút nào, chọn cái gì đầu tiên."*
+**Năm 2026 (Với Lindy.ai):**
+1. Bạn tạo một Agent tên là "Nhân viên CSKH".
+2. Cấp cho nó quyền (Tool) truy cập Facebook Fanpage và Google Sheets của công ty.
+3. **Lệnh bằng Tiếng Việt (Prompt):** *"Nhiệm vụ của bạn là trực Facebook. Bất cứ khi nào có người nhắn tin hỏi mua hàng, hãy nói chuyện với họ, xin số điện thoại, và tự động ghi tên họ vào file Google Sheets này. Nếu họ chửi rủa, tự động block."*
 
-AI sẽ tự động dịch các khái niệm phức tạp thành "ngôn ngữ con người" và chỉ cho bạn cách kéo thả từng bước một!
+Xong! Bạn không cần kéo một cái dây nào. AI sẽ tự động lắng nghe, suy nghĩ lúc nào thì cần xin số điện thoại, và lúc nào thì cần dùng quyền mở Google Sheets để ghi vào!
 `;
 
 export const sk_7_2 = `
 ### 🎯 Mục tiêu bài học
-Gặp tài liệu kỹ thuật toàn mã code khó hiểu của các nền tảng (như Facebook API, Shopee API)? Cứ vứt hết vào não ChatGPT!
+Cho AI đọc các Tài liệu Kỹ thuật (API Docs) bằng **Agentic n8n**. AI tự đọc, tự hiểu và tự lắp ráp bộ công cụ cho chính mình.
 
-### 🌐 Dịch tài liệu Kỹ thuật bằng AI
-Để 2 phần mềm nói chuyện được với nhau, chúng ta thường phải đọc "Tài liệu API" (API Documentation). Dân không chuyên nhìn vào là tẩu hỏa nhập ma ngay.
+### 🌐 AI tự dạy AI làm việc
+Nếu hệ thống công ty bạn dùng một phần mềm đặc thù (VD: Phần mềm Kế toán MISA) chưa có sẵn kết nối trong Lindy hay n8n.
 
-**Cách xử lý:**
-1. Copy toàn bộ cái trang web Tài liệu API đó (Đầy những chữ ngoằn ngoèo).
-2. Dán vào ChatGPT.
-3. **Prompt (CoT):** *"Đây là tài liệu API của Facebook. Tôi muốn lấy danh sách bài viết. Đừng giải thích lằng nhằng, hãy SUY NGHĨ TỪNG BƯỚC, nhặt ra đúng cái Đường Link tôi cần nhập vào n8n, và chỉ cho tôi xem tôi cần copy cái Mã bảo mật (Token) ở đâu."*
+**Cách xử lý 2026:**
+1. Copy toàn bộ tài liệu API của MISA quăng vào node \`AI Tool Creator\`.
+2. Ra lệnh: *"Đây là tài liệu API của MISA. Hãy tự động đọc, phân tích các điểm cuối (Endpoints) và TỰ SINH RA (Generate) một công cụ kết nối mới. Tôi muốn công cụ này có khả năng Tạo Hóa đơn."*
 
-Thế là xong! Bạn chẳng cần đi học một khóa lập trình nào cả.
+Chỉ 1 phút sau, AI sẽ tự động đẻ ra một Node tên là "Tạo Hóa đơn MISA". Bạn lôi nó ra xài luôn, không cần viết một dòng mã Code hay Token loằng ngoằng nào!
 `;
 
 export const sk_8_1 = `
 ### 🎯 Mục tiêu bài học
-Tự động gom thông tin khách hàng (Lead) về một chỗ bằng cách nhờ AI hướng dẫn setup luồng n8n.
+Chăm sóc khách hàng kiểu 2026: Agent không chỉ lấy tên, số điện thoại mà còn tự đánh giá mức độ tiềm năng (Scoring) dựa trên ngữ cảnh trò chuyện.
 
-### 📥 Kéo dữ liệu khách hàng vào Google Sheets
-Bây giờ, bạn bắt đầu làm thực hành. Bạn đã mở n8n lên, kéo node Webhook và node Google Sheets ra. Nhưng đến phần điền thông tin (Mapping) thì bạn rối.
+### 📥 Đặc vụ phân tích Lead (Khách hàng tiềm năng)
+Khách hàng không bao giờ nhắn tin theo một form chuẩn. Họ sẽ chat: *"E ơi, a thấy áo bên e đẹp, mà đắt quá, có giảm giá ko, sđt a 0912..."*
 
-**Đừng tự mò mẫm, hãy nhờ AI:**
-> *"Tôi đang ở trong n8n. Tôi có node Webhook nhận dữ liệu là {Tên, Số điện thoại}. Tôi muốn điền nó vào Node Google Sheets. Tôi phải bấm vào chỗ nào để nối dây chữ 'Tên' bên này sang cột 'Tên' bên kia? Hãy hướng dẫn tôi thao tác kéo thả bằng chuột."*
+**Quy trình của Agent:**
+- Agent tự động lọc mớ văn bản lộn xộn.
+- Dùng **CoT (Chain of Thought)** ngầm định: Suy nghĩ xem ông này đang phàn nàn giá hay thực sự muốn mua?
+- Cập nhật vào Google Sheets:
+  - Cột Tên: (Tự suy luận hoặc hỏi lại)
+  - Cột Số điện thoại: 0912...
+  - Cột Phân loại: Khách quan tâm nhưng nhạy cảm về giá (HOT LEAD).
 
-Làm theo đúng những gì AI chỉ, thông tin khách hàng sẽ lập tức chui tọt vào file Excel của bạn ngay khi họ bấm đăng ký!
+Đó là cách AI tự động hóa dựa trên Suy luận (Reasoning) chứ không dựa trên quy tắc tĩnh!
 `;
 
 export const sk_8_2 = `
 ### 🎯 Mục tiêu bài học
-Để AI tự viết thư cảm ơn cá nhân hóa và tự động gửi đi ngay khi khách hàng vừa đăng ký.
+Tạo đặc vụ tự động Soạn, Phê duyệt (Approval) và Gửi Email bằng cơ chế **Human-in-the-loop (Có con người kiểm duyệt)**.
 
-### 💌 AI Tự soạn và Gửi Email chăm sóc
-Bạn nối thêm Node Gmail vào sau Node Google Sheets ở luồng trước. Thay vì gửi một cái email khô khan kiểu "Cảm ơn bạn đã đăng ký", hãy nhờ AI làm cho nó sinh động.
+### 💌 Email Agent (Vừa Tự trị vừa An toàn)
+Bỏ AI tự chạy gửi thư cho khách thì rất rủi ro. n8n 2026 có cơ chế **Wait for Human Approval**.
 
-1. **Gắn thêm Node OpenAI** vào giữa Sheets và Gmail.
-2. Dùng công thức **RTF (Role-Task-Format)** đã học ở Level 1 vào Node OpenAI:
-> *"Role: Nhân viên CSKH ngọt ngào.*
-> *Task: Viết thư cảm ơn khách tên là {{Tên khách hàng}} vừa đăng ký nhận bản tin.*
-> *Format: Ngắn 50 chữ, xưng hô 'em' và 'anh/chị', thân thiện."*
-3. Đẩy kết quả (Output) của Node AI đó vào Node Gmail để gửi đi.
+1. Đặc vụ tự động soạn 1 email xin lỗi một khách hàng VIP vừa phàn nàn.
+2. Thay vì gửi đi, nó tự động nhắn 1 tin nhắn vào ứng dụng Slack/Zalo của bạn: *"Sếp ơi, em đã soạn xong thư gửi anh X. Sếp có duyệt để gửi không?"* kèm theo nội dung.
+3. Bạn ấn nút **"Approve" (Duyệt)** ngay trên điện thoại.
+4. AI nhận được lệnh duyệt, lúc đó nó mới nhả thư đi vào Hòm thư khách.
 
-Thế là mỗi khách hàng sẽ nhận được một bức thư có văn phong riêng biệt, không ai giống ai!
+Bạn hoàn toàn làm chủ AI, bắt AI làm lính phục vụ tận răng!
 `;
 
 export const sk_9_1 = `
 ### 🎯 Mục tiêu bài học
-Dạy AI làm cổng gác cửa: Tự đọc hộp thư công ty và gắn nhãn phân loại (Thư rác, Thư hỏi giá, Thư khiếu nại).
+Sử dụng AI Memory (Bộ nhớ dài hạn) để phân loại email thông minh. AI nhớ được lịch sử giao dịch của khách hàng cách đây 3 tháng.
 
-### 🧠 Phân loại Email (Zero-shot Prompting)
-Mỗi ngày hòm thư nhận hàng trăm lá thư thập cẩm. Hãy đẩy tất cả vào ChatGPT.
+### 🧠 Bộ não của Hộp thư (Long-term Memory)
+Đừng bắt AI đoán mò. Các Agent 2026 được tích hợp bộ nhớ Vector (Vector Database / RAG).
 
-**Prompt trong Node OpenAI:**
-> *"Bạn là hệ thống phân loại hộp thư tự động. Đọc nội dung thư này: {{Nội dung thư}}.*
-> *Chỉ trả về ĐÚNG MỘT TỪ trong 3 từ sau: [KHIEU_NAI], [HOI_GIA], [RAC]. Không giải thích."*
+- Khách hàng email: *"Gửi tôi lại hóa đơn lần trước nhé."*
+- Hệ thống Agent đọc thư. Nếu là hệ thống cũ (2024), nó sẽ không hiểu "lần trước" là lần nào.
+- Trợ lý AI 2026 sẽ chui vào Bộ nhớ Vector, tự tìm kiếm lịch sử: *"À, khách hàng này tên Tèo, 3 tháng trước mua 1 cái Máy Lạnh. Hóa đơn mã #123."*
+- Sau đó, nó tự động chui vào phần mềm xuất hóa đơn, xuất PDF và tự động gửi lại cho khách.
 
-Bạn ép AI chỉ trả về đúng cái mã lệnh đó (Zero-shot). Sau đó dùng Node \`Switch\` của n8n (hoặc Router của Make):
-- Nhánh 1: Nếu AI trả chữ [KHIEU_NAI] -> Báo động cho sếp.
-- Nhánh 2: Nếu AI trả chữ [RAC] -> Thẳng tay xóa.
+Không cần bạn đụng dù chỉ một ngón tay!
 `;
 
 export const sk_9_2 = `
 ### 🎯 Mục tiêu bài học
-Không chỉ phân loại, ép AI tự động soạn sẵn một bản nháp trả lời (Draft) trong hòm thư, bạn chỉ cần liếc mắt rồi bấm nút Gửi.
+Xây dựng **Routing Agent** (Đặc vụ Phân luồng) - Ông trùm của các con AI khác. 
 
-### ✍️ AI tự làm Thư ký Soạn nháp (Ứng dụng CoT)
-Với nhánh thư [HOI_GIA], đừng để nó nằm im. Hãy dùng kỹ thuật Chuỗi tư duy (Chain of Thought).
+### 🔀 Ông trùm AI phân việc cho Đệ tử AI
+Khi công ty lớn lên, bạn có rất nhiều phòng ban.
+Trong n8n, bạn thiết lập 1 Agent đứng ở cổng chính (Hộp thư công ty).
+- Khách gửi thư Khiếu nại kỹ thuật -> Routing Agent đọc và ra lệnh: *"Alo, Đặc vụ Kỹ Thuật (Tech Agent), ca này của chú, xử lý đi."* Tech Agent sẽ tự động kiểm tra server, tra cứu tài liệu code và trả lời khách.
+- Khách hỏi mua sỉ -> Routing Agent gọi: *"Đặc vụ Sales (Sales Agent), có khách sộp. Mày lục bảng giá đại lý và làm việc với người ta nhé."*
 
-**Prompt cho Node OpenAI thứ hai:**
-> *"Đây là email hỏi giá của khách. Dưới đây là bảng giá công ty tôi [Dán bảng giá].*
-> *Đừng viết trả lời ngay. HÃY SUY NGHĨ TỪNG BƯỚC: Phân tích xem khách đang hỏi mua gói nào -> Tra bảng giá xem giá bao nhiêu -> Cuối cùng mới viết một bức thư trả lời lịch sự, báo giá chính xác gói đó."*
-
-Sau đó, cấu hình Node Gmail là \`Create Draft\` (Tạo bản nháp). Sáng ra mở mail lên, bạn sẽ thấy hàng chục cái email đã được AI soạn sẵn, phân tích giá rổ chuẩn xác từng đồng, chỉ chờ bạn bấm "Send"!
+Đây là kiến trúc của một Hệ sinh thái Công ty Nhân sự Ảo!
 `;
