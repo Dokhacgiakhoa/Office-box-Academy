@@ -1,89 +1,86 @@
 export const sk_16_1 = `
 ### 🎯 Mục tiêu bài học
-Hiểu logic cốt lõi của một cái "Giỏ hàng" trực tuyến để dạy AI code giao diện mua bán chuẩn xác.
+Nhờ AI tự xây dựng luồng "Giỏ hàng" (Cart) phức tạp mà bạn không cần phải tính toán bất kỳ một con số nào.
 
-### 🛒 Cơ chế của Giỏ Hàng (Cart)
-Làm thế nào mà khi bấm "Thêm vào giỏ", con số góc màn hình lại tự nhảy lên? Bí kíp nằm ở **Trạng thái (State)**.
+### 🛒 Cơ chế Giỏ hàng (Nhờ AI tính tiền)
+Web có giỏ hàng (E-commerce) phức tạp hơn Web thường ở chỗ nó phải tự cộng trừ tiền khi khách thêm món.
 
-- Bạn cần bảo AI tạo ra một cái "Rổ điện tử".
-- Khi khách bấm chọn 1 Cốc trà sữa, hệ thống ném cái Cốc đó vào Rổ.
-- AI sẽ tự động điếm số đồ trong Rổ và nhân với Giá tiền để in ra chữ "Tổng thanh toán: 50.000đ".
+**Prompt (Meta-prompting):**
+> *"Tôi muốn làm tính năng Giỏ hàng cho web bán Trà sữa. Tôi không rành về thuật toán cộng trừ tiền hay tính tổng phụ phí.*
+> *Đóng vai Kỹ sư trưởng, bạn hãy thiết kế cho tôi cơ chế Giỏ hàng: Cần hiển thị những con số gì (Tạm tính, Phí ship, Tổng thanh toán)? Khi khách ấn 'Dấu cộng' thì tiền nhảy như thế nào? Sau khi tôi duyệt phương án của bạn, hãy code nó ra giao diện bằng React."*
 
-**Câu lệnh (Prompt) yêu cầu AI code:**
-> "Tôi muốn làm web bán Trà sữa. Hãy dựng giao diện có 4 sản phẩm mẫu (có ảnh, giá tiền). Mỗi sản phẩm có nút 'Thêm vào giỏ'.
-> Ở góc trên bên phải có Icon Giỏ hàng hiện số lượng. Khi bấm vào Icon đó, nó sẽ bật lên một bảng liệt kê các món đã chọn, tính tổng tiền, và có một nút 'Thanh toán ngay'. Giao diện màu trà sữa trân châu nhìn ngon mắt."
+Bạn đẩy phần "suy nghĩ logic" cho AI. Nó sẽ tự lập bảng tính toán và tự code ra một giỏ hàng chính xác đến từng đồng.
 `;
 
 export const sk_16_2 = `
 ### 🎯 Mục tiêu bài học
-Kết nối cửa hàng với nơi cất giữ thông tin (Database) để bạn thực sự biết khách hàng là ai và họ đặt món gì.
+Gặp khái niệm hóc búa "Cơ sở dữ liệu" (Database / Supabase), hãy ép AI phải cầm tay chỉ việc hướng dẫn bạn cách cất đơn hàng.
 
-### 💾 Lưu trữ Đơn hàng (Database)
-Web đẹp đến đâu mà khách mua xong bạn không biết họ tên gì, ở đâu thì cũng vứt! Ta cần một Cơ sở dữ liệu (Ví dụ: Supabase, Firebase).
+### 💾 Kết nối Database bằng Meta-Prompting
+Mua hàng xong thì đơn đi đâu? Phải chui vào Database (như Supabase).
 
-Hãy coi Database như một file Excel khổng lồ trên mạng không bao giờ bị mất dữ liệu.
-1. Sau khi khách bấm "Thanh toán ngay" ở bước trên, hãy bảo AI: *"Hiển thị ra một cái Form bắt khách điền Tên, Số điện thoại và Địa chỉ giao hàng."*
-2. Ra lệnh tiếp: *"Khi khách bấm Xác nhận, hãy viết code gửi các thông tin này (kèm danh sách món ăn) lưu thẳng vào bảng 'Orders' trên Supabase."*
+**Prompt (Kỹ thuật CoT):**
+> *"Khách bấm Thanh toán xong, tôi muốn lưu Tên khách và Món đồ họ mua vào Cơ sở dữ liệu Supabase. Nhưng tôi chưa dùng Supabase bao giờ.*
+> *HÃY SUY NGHĨ TỪNG BƯỚC:* 
+> *1. Hướng dẫn tôi vào trang web Supabase bấm tạo bảng tên là gì, có các cột gì?*
+> *2. Chỉ tôi chỗ lấy link kết nối (API URL).*
+> *3. Code đoạn Javascript để khi bấm nút Thanh toán, nó tự động lấy dữ liệu trên web bắn thẳng vào Supabase."*
 
-Giờ đây, bạn chỉ cần mở trang quản trị Supabase ra là thấy đơn hàng nhảy tinh tinh liên tục. Chúc mừng "Chủ tịch" của một cửa hàng E-commerce thực thụ!
+Thay vì tự lên mạng tìm hiểu xem Database là gì, bạn biến AI thành ông thầy giáo IT tận tụy nhất thế giới!
 `;
 
 export const sk_17_1 = `
 ### 🎯 Mục tiêu bài học
-Hiểu cách một Website "nói chuyện" được với bộ não của ChatGPT thông qua một đường ống dẫn vô hình tên là API.
+Nhúng bộ não của ChatGPT vào website của bạn. Không biết API hoạt động ra sao? Hãy gọi AI ra tra khảo!
 
-### 🧠 Nguyên lý hoạt động của Bot tư vấn
-Khi khách hàng nhắn tin vào Khung chat trên web của bạn, đây là những gì diễn ra ở hậu trường:
+### 🧠 Tự cắm ống API ChatGPT vào Web
+Bạn muốn website của mình có một nút Chat ở góc phải, khách nhắn vào thì có AI trả lời ngay.
 
-1. **Khung Chat (Giao diện):** Nơi khách hàng gõ chữ "Tư vấn cho tôi đôi giày size 42".
-2. **Ống dẫn (API):** Website sẽ lấy câu nói đó, nhét vào một cái phong bì, rồi gửi hỏa tốc thẳng đến máy chủ của OpenAI (Nơi chứa bộ não ChatGPT).
-3. **Suy nghĩ & Trả lời:** ChatGPT mở phong bì ra đọc, suy nghĩ mất 2 giây, rồi viết câu trả lời: "Dạ bên em đang có mẫu giày X rất hợp với anh/chị". Nó nhét lại vào phong bì gửi về.
-4. **Hiển thị:** Website nhận được thư và in ra dòng chữ đó cho khách xem.
+**Prompt (Dùng AI hỏi AI):**
+> *"Tôi muốn tự nhúng ChatGPT vào trang web của mình. Tôi biết tôi cần lấy một cái gọi là API Key từ OpenAI, nhưng tôi không biết cơ chế hoạt động của nó thế nào.*
+> *Hãy giải thích thật dễ hiểu cho một người không biết code: API Key là gì? Khung chat trên web của tôi làm sao 'nói chuyện' được với máy chủ của OpenAI? Sau khi tôi hiểu, hãy hướng dẫn tôi code chức năng này."*
 
-Bằng cách này, website của bạn tuy nhỏ bé nhưng lại sở hữu trí tuệ của AI giỏi nhất thế giới!
+AI sẽ tự động giải thích API như cái ống nước truyền tin nhắn, và giúp bạn lắp ráp ống nước đó từ web của bạn sang máy chủ của nó!
 `;
 
 export const sk_17_2 = `
 ### 🎯 Mục tiêu bài học
-Lấy chiếc "Chìa khóa" (API Key) từ OpenAI, lắp vào khung chat để nhúng Bot vào website thành công và an toàn.
+Mất cảnh giác với API Key có thể khiến bạn mất hàng triệu đồng. Hãy nhờ AI chỉ cách "giấu nhẹm" mật mã này.
 
-### 🔑 Lắp ráp Chatbot và Giấu Chìa khóa
-Để ChatGPT chịu trả lời thư của bạn (chứ không phải người lạ), bạn cần một thẻ VIP gọi là API Key.
+### 🔑 Giấu Chìa khóa (API Key) an toàn
+API Key giống như thẻ ATM của bạn. Nếu bạn ném nó tơ hơ trên trang web, người khác ấn F12 sẽ ăn cắp được và dùng ChatGPT bằng tiền của bạn.
 
-1. **Lấy API Key:** Truy cập \`platform.openai.com\`, tạo một cái **Secret Key** (Ví dụ: \`sk-proj-xyz...\`).
-2. **Nhờ AI Code Khung Chat:** Dùng Prompt: *"Viết cho tôi một khung Chatbot nhỏ ở góc phải dưới cùng màn hình. Khi gõ chữ bấm Gửi thì dùng Javascript gọi API đến OpenAI bằng cái Key này [Dán Key của bạn vào]."*
-3. **Bảo mật Chìa khóa (Quan trọng):** ĐỪNG BAO GIỜ dán API Key thẳng vào đoạn code, vì người khác bấm F12 là ăn cắp được ngay. Kẻ gian có thể dùng thẻ VIP của bạn xài chùa khiến bạn bị trừ sạch tiền!
-   - Hãy bảo AI: *"Hãy chỉ cho tôi cách cất giấu cái API Key này vào file biến môi trường \`.env\` và cách thiết lập trên Vercel để không bị lộ."*
+**Prompt (CoT - Bắt bệnh bảo mật):**
+> *"Bạn vừa code cho tôi khung Chatbot gọi API OpenAI. Nhưng tôi sợ nếu tôi nhét API Key thẳng vào đoạn code này, hacker sẽ ăn cắp được.*
+> *HÃY SUY NGHĨ TỪNG BƯỚC: Chỉ cho tôi cách tạo file biến môi trường (\`.env\`) để giấu Key ở dưới máy (Local), và cách giấu Key khi tôi tung web này lên Vercel (Production) để an toàn tuyệt đối 100%."*
 
-Vậy là bạn đã có một nhân viên Sale 24/7 siêu việt, tư vấn không biết mệt!
+Và thế là chuyên gia bảo mật AI sẽ hướng dẫn bạn cất kỹ chiếc thẻ ATM của mình một cách hoàn hảo!
 `;
 
 export const sk_18_1 = `
 ### 🎯 Mục tiêu bài học
-Bóc tách 4 chữ cái quyền lực nhất giới lập trình: CRUD. Khái niệm cốt lõi để làm phần mềm quản trị (SaaS).
+Nắm thóp mọi phần mềm quản lý doanh nghiệp (SaaS) nhờ việc yêu cầu AI phân tích 4 chữ cái CRUD.
 
-### 🔄 Luồng dữ liệu (CRUD)
-Phần mềm quản lý công việc của đội nhóm (To-do App) nghe thì nguy hiểm, nhưng thực chất nó xoay quanh 4 thứ (gọi tắt là **CRUD**):
+### 🔄 Dùng AI lập sơ đồ CRUD
+Phần mềm quản lý công việc, quản lý kho, quản lý nhân sự... tất cả đều là **CRUD** (Tạo mới - Xem - Cập nhật - Xóa). Đừng vội nhào vào code ngay!
 
-- **C - Create (Tạo mới):** Bạn phân công 1 việc mới cho nhân viên.
-- **R - Read (Xem):** Nhân viên mở App lên nhìn thấy danh sách việc cần làm.
-- **U - Update (Cập nhật):** Nhân viên bấm nút "Đã xong" để chuyển trạng thái công việc.
-- **D - Delete (Xóa):** Sếp xóa bỏ một dự án bị hủy.
+**Prompt (Thiết kế hệ thống):**
+> *"Tôi muốn làm phần mềm To-do List (Quản lý công việc) cho nhân viên công ty. Trước khi code, hãy đóng vai Kiến trúc sư Phần mềm (Software Architect).*
+> *Hãy kẻ cho tôi một cái bảng phân tích 4 chức năng CRUD (Create, Read, Update, Delete) của ứng dụng này. Tính năng 'Update' nên là Đổi trạng thái hay là Sửa nội dung? Hãy đề xuất cho tôi thiết kế hợp lý nhất."*
 
-Khi ra lệnh cho AI code, hãy đi từ từ: *"Làm cho tôi cái danh sách hiển thị việc (Read) trước đã. Chạy ngon rồi thì làm thêm cái Nút Thêm Việc (Create) nhé."*
+Một lần nữa, "Vô chiêu thắng hữu chiêu". Bạn nhường phần suy nghĩ kiến trúc cho AI. Nó nghĩ xong, bạn gật đầu thì nó mới được quyền code!
 `;
 
 export const sk_18_2 = `
 ### 🎯 Mục tiêu bài học
-Nhờ AI dựng bảng điều khiển (Dashboard) sang trọng và làm tính năng "Ai làm việc nấy, không được dòm ngó nhau".
+Tự làm hệ thống Đăng nhập (Login) và Phân quyền (Nhân viên / Giám đốc). Không biết code? AI sẽ lo!
 
-### 📊 Dựng Dashboard & Cấp Quyền Truy cập
-Phần mềm nội bộ thì cần phải phân quyền rõ ràng, Sếp nhìn khác nhân viên nhìn.
+### 📊 Phân quyền cực khó? Cứ để AI lo!
+Trong phần mềm nội bộ, nhân viên nào chỉ được thấy việc của người đó. Khái niệm này gọi là RLS (Row Level Security). Nghe là thấy nhức đầu.
 
-1. **Dựng Giao diện (Prompt):**
-> "Viết giao diện Dashboard quản lý công việc. Có Cột menu bên trái. Ở giữa có 3 ô tổng kết to: Tổng số việc, Việc đã xong, Việc trễ hạn. Ở dưới là một cái Bảng (Table) liệt kê các đầu việc. Làm giao diện màu Trắng - Xám nhạt nhìn sang trọng."
-2. **Chức năng Đăng nhập:** Bảo AI gắn thêm màn hình Đăng nhập (Email/Mật khẩu). Không có tài khoản thì không được vào xem Bảng điều khiển.
-3. **Phân Quyền:** Ra lệnh cho AI: *"Hãy lập trình chức năng kiểm tra: Nếu người đăng nhập là Nhân viên, chỉ hiển thị những Công việc được giao cho họ. Nếu là Giám đốc, hiển thị toàn bộ."*
+**Prompt (Meta-prompting Đỉnh cao):**
+> *"Giao diện web đã xong. Bây giờ tôi cần tính năng Đăng nhập. Nhưng tôi muốn có Phân quyền: Đứa nhân viên A đăng nhập vào thì CHỈ THẤY công việc của A. Giám đốc đăng nhập vào thì THẤY TẤT CẢ.*
+> *Tôi sử dụng cơ sở dữ liệu Supabase. Tôi hoàn toàn mù mờ về bảo mật. Bạn hãy chỉ tôi RÕ RÀNG: Tôi phải gõ cái lệnh quỷ quái gì vào Supabase để thiết lập được quyền bảo mật này? Hãy hướng dẫn như đang dạy trẻ con lớp 5."*
 
-Chúc mừng! Bạn đã hoàn thành khóa học Vibe Coding cuối cùng. Bạn chính thức có khả năng tự mình đẻ ra mọi phần mềm mình muốn mà không cần đi thuê kỹ sư IT nữa!
+Chúc mừng! Bạn đã tốt nghiệp Lớp Vibe Coding xuất sắc nhất. Chẳng cần thuộc một dòng code nào, bạn vẫn thiết kế được những hệ thống trị giá hàng chục nghìn đô la chỉ bằng cách TỰ TIN RA LỆNH cho máy móc!
 `;

@@ -1,95 +1,83 @@
 export const sk_4_1 = `
 ### 🎯 Mục tiêu bài học
-Nhờ AI dọn dẹp các bảng dữ liệu lộn xộn, tự động tách/gộp cột mà không cần còng lưng gõ từng ô Excel.
+Vứt bỏ các hàm VLOOKUP, IF rối rắm. Dùng kỹ thuật CoT (Chain of Thought) để ép AI làm sạch bảng dữ liệu Excel rác.
 
-### 🧹 Làm sạch Dữ liệu (Data Cleaning)
-Dữ liệu khách hàng tải từ phần mềm về thường rất rác (chứa ký tự lạ, sai định dạng ngày tháng, dính khoảng trắng).
+### 🧹 Làm sạch Dữ liệu (Ứng dụng CoT)
+Dữ liệu khách hàng tải về thường dính khoảng trắng, sai ngày tháng. Đừng tự sửa, hãy nhờ ChatGPT (Advanced Data Analysis) hoặc DeepSeek.
 
-**Cách làm với ChatGPT (Advanced Data Analysis) hoặc DeepSeek:**
-1. Lưu file Excel thành đuôi \`.csv\` hoặc \`.xlsx\` và tải (Upload) thẳng vào AI.
-2. **Ra lệnh (Prompt):**
-> "Đây là file danh sách khách hàng bị lỗi định dạng. Hãy xử lý các bước sau giúp tôi:
-> 1. Xóa tất cả khoảng trắng bị thừa ở cột 'Tên'.
-> 2. Viết hoa chữ cái đầu tiên của cột 'Tên'.
-> 3. Tách cột 'Họ và Tên' thành 2 cột riêng biệt: 'Họ' và 'Tên'.
-> 4. Sửa định dạng cột 'Ngày sinh' về chuẩn DD/MM/YYYY.
-> Xử lý xong hãy xuất lại thành 1 file Excel để tôi tải về."
+1. Tải file Excel lên AI.
+2. **Prompt:**
+> *"Đây là file thông tin khách hàng đang bị lỗi định dạng từ hệ thống cũ. Hãy ĐÓNG VAI chuyên gia Data. Bạn hãy SUY NGHĨ TỪNG BƯỚC: Đầu tiên kiểm tra lỗi khoảng trắng, sau đó kiểm tra lỗi ngày tháng, cuối cùng tách cột Họ Tên. Cứ xử lý xong 1 bước thì báo cáo cho tôi, không được làm gộp. Cuối cùng xuất lại file Excel sạch cho tôi."*
 
-Chỉ 1 câu lệnh, AI sẽ tự động chạy code ngầm và trả cho bạn file Excel sạch sẽ, bóng lộn!
+Bằng cách bắt AI "suy nghĩ từng bước", bạn sẽ tránh được việc AI tự xóa nhầm cột dữ liệu quan trọng của bạn.
 `;
 
 export const sk_4_2 = `
 ### 🎯 Mục tiêu bài học
-Làm phân tích báo cáo, vẽ biểu đồ từ số liệu thô chỉ bằng cách "nói chuyện" với AI mà không cần giỏi hàm Excel hay Pivot Table.
+Nhờ AI phân tích số liệu kinh doanh và tự động vẽ biểu đồ mà không cần học Pivot Table.
 
-### 📊 Phân tích Số liệu & Vẽ biểu đồ
-Sếp quẳng cho bạn file doanh thu 12 tháng của 5 cửa hàng và yêu cầu: "Tìm xem nguyên nhân vì sao tháng 6 giảm doanh thu".
+### 📊 Vẽ Biểu đồ bằng Meta-Prompting
+Sếp giao cho bạn 1 bảng doanh thu 12 tháng và bắt bạn phân tích nguyên nhân tháng 6 giảm. Bạn chả biết nên vẽ biểu đồ cột hay biểu đồ tròn. Đừng lo!
 
-1. Tải file số liệu lên AI.
-2. **Ra lệnh (Prompt):**
-> "Đóng vai chuyên gia Phân tích Dữ liệu (Data Analyst). Hãy đọc file doanh thu đính kèm.
-> 1. Vẽ cho tôi 1 biểu đồ đường (Line chart) thể hiện xu hướng doanh thu của 5 cửa hàng qua 12 tháng. Trục X là tháng, Trục Y là số tiền.
-> 2. Phân tích dữ liệu và chỉ ra 3 nguyên nhân cốt lõi khiến cửa hàng số 2 sụt giảm doanh thu mạnh vào tháng 6.
-> 3. Kẻ một bảng dự phóng doanh thu cho 3 tháng tiếp theo."
+**Prompt (Meta-prompting):**
+> *"Tôi tải lên file doanh thu 12 tháng. Tôi muốn tìm nguyên nhân vì sao tháng 6 giảm sút, nhưng tôi dốt toán và không biết nên vẽ biểu đồ gì cho trực quan. Bạn hãy làm chuyên gia, tự quyết định loại biểu đồ phù hợp nhất, tự vẽ nó ra, và giải thích cho tôi nguyên nhân bằng ngôn ngữ đơn giản nhất."*
 
-AI sẽ tự động tính toán, vẽ ra biểu đồ tuyệt đẹp trực tiếp trên màn hình chat và báo cáo nguyên nhân y như một chuyên gia!
+AI sẽ tự động chọn biểu đồ đường (Line chart) hoặc cột (Bar chart), chạy code vẽ ra hình và viết lời giải thích dễ hiểu như đang nói chuyện với bạn.
 `;
 
 export const sk_5_1 = `
 ### 🎯 Mục tiêu bài học
-Nắm được ngôn ngữ của "Thiết kế" để ra lệnh cho các AI sinh ảnh (Midjourney, Flux, ChatGPT Plus) vẽ đúng hình bạn tưởng tượng trong đầu.
+Áp dụng công thức CREATE từ Level 1 để vẽ ra những bức ảnh Mockup sản phẩm đẹp như Studio.
 
-### 🎨 Công thức vẽ ảnh "Ma thuật"
-Để AI vẽ đẹp, bạn không thể chỉ gõ: "Vẽ cho tôi con mèo". Hãy dùng công thức sau:
+### 🎨 Giám đốc Nghệ thuật AI (Midjourney/Flux)
+Khi muốn vẽ ảnh sản phẩm (Ví dụ: Một lọ nước hoa), hãy bám sát sườn CREATE:
 
-**[Chủ thể chính] + [Hành động/Bối cảnh] + [Phong cách nghệ thuật] + [Góc máy & Ánh sáng]**
+- **C (Concept):** Lọ nước hoa thủy tinh cao cấp.
+- **R (Resolution):** Chụp cận cảnh (Close-up).
+- **E (Environment):** Đặt trên tảng đá rêu phong cạnh thác nước.
+- **A (Atmosphere):** Ánh sáng hắt từ phía sau (Backlight) làm lấp lánh nước.
+- **T (Tone):** Tông màu xanh lá mát mẻ, kỳ bí.
+- **E (Extra):** 8K, cinematic lighting, photorealistic.
 
-*Ví dụ:*
-> "Một con mèo Anh lông ngắn đeo kính râm (Chủ thể), đang ngồi trên chiếc ghế sofa da uống cà phê (Hành động/Bối cảnh), phong cách hoạt hình Pixar 3D (Phong cách), góc máy chụp cận cảnh từ dưới lên, ánh sáng rực rỡ từ cửa sổ chiếu vào (Góc máy & Ánh sáng)."
-
-Chỉ cần bám sát công thức này, ảnh của bạn tạo ra sẽ luôn sắc nét và đầy tính nghệ thuật.
+Ghép lại bằng tiếng Anh (hoặc nhờ ChatGPT dịch), bạn dán vào Midjourney và sẽ nhận được một tác phẩm triệu đô!
 `;
 
 export const sk_5_2 = `
 ### 🎯 Mục tiêu bài học
-Dùng AI thiết kế Banner quảng cáo sản phẩm, tờ rơi, bài đăng Facebook một cách chuyên nghiệp.
+Bạn bí ý tưởng? Không biết tiếng Anh? Không thuộc công thức CREATE? Hãy dùng AI để trị AI!
 
-### 📸 Tạo ảnh Quảng cáo Sản phẩm
-Đối với dân kinh doanh/Marketing, việc tạo ảnh mockup sản phẩm là vô cùng quan trọng.
+### 💡 Meta-Prompting trong Vẽ Ảnh
+Thay vì cố nặn chữ để mô tả ảnh, bạn hãy mở ChatGPT lên và ra lệnh:
 
-**Mẫu câu lệnh (Prompt) dùng cho Midjourney hoặc Flux:**
-> "Ảnh chụp sản phẩm nghệ thuật: Một lọ nước hoa thủy tinh cao cấp đặt trên bục đá cẩm thạch. Xung quanh là mặt nước đang gợn sóng nhẹ và những cánh hoa hồng rơi rải rác. Nền tối phía sau. Ánh sáng studio hắt từ phía sau (backlight) làm nổi bật đường nét chai nước hoa. Chụp bằng máy ảnh chuyên nghiệp 85mm f/1.4, siêu sắc nét, phong cách luxury thương mại."
+**Prompt:**
+> *"Tôi đang làm banner quảng cáo cho quán Trà sữa mùa hè. Tôi muốn vẽ một tấm ảnh thật tươi mát nhưng không biết cách mô tả bằng công thức CREATE. Hãy đóng vai giám đốc sáng tạo, đặt cho tôi 3 câu hỏi về quán trà sữa của tôi. Sau khi tôi trả lời, hãy tự động ráp thành 1 câu lệnh (Prompt) tiếng Anh siêu đỉnh để tôi đem đi dán vào Midjourney."*
 
-Bạn có thể thay chữ "lọ nước hoa" bằng "ly trà sữa", "đôi giày sneaker"... để tạo ra những bức ảnh quảng cáo xịn xò mà không cần phải thuê thợ chụp ảnh!
+ChatGPT sẽ tự động lo phần thiết kế ý tưởng, dịch tiếng Anh và canh chuẩn công thức CREATE cho bạn. Bạn chỉ việc copy đi xài!
 `;
 
 export const sk_6_1 = `
 ### 🎯 Mục tiêu bài học
-Biến một bài viết blog khô khan hoặc file báo cáo thành một đoạn âm thanh (Podcast) có giọng người thật đọc siêu truyền cảm.
+Biến các tài liệu dài ngoằng thành một buổi nói chuyện Radio (Podcast) 2 người để nhân viên công ty dễ nghe, dễ thấm.
 
-### 🎙️ Nhờ AI đọc văn bản (Text-to-Speech)
-Sử dụng các công cụ như ElevenLabs (cho giọng tiếng Anh cực hay) hoặc FPT AI / Viettel AI (cho giọng tiếng Việt chuẩn).
+### 🎙️ Phù thủy Âm thanh (NotebookLM)
+Thật nhàm chán khi ép nhân viên đọc Nội quy công ty dài 10 trang. Thay vì thế:
 
-1. Nhờ ChatGPT viết một kịch bản Podcast: *"Viết kịch bản Radio dài 1 phút, 1 nam 1 nữ nói chuyện vui vẻ về lợi ích của việc ngủ trưa tại văn phòng."*
-2. Copy đoạn text đó dán vào công cụ chuyển đổi giọng nói.
-3. Chọn giọng đọc (Nam/Nữ, Trẻ/Già, Bắc/Nam).
-4. Bấm "Generate" và tải file .mp3 về. 
-
-Bạn có thể chèn file này vào video Tiktok hoặc dùng làm thông báo phát loa của công ty!
+1. Quăng file PDF Nội quy đó vào **NotebookLM** của Google.
+2. Bấm nút **"Audio Overview"** (Tạo tổng quan âm thanh).
+3. Đợi 2 phút. AI sẽ tự động đọc hiểu, và tự phân vai 1 Nam 1 Nữ dẫn chương trình trò chuyện rôm rả về cái "Nội quy" đó như một show radio giải trí.
+4. Tải file mp3 về và gửi vào nhóm Zalo công ty!
 `;
 
 export const sk_6_2 = `
 ### 🎯 Mục tiêu bài học
-Cách dùng AI biến một tấm ảnh tĩnh đứng im thành một đoạn video chuyển động mượt mà như được quay bằng máy quay thật.
+Biến tấm ảnh tĩnh thành video quảng cáo chuyển động mượt mà.
 
-### 🎬 Tạo Video từ Ảnh tĩnh (Image-to-Video)
-Bạn vừa dùng AI vẽ ra một tấm ảnh đĩa spaghetti bốc khói nghi ngút ở Level 5. Giờ hãy làm cho nó chuyển động!
+### 🎬 Đạo diễn Video AI (Kling / Runway)
+Bạn vừa nhờ ChatGPT viết prompt, rồi mang qua Midjourney vẽ được 1 bức ảnh đĩa Cơm tấm bốc khói tuyệt đẹp. Giờ làm sao để nó chuyển động?
 
-Dùng các công cụ như Kling AI, Luma Dream Machine, hoặc Runway Gen-3.
-1. Tải tấm ảnh tĩnh của bạn lên công cụ.
-2. Cung cấp Prompt điều khiển chuyển động:
-> "Sợi mỳ từ từ rơi xuống đĩa. Khói bốc lên nghi ngút mờ ảo. Góc máy quay (Camera) chầm chậm tiến về phía trước (zoom in) và lia nhẹ sang trái (pan left)."
-3. Bấm Generate và chờ 2-3 phút.
+1. Tải bức ảnh lên Kling AI.
+2. **Dùng công thức điều khiển Camera:** Bạn không cần công thức phức tạp, chỉ cần nói rõ hướng đi của máy quay.
+> *"Khói bay lên nghi ngút từ miếng sườn nướng. Máy quay (Camera) zoom in (tiến lại gần) thật chậm và mượt mà."*
 
-Thế là bạn đã có một đoạn Footage (cảnh quay) tuyệt đẹp để ghép vào Video quảng cáo nhà hàng của mình!
+Bấm nút, và bạn sẽ có 5 giây Footage (cảnh quay) chất lượng điện ảnh để ghép vào Tiktok ngay lập tức!
 `;

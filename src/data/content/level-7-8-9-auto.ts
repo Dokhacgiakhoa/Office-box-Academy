@@ -1,93 +1,88 @@
 export const sk_7_1 = `
 ### 🎯 Mục tiêu bài học
-Hiểu rõ bản chất "Tự động hóa" (Automation) là gì. Thoát khỏi tư duy làm tay, chuyển sang tư duy xây dựng hệ thống tự chạy 24/7.
+Quẳng hết mớ lý thuyết khô khan về "Tự động hóa", "Webhook", "API" đi. Không biết thì cứ đem tài liệu hỏi thẳng AI!
 
-### ⚙️ Thế nào là Tự động hóa?
-Bình thường, khi có sếp nhắn tin "Lập báo cáo đi", bạn sẽ phải tự mở Excel, điền số, rồi gửi lại sếp. Việc này tốn sức người.
-Tự động hóa là việc bạn thiết lập sẵn một cái bẫy. Khi "bẫy" sập, máy móc sẽ tự làm phần việc còn lại.
+### ⚙️ Nhờ AI dạy cách bấm nút (n8n/Zapier)
+Sếp yêu cầu bạn: "Làm sao để khi có khách điền Form, thông tin tự chạy vào Google Sheets?". Bạn chưa dùng n8n bao giờ. Thay vì lên mạng đọc hướng dẫn lằng nhằng, hãy mở ChatGPT lên.
 
-Nó luôn bao gồm 2 thành phần:
-1. **Trigger (Cò súng/Điều kiện kích hoạt):** "KHI CÓ điều gì đó xảy ra..." (Ví dụ: Khi đồng hồ điểm 8h sáng, Khi có Email mới đến).
-2. **Action (Hành động):** "...THÌ LÀM việc này." (Ví dụ: Thì nhắn tin lên nhóm Zalo, Thì lưu vào file Excel).
+**Prompt (Meta-prompting):**
+> *"Tôi muốn tự động hóa việc lấy dữ liệu từ Google Form sang Google Sheets bằng nền tảng n8n. Tôi là dân văn phòng không biết lập trình, không hiểu API hay Webhook là gì.*
+> *Đóng vai chuyên gia tự động hóa, hãy giải thích khái niệm cho tôi bằng ngôn ngữ bình dân (ví dụ như ống nước, bưu điện). Sau đó, hãy cầm tay chỉ việc, hướng dẫn tôi từng bước MỘT: bấm vào nút nào, chọn cái gì đầu tiên."*
 
-Các công cụ như n8n, Zapier hay Make sinh ra chính là để giúp bạn kéo thả các Trigger và Action này nối vào nhau mà không cần biết lập trình!
+AI sẽ tự động dịch các khái niệm phức tạp thành "ngôn ngữ con người" và chỉ cho bạn cách kéo thả từng bước một!
 `;
 
 export const sk_7_2 = `
 ### 🎯 Mục tiêu bài học
-Hiểu cách các phần mềm "nói chuyện" với nhau trên mạng Internet thông qua Webhook và API.
+Gặp tài liệu kỹ thuật toàn mã code khó hiểu của các nền tảng (như Facebook API, Shopee API)? Cứ vứt hết vào não ChatGPT!
 
-### 🌐 Ngôn ngữ của Máy móc (API & Webhook)
-Để hiểu vì sao n8n có thể tự lấy thông tin từ Facebook rồi đẩy sang Google Sheets, bạn cần biết 2 khái niệm:
+### 🌐 Dịch tài liệu Kỹ thuật bằng AI
+Để 2 phần mềm nói chuyện được với nhau, chúng ta thường phải đọc "Tài liệu API" (API Documentation). Dân không chuyên nhìn vào là tẩu hỏa nhập ma ngay.
 
-- **API (Người bồi bàn):** Bạn muốn lấy dữ liệu từ phần mềm khác, bạn gọi API. (Ví dụ: Hỏi API của Shopee "Giá áo này bao nhiêu?", Shopee trả lời "100k"). Việc này là bạn TỰ ĐỘNG đi hỏi (gọi là Polling/Request).
-- **Webhook (Người đưa thư):** Bạn không thèm đi hỏi, bạn đứng ở nhà. Bạn cung cấp cho người ta một địa chỉ (Webhook URL). Khi nào có chuyện gì mới, người ta sẽ tự động ném thư vào địa chỉ nhà bạn. (Ví dụ: Khi có người điền Form khảo sát, nền tảng Form sẽ lập tức bắn thẳng dữ liệu sang Webhook của n8n).
+**Cách xử lý:**
+1. Copy toàn bộ cái trang web Tài liệu API đó (Đầy những chữ ngoằn ngoèo).
+2. Dán vào ChatGPT.
+3. **Prompt (CoT):** *"Đây là tài liệu API của Facebook. Tôi muốn lấy danh sách bài viết. Đừng giải thích lằng nhằng, hãy SUY NGHĨ TỪNG BƯỚC, nhặt ra đúng cái Đường Link tôi cần nhập vào n8n, và chỉ cho tôi xem tôi cần copy cái Mã bảo mật (Token) ở đâu."*
 
-> **Nhớ nhanh:** API là bạn phải đi LẤY, còn Webhook là người ta TỰ GỬI đến cho bạn.
+Thế là xong! Bạn chẳng cần đi học một khóa lập trình nào cả.
 `;
 
 export const sk_8_1 = `
 ### 🎯 Mục tiêu bài học
-Thiết lập đường ống tự động hứng thông tin khách hàng (Họ tên, SĐT) từ Website và ném gọn gàng vào một file Google Sheets.
+Tự động gom thông tin khách hàng (Lead) về một chỗ bằng cách nhờ AI hướng dẫn setup luồng n8n.
 
-### 📥 Hứng dữ liệu khách hàng (Webhook -> Sheets)
-Giả sử bạn đang chạy quảng cáo trên Ladipage hoặc Google Form. 
+### 📥 Kéo dữ liệu khách hàng vào Google Sheets
+Bây giờ, bạn bắt đầu làm thực hành. Bạn đã mở n8n lên, kéo node Webhook và node Google Sheets ra. Nhưng đến phần điền thông tin (Mapping) thì bạn rối.
 
-1. **Khởi tạo Webhook:** Mở n8n lên, tạo node đầu tiên là \`Webhook\`. Nó sẽ sinh ra một đường link (URL).
-2. **Gắn link vào Form:** Dán đường link Webhook đó vào mục cấu hình của trang Ladipage/Google Form.
-3. **Thêm node Google Sheets:** 
-   - Đăng nhập tài khoản Google của bạn vào n8n.
-   - Chọn hành động là \`Append Row\` (Thêm một dòng mới xuống dưới cùng).
-4. **Ghép nối:** Cầm con chuột, kéo chữ "Họ Tên" từ Webhook thả vào ô "Họ Tên" của Sheets, kéo chữ "SĐT" thả vào ô "SĐT" của Sheets.
+**Đừng tự mò mẫm, hãy nhờ AI:**
+> *"Tôi đang ở trong n8n. Tôi có node Webhook nhận dữ liệu là {Tên, Số điện thoại}. Tôi muốn điền nó vào Node Google Sheets. Tôi phải bấm vào chỗ nào để nối dây chữ 'Tên' bên này sang cột 'Tên' bên kia? Hãy hướng dẫn tôi thao tác kéo thả bằng chuột."*
 
-Từ giây phút này trở đi, bất kỳ khách nào bấm nút đăng ký, tên của họ sẽ xuất hiện trong Excel của bạn chỉ sau 1 giây!
+Làm theo đúng những gì AI chỉ, thông tin khách hàng sẽ lập tức chui tọt vào file Excel của bạn ngay khi họ bấm đăng ký!
 `;
 
 export const sk_8_2 = `
 ### 🎯 Mục tiêu bài học
-Gây ấn tượng mạnh với khách hàng bằng cách gửi Email hoặc tin nhắn cảm ơn NGAY LẬP TỨC ngay khi họ vừa đăng ký xong.
+Để AI tự viết thư cảm ơn cá nhân hóa và tự động gửi đi ngay khi khách hàng vừa đăng ký.
 
-### 💌 Tự động Gửi Email chăm sóc
-Nối tiếp luồng dữ liệu ở bài trước, sau khi thông tin đã chui vào Google Sheets, ta sẽ làm thêm 1 bước nữa.
+### 💌 AI Tự soạn và Gửi Email chăm sóc
+Bạn nối thêm Node Gmail vào sau Node Google Sheets ở luồng trước. Thay vì gửi một cái email khô khan kiểu "Cảm ơn bạn đã đăng ký", hãy nhờ AI làm cho nó sinh động.
 
-1. Nối thêm node \`Gmail\` (hoặc Outlook) vào đằng sau node Google Sheets.
-2. Đăng nhập tài khoản Gmail của công ty bạn.
-3. **Cấu hình thư:**
-   - Mục **To (Người nhận):** Kéo thả trường thông tin "Email" của khách hàng vào đây.
-   - Mục **Subject (Tiêu đề):** *"Xác nhận đăng ký thành công khóa học Office Box!"*
-   - Mục **Body (Nội dung):** *"Chào {{Tên Khách Hàng}}, cảm ơn bạn đã quan tâm. Chúng tôi sẽ gọi lại cho bạn qua số điện thoại {{Số Điện Thoại}} trong vòng 5 phút nữa nhé."*
+1. **Gắn thêm Node OpenAI** vào giữa Sheets và Gmail.
+2. Dùng công thức **RTF (Role-Task-Format)** đã học ở Level 1 vào Node OpenAI:
+> *"Role: Nhân viên CSKH ngọt ngào.*
+> *Task: Viết thư cảm ơn khách tên là {{Tên khách hàng}} vừa đăng ký nhận bản tin.*
+> *Format: Ngắn 50 chữ, xưng hô 'em' và 'anh/chị', thân thiện."*
+3. Đẩy kết quả (Output) của Node AI đó vào Node Gmail để gửi đi.
 
-Khách hàng vừa bấm đăng ký trên web xong, điện thoại ting ting báo có Email cảm ơn ngay tắp lự. Độ chuyên nghiệp tăng lên 100 lần!
+Thế là mỗi khách hàng sẽ nhận được một bức thư có văn phong riêng biệt, không ai giống ai!
 `;
 
 export const sk_9_1 = `
 ### 🎯 Mục tiêu bài học
-Dạy AI đọc nội dung Email khách hàng gửi tới và tự động gắn nhãn phân loại (Ví dụ: Thư rác, Thư hỏi giá, Thư khiếu nại).
+Dạy AI làm cổng gác cửa: Tự đọc hộp thư công ty và gắn nhãn phân loại (Thư rác, Thư hỏi giá, Thư khiếu nại).
 
-### 🧠 Dạy AI Phân loại Email
-Hàng ngày hòm thư công ty nhận hàng trăm thư, lẫn lộn đủ thứ. Hãy để AI làm "thư ký lọc thư".
+### 🧠 Phân loại Email (Zero-shot Prompting)
+Mỗi ngày hòm thư nhận hàng trăm lá thư thập cẩm. Hãy đẩy tất cả vào ChatGPT.
 
-1. **Trigger:** Đặt node \`Gmail Trigger\` ở chế độ "Khi có thư mới chuyển đến" (chỉ lấy các thư Chưa đọc).
-2. **AI phân loại:** Lấy nội dung thư vừa nhận, truyền vào node \`OpenAI\` (ChatGPT).
-   - *Câu lệnh (Prompt):* "Bạn là thư ký đọc email. Hãy đọc bức thư này và phân loại nó vào đúng 1 trong 3 nhóm sau: [KHIẾU NẠI], [HỎI GIÁ], [RÁC]. Chỉ in ra tên nhóm, không giải thích gì thêm."
-3. **Rẽ nhánh (Switch):** Thêm node \`Switch\` của n8n.
-   - Nếu ChatGPT trả về chữ [KHIẾU NẠI] -> Chuyển luồng sang nhánh Báo động khẩn cấp cho sếp.
-   - Nếu trả về [HỎI GIÁ] -> Chuyển luồng sang nhánh Tự động báo giá.
-   - Nếu trả về [RÁC] -> Gắn nhãn Spam và xóa luôn khỏi hòm thư!
+**Prompt trong Node OpenAI:**
+> *"Bạn là hệ thống phân loại hộp thư tự động. Đọc nội dung thư này: {{Nội dung thư}}.*
+> *Chỉ trả về ĐÚNG MỘT TỪ trong 3 từ sau: [KHIEU_NAI], [HOI_GIA], [RAC]. Không giải thích."*
+
+Bạn ép AI chỉ trả về đúng cái mã lệnh đó (Zero-shot). Sau đó dùng Node \`Switch\` của n8n (hoặc Router của Make):
+- Nhánh 1: Nếu AI trả chữ [KHIEU_NAI] -> Báo động cho sếp.
+- Nhánh 2: Nếu AI trả chữ [RAC] -> Thẳng tay xóa.
 `;
 
 export const sk_9_2 = `
 ### 🎯 Mục tiêu bài học
-Không chỉ phân loại, AI còn tự động đóng vai nhân viên CSKH để soạn sẵn một bản nháp trả lời (Draft) lưu trong hòm thư chờ bạn duyệt.
+Không chỉ phân loại, ép AI tự động soạn sẵn một bản nháp trả lời (Draft) trong hòm thư, bạn chỉ cần liếc mắt rồi bấm nút Gửi.
 
-### ✍️ AI tự động soạn Bản nháp trả lời
-Đối với những email được phân loại là [HỎI GIÁ]:
+### ✍️ AI tự làm Thư ký Soạn nháp (Ứng dụng CoT)
+Với nhánh thư [HOI_GIA], đừng để nó nằm im. Hãy dùng kỹ thuật Chuỗi tư duy (Chain of Thought).
 
-1. Nối tiếp nhánh [HỎI GIÁ] vào một node \`OpenAI\` thứ hai.
-2. *Câu lệnh (Prompt):* "Đóng vai nhân viên CSKH. Khách hàng vừa gửi email hỏi về sản phẩm công ty. Hãy soạn một email trả lời thật lịch sự, báo giá sơ bộ và mời họ gọi vào số Hotline 090xxxxxxx. Viết dưới 100 chữ."
-3. Thêm node \`Gmail Action\`.
-   - Lựa chọn hành động: \`Create Draft\` (Tạo bản nháp) thay vì \`Send Email\` (Gửi đi luôn).
-   - Điền email người nhận và Nội dung mà AI vừa viết.
+**Prompt cho Node OpenAI thứ hai:**
+> *"Đây là email hỏi giá của khách. Dưới đây là bảng giá công ty tôi [Dán bảng giá].*
+> *Đừng viết trả lời ngay. HÃY SUY NGHĨ TỪNG BƯỚC: Phân tích xem khách đang hỏi mua gói nào -> Tra bảng giá xem giá bao nhiêu -> Cuối cùng mới viết một bức thư trả lời lịch sự, báo giá chính xác gói đó."*
 
-Mỗi sáng đến công ty, bạn chỉ cần mở mục Bản Nháp ra, xem AI đã viết sẵn hàng chục cái email trả lời. Bạn chỉ cần đọc lướt qua, thấy ổn thì bấm nút "Gửi". Tiết kiệm 90% thời gian gõ phím!
+Sau đó, cấu hình Node Gmail là \`Create Draft\` (Tạo bản nháp). Sáng ra mở mail lên, bạn sẽ thấy hàng chục cái email đã được AI soạn sẵn, phân tích giá rổ chuẩn xác từng đồng, chỉ chờ bạn bấm "Send"!
 `;

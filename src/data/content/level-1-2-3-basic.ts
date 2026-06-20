@@ -1,98 +1,91 @@
 export const sk_1_1 = `
 ### 🎯 Mục tiêu bài học
-Hiểu rõ bản chất AI (Trí tuệ nhân tạo) là gì, nó suy nghĩ như thế nào và tại sao đôi lúc nó lại trả lời ngô nghê hoặc "bịa chuyện".
+Học cách sử dụng hai bộ công thức Prompt đỉnh cao nhất năm 2024: **RTF** (Chuyên dùng để viết lách) và **CREATE** (Chuyên dùng để vẽ ảnh). Không dùng lẫn lộn!
 
-### 🤖 AI thực chất là gì?
-AI (đặc biệt là các mô hình ngôn ngữ lớn như ChatGPT, Gemini, Claude) không phải là Google. Nó không "tìm kiếm" câu trả lời trên mạng rồi copy cho bạn.
-- Nó hoạt động dựa trên cơ chế **Đoán chữ tiếp theo**. Dựa vào dữ liệu nó đã học, nó đoán xem từ nào hợp lý nhất để viết ra.
-- **Ảo giác (Hallucination):** Vì tính năng "đoán chữ" này, nếu bạn hỏi một thứ nó không biết, nó sẽ có xu hướng "bịa" ra một câu trả lời nghe rất thuyết phục.
+### 📝 1. Công thức RTF (Dành cho Văn bản)
+RTF là viết tắt của Role - Task - Format. Dùng khi bạn muốn AI viết email, bài blog, kịch bản...
+- **R (Role - Vai trò):** Cho AI một chức danh. *(VD: Hãy đóng vai Chuyên gia Copywriter)*
+- **T (Task - Nhiệm vụ):** Yêu cầu cụ thể. *(VD: Viết một email báo giá dịch vụ dọn nhà)*
+- **F (Format - Định dạng):** Kết quả trông thế nào. *(VD: Ngắn gọn dưới 100 chữ, dùng gạch đầu dòng, có lời chúc cuối thư)*
 
-**Quy tắc vàng:** Luôn cung cấp đủ "ngữ cảnh" (thông tin nền) để ép AI đi đúng hướng và không cho nó cơ hội bịa chuyện.
+### 🎨 2. Công thức CREATE (Dành cho Hình ảnh)
+Cấm không được dùng RTF để vẽ ảnh. Khi ra lệnh cho Midjourney hoặc Flux, hãy dùng công thức CREATE:
+- **C (Concept):** Chủ thể là gì? *(VD: Một ly cà phê bốc khói)*
+- **R (Resolution/Angle):** Góc máy ra sao? *(VD: Chụp cận cảnh macro)*
+- **E (Environment):** Bối cảnh xung quanh? *(VD: Đặt trên bàn gỗ cạnh cửa sổ)*
+- **A (Atmosphere/Lighting):** Ánh sáng? *(VD: Ánh nắng buổi sáng rọi vào)*
+- **T (Tone):** Tông màu/Cảm xúc? *(VD: Màu ấm áp, vintage)*
+- **E (Extra):** Yêu cầu thêm. *(VD: Siêu sắc nét 8K, cinematic)*
 `;
 
 export const sk_1_2 = `
 ### 🎯 Mục tiêu bài học
-Nắm vững công thức viết câu lệnh (Prompt) chuẩn mực giúp AI hiểu chính xác 100% ý muốn của bạn ngay từ lần thử đầu tiên.
+Làm chủ kỹ thuật ép AI phải "động não" (CoT) trước khi làm toán/code, và kỹ thuật Tối thượng: Dùng AI hỏi AI (Meta-Prompting).
 
-### 📝 Công thức Prompt 4 phần (Công thức CPRF)
-Để ra lệnh cho AI hiệu quả, đừng chỉ hỏi một câu cộc lốc. Hãy áp dụng công thức sau:
+### 🧠 3. Kỹ thuật CoT (Chain of Thought - Chuỗi tư duy)
+Khi bạn quăng một bảng số liệu lộn xộn hoặc một bài toán logic, nếu AI trả lời ngay, nó rất dễ sai. Hãy thêm câu thần chú này vào cuối câu lệnh:
+> *"Hãy suy nghĩ từng bước một trước khi đưa ra đáp án cuối cùng." (Think step by step)*
 
-1. **C - Context (Bối cảnh):** Cung cấp thông tin nền. 
-   *(VD: "Công ty chúng ta bán phần mềm kế toán. Khách hàng đang chê giá đắt.")*
-2. **P - Persona (Vai trò):** Gắn cho AI một chức danh.
-   *(VD: "Hãy đóng vai một chuyên gia sale B2B với 10 năm kinh nghiệm.")*
-3. **R - Request (Yêu cầu chính):** Bạn muốn nó làm gì?
-   *(VD: "Hãy viết một email phản hồi khách hàng để thuyết phục họ về giá trị sản phẩm.")*
-4. **F - Format (Định dạng):** Kết quả trả về trông như thế nào.
-   *(VD: "Email dài dưới 150 chữ, chia làm 3 đoạn nhỏ, giọng điệu chuyên nghiệp, lịch sự.")*
+Khi đó, AI sẽ tự động in ra màn hình các bước phân tích (như giải toán nháp) rồi mới chốt kết quả. Tỷ lệ chính xác tăng lên 90%!
 
-**Ghép lại:** Bạn sẽ có một câu lệnh hoàn hảo khiến AI làm việc như một nhân sự cao cấp thực thụ!
+### 🔄 4. Bí kíp Tối thượng: Kỹ thuật Đảo ngược (Meta-Prompting)
+Đây là lúc bạn "Vô chiêu thắng hữu chiêu". Khi bạn không biết phải dùng công thức nào, hay không biết phải cung cấp thông tin gì, hãy đưa quyền làm chủ cho AI.
+
+**Câu thần chú vạn năng:**
+> *"Tôi muốn [Viết một bức thư xin lỗi sếp]. Tôi không biết bạn cần những thông tin gì để viết tốt nhất. Hãy đóng vai một chuyên gia, và đặt câu hỏi cho tôi từng câu một cho đến khi bạn có đủ dữ kiện để hoàn thành việc này."*
+
+Ngay lập tức, AI sẽ trở thành người phỏng vấn bạn. Bạn cứ trả lời từng câu, cuối cùng AI sẽ đẻ ra kết quả hoàn hảo!
 `;
 
 export const sk_2_1 = `
 ### 🎯 Mục tiêu bài học
-Nhờ AI viết hộ email (xin lỗi, chào hàng, báo giá) chỉ trong 5 giây thay vì ngồi cắn bút 30 phút.
+Kết hợp công thức RTF và Meta-Prompting để giải quyết gọn gàng hòm thư email mỗi sáng.
 
-### 📧 Soạn Email Tự Động
-Hãy dùng công thức đã học ở Level 1 để áp dụng vào viết Email.
+### 📧 Giao tiếp Văn bản bằng Meta-Prompting
+Hôm nay bạn cần gửi một email từ chối ứng viên phỏng vấn, nhưng bạn sợ mất lòng. Đừng cố tự viết, hãy chat với AI:
 
-**Mẫu câu lệnh (Prompt):**
-> "Đóng vai là nhân viên Chăm sóc khách hàng. Hãy viết một email xin lỗi khách hàng vì giao hàng trễ 2 ngày do lỗi kho bãi.
-> 
-> Bối cảnh: Đơn hàng là một bộ bàn ghế văn phòng. Khách đang rất tức giận.
-> Giải pháp đền bù: Tặng voucher giảm 20% cho lần mua sau.
-> Giọng điệu: Vô cùng thành khẩn, thấu hiểu, không đổ lỗi vòng vo.
-> Định dạng: Ghi rõ tiêu đề thư. Ký tên: Phòng CSKH Office Box."
+**Prompt:**
+> *"Tôi cần viết email từ chối ứng viên trượt phỏng vấn nhưng vẫn giữ được hình ảnh chuyên nghiệp của công ty. Bạn hãy làm chuyên gia HR, hỏi tôi 3 câu hỏi để lấy thông tin, sau đó tự động áp dụng công thức RTF để viết thư cho tôi."*
 
-Chỉ cần copy và sửa lại thông tin, AI sẽ cho bạn một bức thư hoàn hảo để xoa dịu mọi khách hàng khó tính.
+Sau khi bạn trả lời 3 câu hỏi (Ví dụ: Tên ứng viên? Vị trí ứng tuyển? Điểm yếu của họ là gì?), AI sẽ dùng chính câu trả lời của bạn, đúc kết bằng RTF và nhả ra một email xuất sắc.
 `;
 
 export const sk_2_2 = `
 ### 🎯 Mục tiêu bài học
-Dạy AI cách bắt chước chính xác giọng văn của bạn (hoặc của sếp) để người nhận không nhận ra là máy viết.
+Dạy AI cách học lỏm giọng văn của bạn để người nhận email không thể phát hiện ra thư này do máy viết.
 
-### 🎭 Kỹ thuật Bắt chước Giọng văn (Few-Shot Prompting)
-AI ban đầu sẽ viết rất "máy móc". Để nó viết giống con người, bạn phải đưa cho nó "ví dụ mẫu".
+### 🎭 Ép AI nhại giọng (Few-shot Prompting)
+Công thức RTF rất tốt, nhưng văn phong của AI vẫn có mùi "rô bốt". Khắc phục bằng cách ném bài mẫu vào:
 
-**Mẫu câu lệnh (Prompt):**
-> "Dưới đây là 2 bài viết mẫu mà tôi từng viết trên Facebook cá nhân. Hãy phân tích giọng điệu, cách tôi dùng từ ngữ, cách đặt câu:
-> [Dán Bài mẫu 1 vào đây]
-> [Dán Bài mẫu 2 vào đây]
+**Prompt:**
+> *"Dưới đây là 2 bài thông báo nội bộ tôi từng viết. Hãy đọc và phân tích xem tôi hay dùng từ ngữ gì, độ dài câu ra sao:
+> [Bài 1...]
+> [Bài 2...]
 > 
-> Bây giờ, hãy đóng vai tôi, sử dụng ĐÚNG GIỌNG ĐIỆU đó, để viết một bài thông báo công ty sắp đi du lịch Nha Trang. Yêu cầu hài hước, năng động."
-
-Việc đưa ra ví dụ (Few-shot) sẽ giúp AI thoát khỏi văn phong rô bốt nhàm chán.
+> Dựa vào giọng điệu đó (Role), hãy viết giúp tôi một thông báo mới về việc công ty sẽ cắt điện bảo trì vào chủ nhật tuần này (Task). Định dạng là 1 bài đăng lên Zalo công ty (Format)."*
 `;
 
 export const sk_3_1 = `
 ### 🎯 Mục tiêu bài học
-Dùng AI làm trợ lý tìm kiếm thông tin trên mạng, tự động tổng hợp báo cáo thay vì phải tự bấm vào 10 trang web khác nhau.
+Dùng Perplexity AI làm "trợ lý tình báo", đào bới Internet và tổng hợp thông tin đối thủ.
 
-### 🔍 Tìm kiếm thông minh bằng Perplexity AI / ChatGPT Search
-Thay vì dùng Google rồi tự đọc từng link, hãy dùng Perplexity AI.
+### 🔍 Nghiên cứu Thị trường bằng AI
+Thay vì Google 10 trang rồi tự ghi chép, hãy để AI làm thay.
 
-**Mẫu câu lệnh (Prompt):**
-> "Hãy tìm kiếm trên mạng và lập cho tôi một bảng so sánh 3 phần mềm quản lý công việc phổ biến nhất hiện nay (Trello, Asana, Jira) tại thị trường Việt Nam.
-> 
-> Bảng cần có các cột: Tên phần mềm, Giá tiền, Ưu điểm chính, Nhược điểm chính.
-> Hãy trích dẫn rõ nguồn link bài viết."
+**Prompt:**
+> *"Tôi đang chuẩn bị mở quán cà phê cạnh tranh với The Coffee House. Hãy tự động tìm kiếm trên mạng các bài viết review về The Coffee House trong 6 tháng gần đây. Sau đó, lập bảng phân tích: 3 điểm mạnh nhất, 3 điểm khách hay chê nhất. Trích dẫn rõ nguồn link bài viết."*
 
-AI sẽ tự động đọc hàng chục bài viết trên mạng, chắt lọc thông tin và kẻ sẵn bảng cho bạn trong tích tắc.
+Perplexity sẽ đọc hàng tá trang web (như một CoT thực thụ) và chắt lọc ra bảng báo cáo cho bạn.
 `;
 
 export const sk_3_2 = `
 ### 🎯 Mục tiêu bài học
-Ép AI đọc hộ file tài liệu dài 100 trang (hoặc file ghi âm cuộc họp) và tóm tắt lại những ý quan trọng nhất trong 3 phút.
+"Nhét" 100 trang PDF vào não AI và ép nó tóm tắt lại trong vòng 3 gạch đầu dòng.
 
-### 📚 Đọc tài liệu siêu tốc bằng NotebookLM / Claude
-Nếu sếp quẳng cho bạn một cuốn báo cáo ngành dài 120 trang file PDF, đừng hoảng hốt.
+### 📚 Đọc tài liệu siêu tốc (Claude / NotebookLM)
+Bạn nhận được một báo cáo thị trường ngành Bất động sản rất dài. Đừng hoảng!
 
-1. Tải file PDF đó lên hệ thống AI (Claude hoặc NotebookLM).
-2. **Ra lệnh (Prompt):**
-> "Dựa CHỈ VÀO TÀI LIỆU được đính kèm, không tự bịa thông tin. Hãy:
-> 1. Tóm tắt 5 ý chính quan trọng nhất của tài liệu này (mỗi ý 2 câu).
-> 2. Liệt kê 3 rủi ro lớn nhất mà tài liệu đề cập.
-> 3. Trích xuất tất cả các con số, số liệu thống kê liên quan đến Doanh thu năm 2023."
-
-Vậy là bạn đã có bản báo cáo để trình sếp mà không cần đọc hết 120 trang giấy!
+1. Tải file PDF lên Claude.
+2. **Áp dụng Meta-Prompting & CoT:**
+> *"Dựa vào tài liệu đính kèm, tôi cần bạn tóm tắt những thông tin cốt lõi nhất. Bạn hãy suy nghĩ từng bước, quét toàn bộ tài liệu, và chỉ lọc ra những thông tin liên quan đến phân khúc Chung cư cao cấp. Trình bày dưới dạng bảng: Tên dự án, Giá dự kiến, Chủ đầu tư."*
 `;

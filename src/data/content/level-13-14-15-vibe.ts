@@ -1,93 +1,86 @@
 export const sk_13_1 = `
 ### 🎯 Mục tiêu bài học
-Đập tan rào cản sợ hãi kỹ thuật. Bạn không cần học thuộc dòng code nào, chỉ cần hiểu quy luật để "sai bảo" AI code thay bạn.
+Đập tan rào cản code. Bạn không cần học Code, chỉ cần học cách dùng "Meta-Prompting" để ép AI tự đẻ ra Code.
 
-### 🪄 Vibe Coding là gì?
-"Vibe Coding" là thuật ngữ mới chỉ việc lập trình bằng... cảm giác. Nghĩa là bạn giao tiếp với máy tính bằng ngôn ngữ tự nhiên (Tiếng Việt, Tiếng Anh) như đang nói chuyện, và AI sẽ tự động đẻ ra các dòng lệnh phức tạp.
+### 🪄 Vibe Coding & Triết lý "Không biết thì hỏi"
+Vibe Coding là thuật ngữ chỉ việc bạn dùng Tiếng Việt (hoặc Tiếng Anh) mô tả ý tưởng, và AI sẽ tự động lập trình ra một trang web hoạt động được (dùng v0.dev, Cursor, Bolt.new).
 
-Để Vibe Coding hiệu quả, bạn cần biết 3 khái niệm cốt lõi:
-1. **Giao diện (Frontend):** Là phần vỏ bên ngoài (nút bấm, màu sắc, hình ảnh) mà khách hàng nhìn thấy.
-2. **Dữ liệu (Database):** Là cái kho chứa thông tin (Ai vừa đăng nhập? Họ lưu sản phẩm gì?).
-3. **Logic (Backend):** Bộ não ở giữa tính toán (Khi bấm nút mua, thì trừ đi số tiền trong thẻ và lưu vào kho).
+Thay vì phải lên mạng học HTML, CSS là gì, hãy nhồi thẳng câu hỏi vào não AI:
+> *"Tôi muốn học cách dùng công cụ v0.dev để tự làm một trang web, nhưng tôi là một người mù công nghệ, tôi không biết một dòng chữ code nào cả.*
+> *Đóng vai chuyên gia lập trình, hãy giải thích cho tôi cơ chế hoạt động của v0.dev, và tôi cần phải viết câu lệnh (Prompt) như thế nào để bạn hiểu và code giao diện cho tôi?"*
 
-Chỉ cần bạn phân tích ứng dụng theo 3 mảng này, AI (như Cursor, v0.dev, Bolt.new) sẽ hiểu ngay lập tức và code chính xác ý bạn.
+Ngay lập tức, AI sẽ hướng dẫn bạn cặn kẽ cách ra lệnh cho nó để đạt hiệu quả cao nhất!
 `;
 
 export const sk_13_2 = `
 ### 🎯 Mục tiêu bài học
-Cài đặt và thiết lập môi trường lập trình AI ngay trên trình duyệt web chỉ bằng một cú nhấp chuột.
+Cài đặt môi trường lập trình ngay trên trình duyệt mà không cần tải bất kỳ phần mềm nặng nề nào.
 
-### 🌐 Khởi tạo Môi trường (v0.dev / Bolt.new)
-Ngày xưa lập trình viên phải mất cả ngày để cài đặt phần mềm trên máy tính. Còn bây giờ:
+### 🌐 Nhờ AI setup Môi trường (Bolt.new / v0.dev)
+Khi bạn mở trang v0.dev hoặc Bolt.new lên, sẽ có một ô chat to tướng. Đừng cố gõ những từ chuyên ngành.
 
-1. Mở trình duyệt web, vào trang **v0.dev** (Của Vercel) hoặc **Bolt.new** (Của StackBlitz).
-2. Sẽ có một ô Chat to đùng hiện ra giữa màn hình.
-3. Hãy gõ một câu mô tả ngắn: *"Tạo cho tôi một form đăng nhập nền màu đen, viền cam neon, có nút 'Quên mật khẩu' ở dưới cùng."*
-4. Gõ Enter và ngồi nhìn phép màu xảy ra. Chưa đầy 5 giây, giao diện sẽ hiện ra sống động ngay bên cạnh màn hình chat. Bạn có thể bấm thử, gõ chữ thử luôn!
+**Áp dụng Kỹ thuật Đảo ngược (Meta-prompting):**
+> *"Tôi muốn tự thiết kế một form đăng nhập cho công ty. Tôi không biết phải miêu tả bố cục thế nào cho chuẩn để bạn code đẹp nhất.*
+> *Hãy đặt cho tôi 3 câu hỏi (về màu sắc, logo, phong cách, hiệu ứng). Sau khi tôi trả lời xong, hãy tự động chốt lại yêu cầu và bắt đầu code cho tôi xem luôn."*
+
+Bạn chỉ việc bấm phím trả lời 1-2-3, và bùm! Giao diện đăng nhập lung linh hiện ra bên cạnh màn hình.
 `;
 
 export const sk_14_1 = `
 ### 🎯 Mục tiêu bài học
-Dùng kỹ thuật Vibe Coding để phác thảo toàn bộ giao diện của một trang web giới thiệu sản phẩm (Landing Page) chuẩn SEO.
+Dùng kỹ thuật Meta-Prompting để thiết kế một Landing Page bán hàng chuẩn SEO mà không sót bất kỳ tính năng nào.
 
-### 📐 Dựng Layout Trang Web Siêu Tốc
-Một Landing Page tốt luôn có cấu trúc: Hero (Mặt tiền), Features (Tính năng), và Pricing (Bảng giá).
+### 📐 Tự làm Landing Page bằng AI
+Làm trang web bán hàng (Landing Page) cần cấu trúc (Hero, Tính năng, Bảng giá). Nếu bạn không nhớ nổi cấu trúc đó?
 
-**Mẫu câu lệnh (Prompt) đưa cho AI:**
-> "Tôi muốn làm một Landing Page giới thiệu dịch vụ Dọn nhà tự động. Giao diện dùng TailwindCSS, tông màu xanh ngọc bích tươi sáng.
-> - Phần Header: Logo bên trái, nút 'Đặt lịch ngay' bên phải.
-> - Phần Hero: Câu slogan to 'Nhà sạch bóng chỉ sau 1 chạm'. Có 1 ô nhập SĐT để khách điền.
-> - Phần Features: Dưới dạng 3 thẻ (Card) có icon. Nội dung: Nhanh chóng, Giá rẻ, Uy tín.
-> - Phần Pricing: Bảng giá 2 gói (Gói Cơ bản 50k, Gói VIP 100k).
-> Hãy code để trang web có hiệu ứng trượt mượt mà (animation) và xem đẹp trên màn hình điện thoại (Responsive)."
+**Đơn giản, ném bài toán cho AI:**
+> *"Tôi đang bán dịch vụ Vệ sinh Máy lạnh. Tôi muốn nhờ bạn code một Landing Page đầy đủ các phần để thuyết phục khách hàng nhất. Tôi không biết một Landing Page chuẩn cần có những mục (Section) gì.*
+> *Bạn hãy tự đóng vai Giám đốc Marketing, đề xuất cho tôi cấu trúc 5 phần của trang web này. Nếu tôi đồng ý, hãy bắt đầu code nó bằng TailwindCSS với tông màu xanh dương mát mẻ."*
 
-AI sẽ tự động sinh ra mã nguồn giao diện xịn xò. Chỗ nào chưa ưng, bạn cứ chat tiếp: *"Đổi màu nút thành đỏ đi", "Làm góc bo tròn hơn"* là nó tự sửa.
+AI sẽ tự động nảy số, vẽ ra sườn trang web. Bạn Ok một cái là nó tự động nhả code giao diện chạy mượt mà ngay trên màn hình.
 `;
 
 export const sk_14_2 = `
 ### 🎯 Mục tiêu bài học
-Biến mã nguồn đang nằm trên máy thành một trang web thực sự trên Internet để gửi link cho khách hàng.
+Website làm xong để đó thì ai xem? Ép AI phải hướng dẫn bạn cách đưa trang web lên mạng (Deploy).
 
 ### 🚀 Tung Website lên Internet (Deploy)
-Khi AI đã code xong và bạn nhìn thấy giao diện ưng ý trên công cụ v0.dev hoặc Bolt.new:
+Khi AI đã code xong giao diện trên v0.dev, bạn muốn gửi link cho sếp xem.
 
-1. Bấm nút **Deploy** (Thường nằm ở góc trên bên phải màn hình).
-2. Hệ thống sẽ tự động liên kết với các dịch vụ hosting miễn phí (như Vercel hoặc Netlify).
-3. Đợi khoảng 30 giây để hệ thống cấu hình.
-4. Nó sẽ trả lại cho bạn một đường link HTTPS bảo mật (Ví dụ: \`dich-vu-don-nha.vercel.app\`).
+**Prompt hỏi AI (CoT):**
+> *"Bạn đã code giao diện đẹp rồi, nhưng nó đang nằm trên máy tôi. Tôi muốn tung nó lên mạng (Internet) bằng Vercel để người khác vào xem được bằng link HTTPS.*
+> *Hãy SUY NGHĨ TỪNG BƯỚC, hướng dẫn tôi phải bấm vào nút nào trên màn hình v0.dev này, thao tác ra sao để xuất bản trang web. Nói bằng ngôn ngữ bình dân."*
 
-Từ giờ phút này, website của bạn đã "live" trên toàn cầu. Bất kỳ ai có đường link đều có thể truy cập được!
+AI sẽ chỉ đích danh: "Bạn nhìn lên góc trên bên phải, có cái nút chữ Deploy, bấm vào đó...". Thế là trang web của bạn chính thức ra mắt toàn cầu!
 `;
 
 export const sk_15_1 = `
 ### 🎯 Mục tiêu bài học
-Mô tả luật chơi thật logic và mạch lạc để ép AI code ra được một trò chơi giải trí chạy mượt trên trình duyệt.
+Code một trò chơi điện tử giải trí (Web Game). Nếu không biết luật, cứ để AI tự điền vào chỗ trống.
 
-### 🎮 Tự Làm Game Rắn Săn Mồi (Snake)
-Để AI code được game, bạn phải mô tả luật (Game Logic) rõ ràng như kể chuyện cho con nít.
+### 🎮 Tự Làm Game Rắn Săn Mồi (Meta-Prompting)
+Muốn làm Game Rắn săn mồi nhưng bạn không biết phải mô tả luật chơi cho AI như thế nào để nó không bị lỗi logic?
 
-**Mẫu câu lệnh (Prompt):**
-> "Hãy viết cho tôi trò chơi Rắn săn mồi kinh điển bằng HTML5 Canvas và Javascript. Viết chung vào 1 file để tôi chạy thử ngay trên web.
-> 
-> Giao diện: Khung game vuông 400x400 nền đen. Rắn màu xanh neon. Thức ăn là 1 ô vuông màu đỏ. Trên cùng hiện Số Điểm (Score).
-> Luật chơi: 
-> - Rắn chạy tự động, dùng phím Mũi tên bàn phím để đổi hướng. 
-> - Ăn 1 mồi thì rắn dài ra 1 đốt, điểm +10.
-> - Nếu rắn đụng vào tường hoặc tự đụng vào đuôi nó -> Game Over, hiện nút 'Chơi Lại'.
-> Tốc độ rắn chạy vừa phải để dễ chơi."
+**Câu thần chú vạn năng:**
+> *"Tôi muốn nhờ bạn code một trò chơi Rắn săn mồi (Snake) cổ điển chạy trực tiếp trên trình duyệt. Tôi không biết phải mô tả luật chơi, kích thước rắn, hay cách tính điểm như thế nào cho hợp lý.*
+> *Bạn hãy tự lập ra luật chơi chuẩn nhất của game này, liệt kê ra cho tôi xem. Nếu tôi đồng ý, hãy lập tức code nó bằng HTML5 Canvas và Javascript."*
+
+Thế là AI tự soạn luật, tự nghĩ ra cách tính điểm (ăn 1 cục mồi được 10 điểm), và tự viết code luôn!
 `;
 
 export const sk_15_2 = `
 ### 🎯 Mục tiêu bài học
-Xử lý các tình huống AI viết code bị lỗi (Ví dụ: Rắn chạy đâm xuyên tường mất tích) mà không cần phải tự đọc code để sửa.
+Tuyệt kỹ sống còn của Vibe Coder: Khi game chạy lỗi đỏ lòm, tuyệt đối KHÔNG tự sửa code. Nhờ AI chửi và sửa chính nó!
 
-### 🐛 Kỹ năng Đọc Lỗi (Debugging)
-Việc AI viết lỗi ở lần đầu tiên là rất bình thường. Bí quyết của Vibe Coder là: **Không bao giờ tự sửa code, hãy để AI tự sửa lỗi của nó.**
+### 🐛 Kỹ năng Đọc Lỗi (Debugging kiểu Lười)
+Đang chơi, con rắn đâm đầu vào tường mà không chết (Lỗi Game Logic). Hoặc màn hình trắng bóc.
 
-1. **Mô tả hiện tượng bằng Tiếng Việt:** Quay lại ô chat và nói: *"Này AI, tôi ăn cục mồi mà điểm không tăng, con rắn cũng không dài ra. Sửa lại ngay!"*
-2. **Cung cấp Log Lỗi (Bắt bệnh):** 
-   - Nhấn chuột phải vào màn hình Game -> Bấm **Inspect (Kiểm tra)** -> Bấm qua tab **Console**.
-   - Nếu thấy dòng chữ đỏ lè (Ví dụ: \`TypeError: updateScore is not defined\`), copy y nguyên dòng đó dán cho AI.
+**Cách xử lý bằng Meta-Prompting:**
+1. Mở F12 (Inspect) lên, qua tab Console, copy đống chữ đỏ loằng ngoằng.
+2. Quăng lại vào ô chat của AI, kèm câu chửi:
+> *"Tôi chạy đoạn code của bạn thì nó hiện ra đống lỗi này: [Dán đống chữ đỏ vào].*
+> *Ngoài ra con rắn đâm xuyên tường mà game không kết thúc.*
+> *HÃY SUY NGHĨ TỪNG BƯỚC: Phân tích xem bạn đã viết sai ở dòng nào, giải thích cho tôi bằng tiếng Việt đơn giản vì sao lại sai, và đưa lại MỘT ĐOẠN CODE DUY NHẤT đã sửa lỗi để tôi copy thay thế."*
 
-AI đọc dòng chữ đỏ đó sẽ hiểu ngay lập tức: *"À tôi quên chưa viết cái hàm tính điểm. Tôi viết bù đây!"* và đưa bạn đoạn code mới đã được sửa ngon lành.
+Nhờ ép AI "suy nghĩ từng bước" (CoT), nó sẽ không còn sửa chỗ này hỏng chỗ kia nữa!
 `;
