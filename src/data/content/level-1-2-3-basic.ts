@@ -1,78 +1,67 @@
 export const sk_1_1 = `
 ### 🎯 Mục tiêu bài học
-Quên chuyện gõ phím đi! Năm 2026 là kỷ nguyên của Multimodal (Đa phương thức). Học cách giao tiếp với các siêu AI như **GPT-5.5** và **Claude Opus 4.8** bằng cả Giọng nói, Hình ảnh và Chữ viết cùng lúc.
+Gạt bỏ việc copy-paste mệt mỏi! Học cách nhúng thẳng **Gemini** vào **Google Docs** để tạo ra một cỗ máy soạn thảo văn bản không bao giờ cạn ý tưởng.
 
-### 🗣️ 1. Giao tiếp Voice-to-Voice (Chế độ Nâng cao)
-AI giờ đây có thể ngắt lời bạn, hiểu tiếng cười, cảm xúc và phản hồi trong 0.2 giây.
-- **Cách dùng:** Bật app ChatGPT, chọn chế độ *Advanced Voice*.
-- **Prompt đa phương thức:** Thay vì gõ, hãy giơ camera điện thoại lên quay một đống tài liệu bừa bộn trên bàn và nói:
-> *"Ê AI, nhìn đống giấy tờ này đi. Tao đang bù đầu. Phân tích cho tao xem tờ nào là hóa đơn, tờ nào là nháp, rồi đọc to tổng số tiền tao đang nợ tháng này lên nghe coi."*
-AI sẽ nhìn (Vision), suy nghĩ và nói chuyện trực tiếp (Voice) với bạn như một người trợ lý bằng xương bằng thịt.
-
-### 🎨 2. Hình ảnh Thế hệ mới (Midjourney v7 & Sora 2)
-Công thức CREATE vẫn dùng tốt, nhưng ở năm 2026, AI hiểu cả những khái niệm vật lý phức tạp.
-- Cứ ném 1 bức ảnh thô vào, dùng tính năng **Inpainting / Character Reference** để ép AI giữ nguyên khuôn mặt nhân vật, sau đó đổi bối cảnh, đổi góc quay camera 3D chuẩn xác đến từng mi-li-mét!
+### 📝 Soạn thảo Thực chiến với Gemini Docs
+Google Docs giờ đây đã có nút "Help me write" thần thánh. Đừng gõ chữ, hãy gõ Prompt!
+- **Thực hành:** Mở một file Google Docs trống.
+- Bấm vào biểu tượng cây đũa phép (Gemini).
+- **Nhập lệnh (Dùng công thức RTF):** *"Đóng vai Chuyên gia Marketing (Role), hãy viết cho tôi một bản Đề xuất Dự án ra mắt sản phẩm mới (Task). Trình bày dưới dạng các gạch đầu dòng ngắn gọn, có bảng dự trù kinh phí (Format)."*
+Gemini sẽ tự động gõ chữ ngay trong file Docs của bạn.
 `;
 
 export const sk_1_2 = `
 ### 🎯 Mục tiêu bài học
-Làm chủ kỹ thuật CoT (Chuỗi tư duy) trên nền tảng Reasoning Models (Mô hình suy luận) như **Gemini 3.5 Pro** và Kỹ thuật Đảo ngược (Meta-Prompting).
+Viết xong mà thấy văn phong hơi "chợ búa" hoặc "dài dòng"? Hãy để Gemini làm biên tập viên sửa lỗi cho bạn chỉ trong 1 nút bấm.
 
-### 🧠 3. Reasoning Models & Chain of Thought
-Các AI năm 2026 không trả lời ngay. Nếu bạn hỏi một bài toán khó, hệ thống sẽ bật chế độ **"Suy luận sâu" (Deep Reasoning)**. Nó tự động sinh ra hàng chục bước giải thích ngầm trong đầu (CoT) trước khi xuất kết quả. Bạn không cần phải dặn "Think step by step" nữa, mà hãy dặn:
-> *"Hãy dành ra 3 phút để tự tranh luận với chính bản thân bạn (Self-Correction) trước khi đưa cho tôi đáp án cuối cùng về báo cáo tài chính này."*
-
-### 🔄 4. Đảo ngược & Tự trị (Meta-Prompting & Agentic)
-Bí kíp tối thượng: Đừng bắt AI làm, hãy trao quyền cho nó "Tự hỏi, tự làm".
-> *"Tôi muốn viết một email cho đối tác. Tôi trao cho bạn quyền truy cập Lịch (Calendar) và Hộp thư của tôi. Hãy tự lục lọi tìm lịch rảnh của tôi tuần sau, đọc lại lịch sử chat với ông ấy, và TỰ SOẠN một cái email hoàn chỉnh. Cần thông tin gì thêm thì mới được quay ra hỏi tôi."*
+### ✨ Sửa lỗi và Làm bóng Văn bản
+Đừng tốn thời gian tự đọc lại từng dòng.
+- Bôi đen đoạn văn cần sửa.
+- Chọn **"Refine" (Tinh chỉnh)** -> Chọn **"Formal" (Trang trọng)** hoặc **"Shorten" (Làm ngắn lại)**.
+- Gemini sẽ lập tức "ủi phẳng" câu chữ của bạn mượt mà như một biên tập viên chuyên nghiệp! Nó cũng có thể tự động bắt lỗi chính tả, thay thế từ ngữ cho phù hợp ngữ cảnh.
 `;
 
 export const sk_2_1 = `
 ### 🎯 Mục tiêu bài học
-Kết hợp **Gemini 3.5 Pro** (siêu mẫu 컨텍스트 2 triệu token) để AI tự đọc toàn bộ lịch sử công ty và tự giao tiếp thay bạn.
+Biến Gmail thành một cô Thư ký AI chăm chỉ: Tự đọc và tóm tắt hàng tá Email chưa đọc trong chớp mắt bằng sức mạnh của **Gemini in Gmail**.
 
-### 📧 Email Agent (Nhân sự Ảo quản lý hòm thư)
-Năm 2026, bạn không copy từng email vào chat nữa.
-Bạn cấp quyền (Grant Access) cho AI chui thẳng vào Gmail của bạn.
-
-**Cấu hình Agent:**
-> *"Đóng vai Quản lý Khách hàng. Từ nay, hãy tự động đọc mọi email đến. Nếu là email rác, tự đưa vào thùng rác. Nếu là email hỏi báo giá, TỰ ĐỘNG quét file Bảng giá trong Google Drive của tôi, soạn thư trả lời và lưu vào thư mục 'Draft' (Bản nháp) để tôi duyệt vào lúc 5h chiều mỗi ngày."*
-
-Hệ thống sẽ chạy ngầm 24/7. Bạn chỉ việc vào lúc 5h chiều, kiểm tra và ấn Send một loạt!
+### 📧 Đọc siêu tốc hàng tá Email
+Sáng ra mở máy thấy 50 cái email chưa đọc? Đừng hoảng loạn!
+- Mở ô chat Gemini ở góc phải màn hình Gmail.
+- **Ra lệnh:** *"Hãy tóm tắt tất cả các email chưa đọc gửi từ hôm qua đến nay. Phân loại xem có email nào quan trọng (từ sếp, khách hàng VIP) cần xử lý gấp không?"*
+Gemini sẽ quét qua hàng tá email và lọc ngay ra 3 cái email sống còn để bạn đọc trước, kèm tóm tắt nội dung cốt lõi của từng cái.
 `;
 
 export const sk_2_2 = `
 ### 🎯 Mục tiêu bài học
-Dạy AI nhại giọng bạn đến mức hoàn hảo thông qua **Personalization Memory** (Bộ nhớ cá nhân hóa dài hạn).
+Đừng ngồi nặn từng chữ để viết mail xin lỗi hay báo giá. Hãy để AI tự động soạn sẵn thư nháp (Draft) dựa trên ngữ cảnh.
 
-### 🎭 AI mang nhân cách của bạn
-Các mô hình AI năm 2026 không bị "mất trí nhớ" sau mỗi đoạn chat. Chúng học phong cách của bạn vĩnh viễn.
-
-**Thiết lập Persona (Nhân cách):**
-> *"Hãy phân tích 100 bài đăng Facebook của tôi trong năm qua (tôi đã cấp quyền truy cập). Lưu lại từ vựng tôi hay dùng, cách tôi xài Emoji, nhịp điệu ngắt câu. Từ bây giờ trở đi, MỌI BÀI VIẾT bạn tạo ra cho tôi phải dùng chính xác nhân cách này (Persona: [Tên Bạn])."*
-
-Bạn không bao giờ phải dặn lại "Hãy viết theo giọng của tôi..." vào mỗi lần tạo chat mới nữa.
+### ✍️ Tự động soạn Thư nháp thông minh
+Khi nhận được email phàn nàn của khách hàng do giao hàng chậm.
+- Bấm **Reply (Trả lời)**.
+- Chọn "Help me write" (Biểu tượng đũa phép).
+- **Prompt:** *"Hãy viết một bức thư xin lỗi chân thành, giải thích nguyên nhân chậm trễ do lỗi hệ thống vận chuyển, và đề nghị đền bù một mã giảm giá 20%."*
+Gemini sẽ phân tích giọng điệu bức thư trước đó của khách, và tự động soạn 1 bức thư dài lê thê, chuyên nghiệp chỉ từ một câu tóm tắt của bạn! Bạn chỉ việc ấn Gửi!
 `;
 
 export const sk_3_1 = `
 ### 🎯 Mục tiêu bài học
-Dùng **Perplexity AI (Pro 2026)** và Search-Grounding Agent để "cào" và tổng hợp số liệu Real-time (Thời gian thực).
+Vứt bỏ việc ngồi xóa khoảng trắng, tô màu từng cái cột Excel. Dùng **Gemini Advanced** kết hợp với **Google Sheets** để làm sạch số liệu rác trong 1 nốt nhạc.
 
-### 🔍 Đặc vụ Nghiên cứu Thị trường (Research Agent)
-AI không chỉ search Google, nó tự động dạo quanh các forum, báo cáo chứng khoán, video Youtube và podcast.
-
-**Prompt kích hoạt Agent:**
-> *"Khởi động chế độ Deep Research (Nghiên cứu Sâu). Hãy lùng sục toàn bộ internet về đối thủ 'Highlands Coffee' trong 1 tuần qua. Nghe cả các đoạn video review trên Tiktok. Tổng hợp thành một bảng báo cáo tương tác, có trích dẫn nguồn bằng video clip và biểu đồ tương tác thời gian thực."*
+### 🧹 Dọn rác Dữ liệu bằng Gemini
+Bạn tải file báo cáo khách hàng về, cột Tên thì viết thường, cột Ngày thì viết sai định dạng.
+- Quăng file Excel/CSV đó vào Gemini Advanced.
+- **Prompt:** *"Hãy đọc file dữ liệu này. Cột A (Họ Tên) đang dính khoảng trắng thừa, hãy chuẩn hóa lại (In hoa chữ cái đầu). Cột B (Ngày sinh) hãy đổi hết về định dạng DD/MM/YYYY. Xuất lại file sạch (Cleaned File) cho tôi tải về."*
+AI sẽ tự động viết code xử lý ngầm và ném lại cho bạn một file hoàn hảo.
 `;
 
 export const sk_3_2 = `
 ### 🎯 Mục tiêu bài học
-Phân tích dữ liệu khủng với **NotebookLM 2026** và tính năng Audio/Video Overviews.
+Dùng ngôn ngữ tự nhiên (Tiếng Việt) để hỏi số liệu trong Google Sheets thay vì phải hì hục viết hàm VLOOKUP hay vẽ Pivot Table.
 
-### 📚 Nhồi não AI bằng hàng nghìn trang tài liệu
-Bạn có 5 cuốn sách PDF, 10 đoạn ghi âm cuộc họp, và 3 video đào tạo. Làm sao để tiêu hóa hết?
-
-1. Quăng tất cả (PDF, MP3, MP4) vào một Workspace của NotebookLM.
-2. Bấm nút tạo **"Multimodal Overview"**.
-3. AI sẽ tự động hiểu nội dung của tất cả định dạng, và tổng hợp ra một File Audio đàm thoại 2 người, xen kẽ với việc nó tự động cắt ghép các đoạn Video từ tài liệu gốc của bạn làm dẫn chứng minh họa! Học hành chưa bao giờ nhàn đến thế!
+### 📈 Phân tích Số liệu bằng Câu hỏi Tiếng Việt
+Trong Google Sheets, mở bảng điều khiển bên phải (Gemini).
+- Bôi đen bảng doanh thu 12 tháng.
+- **Prompt:** *"Dựa vào bảng này, hãy cho tôi biết: Sản phẩm nào bán chạy nhất trong tháng 6? Tốc độ tăng trưởng so với tháng 5 là bao nhiêu %? Hãy vẽ cho tôi một biểu đồ cột thể hiện doanh thu của 3 tháng gần nhất."*
+Gemini sẽ đọc thấu bảng tính, tính toán con số và tự động chèn biểu đồ vào bảng tính của bạn.
 `;

@@ -1,77 +1,71 @@
 export const sk_4_1 = `
 ### 🎯 Mục tiêu bài học
-Giao việc cho **Data Analyst Agent** (Đặc vụ Phân tích Dữ liệu) chạy bằng mô hình GPT-5.5 hoặc Claude 4.8. Không còn tải file Excel thủ công nữa!
+Học cách làm Slide thuyết trình từ số 0 mà không cần đụng đến chuột. **Gemini in Google Slides** sẽ tự động đẻ ra các trang trình bày và chèn nội dung cho bạn.
 
-### 🧹 Đặc vụ Xử lý Dữ liệu Tự động
-Thay vì tự dọn rác Excel, ở năm 2026, AI đã có sẵn môi trường Python (Advanced Data Analysis) cực mạnh chạy ngầm.
+### 🎨 Thuyết trình "Lười biếng" với Google Slides
+Sếp giao 30 phút nữa phải có một bản Slide trình bày kế hoạch Marketing.
+1. Mở một bản Google Slides trống.
+2. Bấm vào nút Gemini ở góc phải.
+3. **Prompt:** *"Tạo cho tôi một bản Slide 5 trang về Kế hoạch Marketing cho quán Trà sữa mới mở. Trang 1 là Tiêu đề. Trang 2 là Phân tích Khách hàng mục tiêu. Trang 3 là Bảng ngân sách. Trang 4 là Timeline triển khai. Trang 5 là Lời cảm ơn."*
 
-1. Bạn cấp quyền cho AI kết nối thẳng vào Google Drive hoặc Database SQL của công ty.
-2. **Prompt:**
-> *"Phân tích Database 'Sales_2026' đang kết nối. Tự động viết script Python để quét toàn bộ dữ liệu bị lỗi (Null, Sai định dạng ngày). Sửa lại chuẩn ISO. Chạy script đó và lưu kết quả thành một View mới. Nếu có gì bất thường vượt quá 10%, hãy dừng lại và báo tôi ngay."*
-
-AI sẽ tự động viết code, tự động chạy, kiểm tra kết quả và báo cáo lại cho bạn. Bạn đóng vai sếp, không phải vai thợ gõ Excel!
+Gemini sẽ tự động đẻ ra 5 trang Slide, thiết kế bố cục, viết sẵn nội dung vào từng ô chữ chỉ trong vòng 10 giây!
 `;
 
 export const sk_4_2 = `
 ### 🎯 Mục tiêu bài học
-Ra lệnh cho AI thiết kế toàn bộ một Dashboard Tương tác (Interactive Dashboard) thay vì chỉ là các ảnh biểu đồ tĩnh.
+Đừng lên Google tìm ảnh minh họa bị dính bản quyền nữa. Sử dụng **Imagen 3** (Tích hợp trong Gemini) để vẽ ra bức ảnh thiết kế độc quyền ngay trên Slide.
 
-### 📊 Dashboard Tương tác với AI
-Năm 2026, kết quả AI trả ra không phải là bức ảnh tĩnh (JPG), mà là các cục Widget (Thành phần giao diện) bạn có thể bấm vào được.
-
-**Prompt (Agentic):**
-> *"Dựa trên dữ liệu doanh thu tháng trước, hãy tạo cho tôi một Interactive Dashboard có 3 biểu đồ: Tròn, Đường, và Cột. Tôi muốn khi tôi dùng chuột bấm vào phần 'Miền Nam' trên biểu đồ tròn, các biểu đồ còn lại tự động lọc theo Miền Nam. Hãy dùng thư viện React Recharts để hiển thị ngay trên màn hình chat này."*
-
-Và bùm! AI sẽ render ngay một giao diện Dashboard như Tableau hay PowerBI thu nhỏ cho bạn chơi đùa với số liệu.
+### 🖼️ Sáng tạo Hình ảnh với Imagen 3
+Bạn đang làm một Slide về "Không gian làm việc tương lai" nhưng tìm mãi không thấy cái ảnh nào ưng ý.
+- Mở Gemini trong Slides.
+- Chọn tính năng **"Create image"** (Tạo hình ảnh).
+- **Prompt (Áp dụng công thức CREATE):** *"Một văn phòng làm việc ngập tràn cây xanh, có cửa sổ lớn nhìn ra biển. Phong cách 3D tối giản (Minimalist), ánh sáng bình minh ấm áp chiếu vào."*
+Imagen 3 sẽ tạo ra 4 lựa chọn ảnh sắc nét chuẩn Studio. Bạn chỉ việc ấn "Insert" (Chèn) là bức ảnh sẽ nằm gọn gàng trên trang Slide của bạn.
 `;
 
 export const sk_5_1 = `
 ### 🎯 Mục tiêu bài học
-Điều khiển **Midjourney v7** và **Flux 2.0** với tính năng Spatial Understanding (Hiểu không gian 3D) và giữ tính nhất quán (Character Consistency).
+Đừng tìm file thủ công bằng thanh tìm kiếm nữa. Ép **Gemini** lặn sâu vào **Google Drive** của bạn, moi móc và đọc hàng trăm tài liệu PDF/Docs cùng lúc để trả lời câu hỏi.
 
-### 🎨 Giám đốc Hình ảnh Thế hệ 2026
-Công thức CREATE vẫn dùng để bắt đầu, nhưng sau đó, việc tinh chỉnh hoàn toàn bằng AI thao tác trực tiếp.
-
-- **Vẽ một cô gái:** *CREATE: Cô gái Việt Nam, áo dài, đường phố Hà Nội...*
-- **Sức mạnh 2026:** Bạn bôi đen cái nón lá của cô gái, ra lệnh: *"Đổi nón lá thành mũ Beret đỏ, xoay góc mặt của cô ấy sang trái 30 độ, và giữ nguyên ánh sáng bối cảnh."*
-AI 2026 hiểu không gian 3D của bức ảnh 2D, cho phép bạn xoay góc, kéo thả vật thể, thay đổi ánh sáng mà không cần dùng Photoshop!
+### 🔍 Đặc vụ Lục lọi (Gemini + Drive Workspace)
+Bạn quên mất cái Báo cáo tài chính quý 1 để ở thư mục nào, bạn chỉ nhớ mang máng nó nhắc đến "Dự án Alpha".
+- Mở trình duyệt web Gemini, gõ ký tự \`@\` để gọi tiện ích, chọn \`@Google Drive\`.
+- **Prompt:** *"@Google Drive Hãy tìm tất cả các file PDF và Docs có nhắc đến 'Dự án Alpha' trong 6 tháng qua. Đọc nội dung của chúng và lập cho tôi một bảng tóm tắt: Tên file, Ngày tải lên, Số tiền đầu tư được nhắc đến trong file đó."*
+Gemini sẽ dùng "cẩu trảo" lục tung Drive của bạn, lôi ra đúng 3 file bị giấu kỹ, đọc thấu nội dung và báo cáo lại cho bạn.
 `;
 
 export const sk_5_2 = `
 ### 🎯 Mục tiêu bài học
-Dùng **Multimodal AI** (Như Gemini 3.5) để phân tích hình ảnh thực tế và tự động tái tạo prompt (Re-prompting).
+Phân tích chéo nhiều tài liệu để tìm ra điểm mâu thuẫn hoặc điểm chung mà não người không thể nhớ hết được.
 
-### 💡 Meta-Prompting Đảo ngược bằng Tầm nhìn
-Bạn lướt Pinterest thấy một bức ảnh quá đẹp nhưng không biết miêu tả thế nào để AI vẽ lại?
-
-**Cách xử lý 2026:**
-1. Chụp ảnh đó, dán vào Gemini 3.5 Pro hoặc GPT-5.5.
-2. **Prompt:** *"Phân tích kỹ bức ảnh này. Ánh sáng đang dùng là loại gì? Bố cục tỷ lệ vàng hay một phần ba? Máy ảnh dùng lens gì? Sau khi phân tích xong (CoT), hãy viết ngược lại cho tôi 1 câu lệnh Prompt chuyên nghiệp nhất để tôi đưa cho Midjourney v7 vẽ ra bức ảnh có thần thái giống hệt 99% thế này."*
-AI sẽ soi ra từng hạt nhiễu (noise grain) và viết lại câu lệnh thần thánh cho bạn!
+### 📚 Phân tích chéo hàng ngàn trang tài liệu
+Sếp gửi cho bạn 3 bản Hợp đồng (Mỗi bản 50 trang) của 3 nhà cung cấp khác nhau và bảo bạn chọn ra người rẻ nhất.
+- Bật tính năng **Deep Research (Nghiên cứu Sâu)** của Gemini 3.5 Pro.
+- Tải cả 3 file Hợp đồng lên (Hoặc gọi \`@Google Drive\`).
+- **Prompt (Dùng CoT):** *"Đây là 3 bản hợp đồng cung cấp vật liệu. HÃY SUY NGHĨ TỪNG BƯỚC: Phân tích các điều khoản về Phí Vận Chuyển, Thời hạn Thanh toán, và Đơn giá của từng nhà cung cấp. Lập một bảng so sánh 3 bên. Cuối cùng, hãy đưa ra nhận định chuyên gia xem tôi nên ký với bên nào để có lợi nhất về dòng tiền."*
+AI sẽ đọc 150 trang trong chớp mắt và tư vấn như một Luật sư + Kế toán thực thụ!
 `;
 
 export const sk_6_1 = `
 ### 🎯 Mục tiêu bài học
-Từ ảnh tĩnh sang Video điện ảnh cực thực với **Sora 2** và **Kling v3**. Làm phim chưa bao giờ dễ dàng như búng tay.
+Tạo ra một đội quân "Nhân bản" thu nhỏ mang tên **Gemini Gems** - mỗi Gem đảm nhận một chuyên môn (Copywriter, Kế toán, Chuyên gia Nhân sự) luôn túc trực phục vụ bạn.
 
-### 🎬 Đạo diễn Phim AI
-Năm 2026, AI Video không còn mờ nhòe hay dị dạng ngón tay nữa. Nó tuân thủ chặt chẽ các nguyên lý Vật lý (Vật rơi, cháy nổ, phản chiếu gương).
-
-**Prompt điều khiển Camera 3D:**
-> *"Tạo video 10 giây. Góc nhìn thứ nhất (FPV), bay từ một con hẻm tối ở Tokyo ra đường lớn ngập ánh đèn Neon. Camera bay lướt qua một vũng nước, và vũng nước phản chiếu hình ảnh một chiếc xe ô tô thể thao bay qua. Chuyển động mượt, không quay giật cục."*
-
-Chỉ 1 câu lệnh, bạn có một cú máy (Tracking shot) Hollywood trị giá hàng ngàn đô-la!
+### 💎 Nhân sự ảo cá nhân (Tạo Gemini Gems)
+Bạn lười viết đi viết lại một cái Prompt dài dòng mỗi ngày? Hãy tạo một **Gem**.
+1. Vào Gemini -> Chọn **Create a Gem**.
+2. Đặt tên Gem: **"Biên tập viên Khó tính"**.
+3. **Viết luật (Instructions):** *"Từ nay, mỗi khi tôi gửi cho bạn một đoạn văn lủng củng, bạn HÃY TỰ ĐỘNG làm 3 việc: 1. Sửa hết lỗi chính tả và ngữ pháp. 2. Đổi giọng văn thành lãng mạn, bay bổng. 3. Dịch kết quả sang tiếng Anh chuẩn IELTS. Đừng hỏi lại, cứ nhận file là tự làm."*
 `;
 
 export const sk_6_2 = `
 ### 🎯 Mục tiêu bài học
-Tạo **Avatar AI (Nhân bản số)** bằng Synthesia hoặc HeyGen thế hệ mới, với giọng nói thật của bạn và biểu cảm tự nhiên.
+Tiết kiệm 80% thời gian làm việc lặp đi lặp lại bằng cách tích hợp các Gems vào quy trình làm việc (Workflow).
 
-### 👥 Nhân bản chính mình làm MC
-Không cần tốn công trang điểm quay clip TikTok mỗi ngày nữa.
+### ⚙️ Setup quy trình Tự động với Gems
+Bạn là một người làm Content. Thay vì ôm đồm mọi thứ, hãy tạo 3 Gems:
+1. **Gem Sáng tạo:** Chuyên đẻ ra 10 ý tưởng tiêu đề giật gân khi bạn nhập chủ đề.
+2. **Gem Viết lách:** Nhận tiêu đề từ Gem Sáng tạo, đẻ ra bài viết 500 chữ.
+3. **Gem Hình ảnh:** Nhận bài viết từ Gem Viết lách, tự động đẻ ra Prompt vẽ ảnh bằng công thức CREATE.
 
-1. Bạn quay 1 đoạn video 2 phút của chính mình ngồi đọc sách để AI học (Học giọng, Học khẩu hình, Học thói quen vung tay).
-2. Viết 1 kịch bản (Bằng GPT-5.5).
-3. Đẩy kịch bản vào công cụ Nhân bản số. Avatar AI của bạn sẽ đứng lên, nói y chang giọng bạn, đi tới đi lui và trình bày lưu loát cái kịch bản đó. 
-Bạn có thể ra hàng chục video mỗi ngày trong lúc đang đi ngủ!
+Mỗi buổi sáng, bạn chỉ việc nhập 1 từ khóa (Ví dụ: "Cafe Giảm cân") vào hệ thống dây chuyền này, các Gems sẽ tự động mớm việc cho nhau và nhả ra cho bạn một gói Content hoàn chỉnh. Bạn chính thức trở thành "Sếp của AI"!
 `;

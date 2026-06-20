@@ -1,89 +1,70 @@
 export const sk_7_1 = `
 ### 🎯 Mục tiêu bài học
-Từ bỏ tư duy "Nối dây kéo thả" (Trigger - Action) nhàm chán của năm cũ. Chào mừng đến kỷ nguyên của **Nhân sự Ảo Tự trị (Autonomous Agents)** trên nền tảng Lindy.ai hoặc n8n Agent.
+Gạt bỏ tư duy nối dây rườm rà của n8n hay Zapier. Làm quen với **Flow Google Labs** - Nền tảng tự động hóa siêu tinh gọn, do chính sếp thiết kế, dành riêng cho hệ sinh thái Google.
 
-### ⚙️ Tạo Nhân sự Ảo thay vì tạo Webhook
-Ngày xưa, để chuyển dữ liệu từ Facebook sang Google Sheets, bạn phải nối hàng tá node. Nếu cấu trúc thay đổi, luồng sẽ bị gãy (Break).
-
-**Năm 2026 (Với Lindy.ai):**
-1. Bạn tạo một Agent tên là "Nhân viên CSKH".
-2. Cấp cho nó quyền (Tool) truy cập Facebook Fanpage và Google Sheets của công ty.
-3. **Lệnh bằng Tiếng Việt (Prompt):** *"Nhiệm vụ của bạn là trực Facebook. Bất cứ khi nào có người nhắn tin hỏi mua hàng, hãy nói chuyện với họ, xin số điện thoại, và tự động ghi tên họ vào file Google Sheets này. Nếu họ chửi rủa, tự động block."*
-
-Xong! Bạn không cần kéo một cái dây nào. AI sẽ tự động lắng nghe, suy nghĩ lúc nào thì cần xin số điện thoại, và lúc nào thì cần dùng quyền mở Google Sheets để ghi vào!
+### ⚙️ Nhập môn Flow Google Labs
+Flow Google Labs là nơi mọi thứ được đơn giản hóa đến mức tối đa. Bạn không cần hiểu API hay Webhook là gì, chỉ cần biết Kéo và Thả.
+- **Khái niệm cốt lõi:** Mỗi luồng (Flow) gồm 1 **Trigger (Cò súng - Kích hoạt)** và các **Actions (Hành động)**.
+- Khi có một sự kiện xảy ra (Ví dụ: Có người điền Form đăng ký), "cò súng" sẽ nổ, và kích hoạt một loạt các "hành động" đằng sau (Ví dụ: Nhắn tin Zalo báo sếp, Gửi email cảm ơn).
+- **Thực hành:** Đăng nhập vào Flow Google Labs, tạo một Flow mới, đặt tên và khám phá giao diện thân thiện 100% tiếng Việt.
 `;
 
 export const sk_7_2 = `
 ### 🎯 Mục tiêu bài học
-Cho AI đọc các Tài liệu Kỹ thuật (API Docs) bằng **Agentic n8n**. AI tự đọc, tự hiểu và tự lắp ráp bộ công cụ cho chính mình.
+Thay vì tự mò mẫm cách nối dây, hãy để AI dạy bạn cách làm. Dùng tư duy **Meta-Prompting** để AI hướng dẫn bạn dùng Flow Google Labs.
 
-### 🌐 AI tự dạy AI làm việc
-Nếu hệ thống công ty bạn dùng một phần mềm đặc thù (VD: Phần mềm Kế toán MISA) chưa có sẵn kết nối trong Lindy hay n8n.
-
-**Cách xử lý 2026:**
-1. Copy toàn bộ tài liệu API của MISA quăng vào node \`AI Tool Creator\`.
-2. Ra lệnh: *"Đây là tài liệu API của MISA. Hãy tự động đọc, phân tích các điểm cuối (Endpoints) và TỰ SINH RA (Generate) một công cụ kết nối mới. Tôi muốn công cụ này có khả năng Tạo Hóa đơn."*
-
-Chỉ 1 phút sau, AI sẽ tự động đẻ ra một Node tên là "Tạo Hóa đơn MISA". Bạn lôi nó ra xài luôn, không cần viết một dòng mã Code hay Token loằng ngoằng nào!
+### 🌐 Dùng AI học Flow Google Labs
+Dù giao diện có dễ đến đâu, khi mới dùng bạn vẫn sẽ bỡ ngỡ. Đừng lên mạng tìm video hướng dẫn!
+- **Prompt cho Gemini:** *"Tôi đang sử dụng Flow Google Labs. Tôi muốn làm một luồng: Khi có người comment trên Facebook, nó tự động tải ảnh avatar của người đó về Google Drive. Tôi là người không biết công nghệ. Hãy đóng vai một chuyên gia, hướng dẫn tôi chọn Trigger nào, kéo Action nào trong hệ thống Flow Google Labs để làm được việc này."*
+AI sẽ biến thành gia sư 1 kèm 1, cầm tay chỉ chuột cho bạn từng bước hoàn hảo.
 `;
 
 export const sk_8_1 = `
 ### 🎯 Mục tiêu bài học
-Chăm sóc khách hàng kiểu 2026: Agent không chỉ lấy tên, số điện thoại mà còn tự đánh giá mức độ tiềm năng (Scoring) dựa trên ngữ cảnh trò chuyện.
+Không còn cảnh copy thông tin khách hàng từ Form sang Excel bằng tay nữa. Xây dựng cỗ máy hút khách hàng tự động 24/7.
 
-### 📥 Đặc vụ phân tích Lead (Khách hàng tiềm năng)
-Khách hàng không bao giờ nhắn tin theo một form chuẩn. Họ sẽ chat: *"E ơi, a thấy áo bên e đẹp, mà đắt quá, có giảm giá ko, sđt a 0912..."*
-
-**Quy trình của Agent:**
-- Agent tự động lọc mớ văn bản lộn xộn.
-- Dùng **CoT (Chain of Thought)** ngầm định: Suy nghĩ xem ông này đang phàn nàn giá hay thực sự muốn mua?
-- Cập nhật vào Google Sheets:
-  - Cột Tên: (Tự suy luận hoặc hỏi lại)
-  - Cột Số điện thoại: 0912...
-  - Cột Phân loại: Khách quan tâm nhưng nhạy cảm về giá (HOT LEAD).
-
-Đó là cách AI tự động hóa dựa trên Suy luận (Reasoning) chứ không dựa trên quy tắc tĩnh!
+### 📥 Tự động gom Lead (Khách hàng tiềm năng)
+Khách hàng điền thông tin đăng ký tư vấn qua Google Forms. Bạn muốn thông tin này tự động chảy về một bảng tính.
+1. **Trong Flow Google Labs:** Chọn Trigger là **Google Forms** (Khi có phản hồi mới).
+2. Nối dây sang Action là **Google Sheets** (Thêm hàng mới).
+3. **Mapping (Ghép nối):** Bấm vào cột Tên trong Sheets, chọn giá trị "Câu trả lời: Họ và Tên" từ Form. Bấm vào cột Số điện thoại, chọn giá trị "Câu trả lời: Số ĐT".
+4. Ấn **Lưu & Bật Luồng**. 
+Từ nay, cứ có khách đăng ký, dữ liệu sẽ tự động nhảy vào bảng tính Excel của bạn chưa đến 1 giây!
 `;
 
 export const sk_8_2 = `
 ### 🎯 Mục tiêu bài học
-Tạo đặc vụ tự động Soạn, Phê duyệt (Approval) và Gửi Email bằng cơ chế **Human-in-the-loop (Có con người kiểm duyệt)**.
+Quản lý tiến độ chăm sóc khách hàng bằng cách kết nối bảng tính Sheets với hệ thống phân chia công việc tự động.
 
-### 💌 Email Agent (Vừa Tự trị vừa An toàn)
-Bỏ AI tự chạy gửi thư cho khách thì rất rủi ro. n8n 2026 có cơ chế **Wait for Human Approval**.
-
-1. Đặc vụ tự động soạn 1 email xin lỗi một khách hàng VIP vừa phàn nàn.
-2. Thay vì gửi đi, nó tự động nhắn 1 tin nhắn vào ứng dụng Slack/Zalo của bạn: *"Sếp ơi, em đã soạn xong thư gửi anh X. Sếp có duyệt để gửi không?"* kèm theo nội dung.
-3. Bạn ấn nút **"Approve" (Duyệt)** ngay trên điện thoại.
-4. AI nhận được lệnh duyệt, lúc đó nó mới nhả thư đi vào Hòm thư khách.
-
-Bạn hoàn toàn làm chủ AI, bắt AI làm lính phục vụ tận răng!
+### 🧑‍💻 Tự động Phân chia Công việc (Giao task)
+Gom khách hàng về Sheets rồi, làm sao để chia cho nhân viên Sale gọi điện?
+- Nối thêm một Action phía sau luồng trên: **Google Chat** (Hoặc Telegram).
+- **Thiết lập:** Mỗi khi có 1 hàng dữ liệu mới xuất hiện trong Sheets, luồng sẽ tự động gửi 1 tin nhắn vào nhóm chat của công ty: *"Sếp ơi, có khách tên {{Họ Tên}} vừa đăng ký khóa học! Số điện thoại: {{Số ĐT}}. Nhân viên Sale số 1 mau gọi tư vấn nhé!"*
+Sales nhận được tin nhắn là gọi ngay lập tức, tỷ lệ chốt đơn tăng gấp 3 lần vì khách hàng vừa điền form xong đã được tư vấn!
 `;
 
 export const sk_9_1 = `
 ### 🎯 Mục tiêu bài học
-Sử dụng AI Memory (Bộ nhớ dài hạn) để phân loại email thông minh. AI nhớ được lịch sử giao dịch của khách hàng cách đây 3 tháng.
+Dạy Flow Google Labs cách đọc hiểu Email để tự động phân loại: Thư nào là hỏi giá, thư nào là khiếu nại, thư nào là rác.
 
-### 🧠 Bộ não của Hộp thư (Long-term Memory)
-Đừng bắt AI đoán mò. Các Agent 2026 được tích hợp bộ nhớ Vector (Vector Database / RAG).
-
-- Khách hàng email: *"Gửi tôi lại hóa đơn lần trước nhé."*
-- Hệ thống Agent đọc thư. Nếu là hệ thống cũ (2024), nó sẽ không hiểu "lần trước" là lần nào.
-- Trợ lý AI 2026 sẽ chui vào Bộ nhớ Vector, tự tìm kiếm lịch sử: *"À, khách hàng này tên Tèo, 3 tháng trước mua 1 cái Máy Lạnh. Hóa đơn mã #123."*
-- Sau đó, nó tự động chui vào phần mềm xuất hóa đơn, xuất PDF và tự động gửi lại cho khách.
-
-Không cần bạn đụng dù chỉ một ngón tay!
+### 🧠 Phân loại Email tự động (Flow + Gemini)
+Mỗi ngày hòm thư nhận hàng trăm lá thư. Đừng tự đọc!
+1. **Trigger:** Khi có Email mới đến hộp thư Gmail.
+2. **Action 1 (Bộ não):** Nối vào Node **Gemini AI**.
+3. **Prompt trong Flow:** *"Đọc nội dung email này: {{Nội dung thư}}. Hãy phân tích và trả về đúng MỘT TỪ trong 3 từ: [HOI_GIA], [KHIEU_NAI], [RAC]. Không giải thích thêm."*
+4. **Action 2 (Bộ lọc Rẽ nhánh):** Nếu Gemini trả về [RAC], tự động đưa vào thùng rác. Nếu trả về [KHIEU_NAI], gắn cờ Đỏ (Quan trọng) để sếp xử lý.
 `;
 
 export const sk_9_2 = `
 ### 🎯 Mục tiêu bài học
-Xây dựng **Routing Agent** (Đặc vụ Phân luồng) - Ông trùm của các con AI khác. 
+Không chỉ phân loại, ép AI tự động soạn thư trả lời ngọt ngào và cá nhân hóa cho từng khách hàng, rồi ấn gửi đi.
 
-### 🔀 Ông trùm AI phân việc cho Đệ tử AI
-Khi công ty lớn lên, bạn có rất nhiều phòng ban.
-Trong n8n, bạn thiết lập 1 Agent đứng ở cổng chính (Hộp thư công ty).
-- Khách gửi thư Khiếu nại kỹ thuật -> Routing Agent đọc và ra lệnh: *"Alo, Đặc vụ Kỹ Thuật (Tech Agent), ca này của chú, xử lý đi."* Tech Agent sẽ tự động kiểm tra server, tra cứu tài liệu code và trả lời khách.
-- Khách hỏi mua sỉ -> Routing Agent gọi: *"Đặc vụ Sales (Sales Agent), có khách sộp. Mày lục bảng giá đại lý và làm việc với người ta nhé."*
-
-Đây là kiến trúc của một Hệ sinh thái Công ty Nhân sự Ảo!
+### 💌 Tự động Gửi thư Cảm ơn (Cá nhân hóa)
+Đối với luồng [HOI_GIA] (Hỏi báo giá), đừng để khách chờ lâu.
+- Dùng tính năng Rẽ nhánh trong Flow Google Labs, kéo nhánh [HOI_GIA] xuống.
+- Nối tiếp vào Node **Gemini AI** để tạo thư nháp (Dùng công thức RTF):
+> *"Role: Nhân viên CSKH thân thiện.*
+> *Task: Viết thư báo giá các gói Dịch vụ Vệ sinh cho khách tên là {{Tên người gửi}}.*
+> *Format: Ngắn gọn, có lời chúc cuối tuần vui vẻ."*
+- Nối kết quả của AI vào Node **Gmail (Gửi thư)**. Khách hàng sẽ nhận được một bức thư chuyên nghiệp, báo giá chính xác, và vô cùng thân thiện ngay lập tức!
 `;

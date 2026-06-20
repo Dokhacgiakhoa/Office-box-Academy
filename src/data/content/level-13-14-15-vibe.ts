@@ -1,79 +1,60 @@
 export const sk_13_1 = `
 ### 🎯 Mục tiêu bài học
-Quên đi "Vibe Coding" lụp xụp của năm 2024. Chào mừng đến kỷ nguyên **Agentic Coding** (Lập trình bằng Đặc vụ Tự trị). Giờ đây, AI (như **Claude Code** hoặc **Cursor**) là Kỹ sư phần mềm toàn thời gian của bạn.
+Bước vào kỷ nguyên "Product Manager" (Quản lý dự án) thay vì làm thợ gõ code. Làm quen với **Antigravity IDE** - vũ khí tối thượng kết hợp với trí tuệ siêu việt của **Claude**.
 
-### 🪄 Agentic Coding & Tư duy Quản lý Dự án
-Năm 2024, bạn dùng v0.dev bắt AI làm cái nút bấm, cái form rời rạc.
-Năm 2026, bạn không cần quan tâm đến từng dòng code nữa. Bạn trở thành Product Manager (Quản lý Sản phẩm).
-> *"Tôi muốn làm một nền tảng bán khóa học giống Udemy. Đây là danh sách các tính năng tôi cần. Cậu (Claude) hãy tự động quét toàn bộ thư mục, đọc các tài liệu kỹ thuật, tự quyết định nên dùng công nghệ gì, thiết lập Database, và TỰ CODE TOÀN BỘ dự án từ đầu đến cuối cho tôi. Mỗi khi code xong 1 tính năng lớn, dừng lại báo cáo."*
-
-AI sẽ tự động sinh ra hàng ngàn dòng code trải dài trên hàng trăm file mà không cần bạn phải copy-paste một lần nào!
+### 🪄 Nhập môn Agentic Coding với Antigravity
+Antigravity không phải là một trình soạn thảo văn bản bình thường. Nó là một môi trường làm việc nơi AI (Claude) có **quyền tự chủ**.
+- AI trong Antigravity có khả năng đọc toàn bộ máy tính của bạn, tự động mở Terminal (Màn hình gõ lệnh đen thui), tự động tải phần mềm, và tự động tạo ra hàng trăm file code cùng một lúc.
+- **Tư duy cốt lõi:** Đừng bảo nó "Hãy code cho tôi hàm cộng hai số". Hãy bảo nó "Hãy xây dựng cho tôi một phần mềm máy tính có đầy đủ giao diện và tải nó lên mạng. Anh tự làm mọi thứ, khi nào xong thì báo tôi nghiệm thu".
 `;
 
 export const sk_13_2 = `
 ### 🎯 Mục tiêu bài học
-Giao quyền (Grant Access) cho AI tự động thao tác trên máy tính của bạn (Computer Use / Terminal) mà không cần tự gõ bất kỳ dòng lệnh rắc rối nào.
+Giao tiếp hiệu quả với Đặc vụ Claude trong Antigravity bằng kỹ thuật Meta-prompting.
 
-### 🌐 Nhờ AI setup Môi trường Tự động hoàn toàn
-Cài đặt môi trường code từng là ác mộng. Giờ đây, AI được tích hợp trực tiếp vào màn hình Terminal (Màn hình đen gõ lệnh) của bạn.
-
-**Cách Agent hoạt động:**
-- Mở **Cursor** hoặc **Claude Code** lên.
-- Bạn gõ: *"Khởi tạo cho tôi một dự án React Next.js, cài đặt luôn Tailwind và Supabase. Nếu thấy thiếu công cụ gì trên máy tôi thì TỰ ĐỘNG tải về và cài đặt luôn nhé."*
-- Agent sẽ tự động chạy các dòng lệnh tải phần mềm, tự sửa lỗi nếu việc tải bị gián đoạn, và dọn sẵn mâm cỗ. Bạn chỉ cần ngồi xem nó múa bàn phím!
+### 🗣️ Giao tiếp và Cấp quyền cho Đặc vụ (Agent)
+Để Agent làm việc hiệu quả, bạn phải cấp quyền cho nó.
+- **Thực hành:** Khởi động một phiên làm việc trong Antigravity.
+- **Prompt:** *"Tôi là một người mù công nghệ, chưa biết lập trình là gì. Đóng vai Giám đốc Kỹ thuật (CTO), bạn hãy giải thích cho tôi cơ chế hoạt động của Antigravity IDE. Làm thế nào để tôi có thể trao quyền cho bạn để bạn tự động thiết lập một dự án Web hoàn chỉnh từ con số 0?"*
+Ngay lập tức, Claude sẽ hướng dẫn bạn cách nó có thể sử dụng các "Công cụ" (Tools) tích hợp trong Antigravity để tự thao tác trên máy tính của bạn.
 `;
 
 export const sk_14_1 = `
 ### 🎯 Mục tiêu bài học
-Cho AI đọc các thư viện thiết kế mới nhất để nó tự xây dựng Landing Page. Đập tan thiết kế "nhìn như cái máy" của AI.
+Xây dựng một giao diện trang web bán hàng (Landing Page) chuẩn SEO chỉ bằng một câu lệnh, không cần học HTML/CSS.
 
-### 📐 Kiến trúc sư Giao diện 2026
-Mọi người thường chê AI thiết kế nhìn rất "công nghiệp". Nhưng ở năm 2026, chúng ta dùng Kỹ thuật **Style-Grounding** (Gắn chặt phong cách).
-
-**Prompt cho Cursor Agent:**
-> *"Tôi đang bán dịch vụ Vệ sinh Máy lạnh. Đừng thiết kế theo kiểu cũ.
-> Tôi đã kết nối bạn với thư viện giao diện 'Shadcn/UI' và 'MagicUI' (Các thư viện đẹp nhất 2026). Hãy đọc tài liệu của 2 thư viện đó, rút trích các hiệu ứng vuốt chạm mượt mà nhất, và TỰ CODE giao diện trang web cho tôi theo phong cách của Apple."*
-
-AI Agent 2026 sẽ đọc nguyên tài liệu thư viện mới nhất, nhặt hiệu ứng về ráp thành trang web đẹp nghẹt thở cho bạn.
+### 📐 Kiến trúc sư Giao diện Claude
+Bạn không biết Landing Page cần có những phần gì? Hãy áp dụng **Meta-Prompting** ngay trong Antigravity.
+- **Prompt:** *"Tôi đang bán dịch vụ Vệ sinh Máy lạnh. Tôi cần một trang web bán hàng (Landing Page) đẹp chuẩn Apple, mượt mà và thuyết phục. Tôi không biết thiết kế. Bạn hãy đóng vai Chuyên gia UX/UI, tự đề xuất cho tôi cấu trúc 5 phần của trang web này. Nếu tôi đồng ý, hãy lập tức tạo các file code React (TailwindCSS) và dựng giao diện cho tôi xem."*
+Claude sẽ tự động lập dàn ý, và sau đó tự tay tạo ra hàng loạt file mã nguồn để hiện thực hóa bản vẽ đó.
 `;
 
 export const sk_14_2 = `
 ### 🎯 Mục tiêu bài học
-AI tự động đưa web lên mạng (Deploy), cấu hình tên miền và chứng chỉ bảo mật HTTPS hoàn chỉnh.
+Bắt AI tự động chạy các dòng lệnh cực kỳ phức tạp để khởi tạo môi trường (Cài đặt Node.js, React, Tailwind) mà bạn không cần phải chạm vào bàn phím.
 
-### 🚀 Đặc vụ DevOps (Đưa Web lên Internet)
-Tung web lên Vercel năm 2024 bạn phải tự bấm từng nút trên trình duyệt.
-
-**Năm 2026, AI Agent tự làm từ A-Z:**
-> *"Web chạy ngon rồi. Bây giờ hãy đóng vai Kỹ sư DevOps.
-> Bạn tự động đăng nhập vào tài khoản Vercel của tôi (thông qua CLI - Dòng lệnh). Tự tạo một dự án mới tên là 'vesinhmaylanh', tung toàn bộ code lên đó, và tự liên kết với tên miền 'vesinh.com' mà tôi vừa mua."*
-
-AI sẽ thao tác tự động, cấu hình các biến môi trường rắc rối, và ném cho bạn cái Link URL thành phẩm cuối cùng. Quá nhàn!
+### 🌐 Đặc vụ Tự động Setup (Môi trường)
+Bạn tải code về mà không biết làm sao để web chạy lên? Đừng lo, Antigravity Agent có thể gõ lệnh thay bạn.
+- **Prompt:** *"Giao diện đã thiết kế xong nhưng hiện tại nó chỉ là các file code nằm trên máy tôi. Bạn hãy TỰ ĐỘNG mở Terminal lên, gõ các lệnh cài đặt thư viện cần thiết (npm install), và tự khởi động máy chủ ảo (npm run dev) để tôi có thể xem trang web này chạy thật trên trình duyệt."*
+Antigravity sẽ tự động mở màn hình đen lên, tự gõ các dòng lệnh như một Hacker chuyên nghiệp, tự sửa nếu bị lỗi mạng, và cuối cùng bắn cho bạn đường link trang web!
 `;
 
 export const sk_15_1 = `
 ### 🎯 Mục tiêu bài học
-Xây dựng Logic game phức tạp không cần gõ phím. Nhường quyền suy nghĩ và lập trình hoàn toàn cho "Reasoning AI" (AI suy luận sâu).
+Đừng dùng thư viện cũ. Dạy Claude cách đọc các thư viện thiết kế (UI Library) mới nhất năm 2026 để giao diện web không bị "công nghiệp".
 
-### 🎮 Làm Game 3D / WebGL với AI Suy Luận
-Năm 2024, làm game Rắn săn mồi là giới hạn. Năm 2026, chúng ta làm game 3D chạy trên trình duyệt!
-
-**Cách ép AI suy luận (CoT nâng cao):**
-> *"Tôi muốn làm một web game 3D đơn giản bằng thư viện Three.js: Lái phi thuyền né chướng ngại vật.
-> BẬT CHẾ ĐỘ SUY LUẬN SÂU (Deep Reasoning): Hãy tính toán vật lý (Trọng lực, gia tốc, góc va chạm). Thiết kế sườn logic trong đầu trước, phân chia thành 3 file: Hệ thống vật lý, Hệ thống hình ảnh, Hệ thống điểm số. Sau khi suy nghĩ xong, TỰ ĐỘNG code toàn bộ hệ thống này ra cho tôi."*
+### 🎨 Tự động cập nhật công nghệ thiết kế
+Claude rất thông minh, nhưng đôi khi nó code ra giao diện trông giống hệt ChatGPT. Chúng ta dùng kỹ thuật **Style-Grounding**.
+- **Prompt:** *"Giao diện cũ hơi nhàm chán. Tôi muốn tích hợp thư viện Shadcn/UI và MagicUI (thư viện có các hiệu ứng vuốt chạm hiện đại). Bạn hãy TỰ ĐỘNG mở trình duyệt, đọc tài liệu hướng dẫn của 2 thư viện đó, tự động gõ lệnh Terminal tải chúng về máy, và áp dụng hiệu ứng mượt mà đó vào trang Landing Page hiện tại."*
+Claude sẽ ngoan ngoãn tự đi đọc tài liệu trên mạng, lôi công nghệ mới nhất về cập nhật cho trang web của bạn.
 `;
 
 export const sk_15_2 = `
 ### 🎯 Mục tiêu bài học
-Đặc vụ Tự động sửa lỗi (Auto-Healing Agent). Code lỗi thì AI tự chui vào sửa cho đến khi nào chạy được thì thôi.
+Sử dụng AI Suy luận sâu (Reasoning) để Claude tự lên phương án thiết kế Mobile-first, đảm bảo trang web hiển thị hoàn hảo trên điện thoại.
 
-### 🐛 Chế độ Đánh vật với Bug (Auto-Debugging)
-Khi web game bị lỗi đen xì màn hình, bạn không cần copy lỗi báo cho AI nữa.
-
-**Sức mạnh của Cursor Agent / Claude Code:**
-- Nó TỰ ĐỌC màn hình đen đó.
-- Nó TỰ BIẾT lỗi ở dòng số 45.
-- Nó TỰ ĐỘNG viết lại dòng 45.
-- Chạy lại game. Vẫn lỗi? Nó tự biết mình vừa sửa ngu, nó TỰ SUY NGHĨ hướng khác (Self-Correction), lùi lại một bước, sửa sang dòng 80.
-- Nó "đánh vật" liên tục 5 vòng như thế trong chớp mắt (Loop Agent), cho đến khi game chạy mượt mà, màn hình sáng lên. Lúc đó nó mới vỗ vai báo cho bạn biết: *"Xong rồi sếp ơi!"*
+### 📱 Thiết kế đáp ứng đa nền tảng
+Chạy trên máy tính đẹp, nhưng mở bằng điện thoại thì bể nát.
+- **Prompt (Áp dụng CoT):** *"Trang web hiện tại xem trên điện thoại đang bị tràn viền và chữ quá nhỏ. BẬT CHẾ ĐỘ SUY LUẬN: Hãy phân tích từng khu vực (Header, Banner, Bảng giá) và suy nghĩ phương án CSS (Tailwind) phù hợp cho màn hình nhỏ (Mobile). Sau khi phân tích xong, hãy tự động sửa lại mã nguồn của tất cả các file liên quan. Chạy kiểm tra kỹ trước khi báo cáo hoàn thành."*
+Claude sẽ tự mổ xẻ mã nguồn, đánh giá lại cấu trúc và tinh chỉnh tỉ mỉ đến từng Pixel.
 `;

@@ -1,68 +1,66 @@
 export const sk_10_1 = `
 ### 🎯 Mục tiêu bài học
-Giao cho **Social Media Agent** (Đặc vụ Mạng Xã hội) nhiệm vụ tự động "ngửi" tin tức nóng hổi trên mạng (RSS / X / Tiktok) bằng sức mạnh của **Grok 4.3** hoặc các mô hình Real-time.
+Giao cho hệ thống việc "Làm báo cáo hàng ngày". Sếp không cần hỏi "Hôm nay làm được gì", Flow sẽ tự động gửi bảng kết quả vào nhóm Chat.
 
-### 📰 Đặc vụ Săn Tin Tự Trị
-Năm 2026, các bài báo rác ngập tràn. Bạn không thể chỉ dùng bộ lọc RSS đơn thuần.
-
-**Cách Agent hoạt động:**
-- Agent liên tục quét các trang tin (Dùng Perplexity hoặc tính năng Real-time).
-- Cài đặt "Lõi tư duy" (Core Prompt): *"Chỉ lọc ra những bài báo nói về 'Khởi nghiệp Công nghệ' mà có mang sắc thái tích cực. Nếu là bài bóc phốt, hãy bỏ qua."*
-- Agent tự động đọc hiểu (Reasoning) từng bài báo, tự chấm điểm xem bài này có đúng gu của sếp không, nếu đạt điểm 8/10 mới bốc mang về.
+### 📅 Báo cáo Tự động Định kỳ (Schedule)
+Thay vì kích hoạt luồng bằng sự kiện, chúng ta kích hoạt bằng Thời gian.
+1. **Trigger:** Chọn **Schedule (Hẹn giờ)** -> Cài đặt: Đúng 17h00 mỗi ngày.
+2. **Action 1 (Lấy dữ liệu):** Nối vào Google Sheets, cấu hình lệnh "Lấy toàn bộ dữ liệu cột Doanh Thu ngày hôm nay".
+3. **Action 2 (Tính toán):** Nối vào Gemini, yêu cầu "Tính tổng số tiền và đếm xem có bao nhiêu đơn hàng thành công trong đống dữ liệu này. Viết một đoạn báo cáo ngắn gọn."
+4. **Action 3 (Gửi tin):** Nối vào Google Chat (hoặc Zalo/Telegram). Bắn thẳng báo cáo của Gemini vào nhóm. Cứ 5h chiều là ting ting báo cáo!
 `;
 
 export const sk_10_2 = `
 ### 🎯 Mục tiêu bài học
-Biến bài báo thành 1 bài Post Tiktok / Facebook / X viral cực đỉnh bằng công thức RTF + Multimodal AI. Tự động tìm cả ảnh minh họa.
+Biến các báo cáo khô khan thành những bức tranh sinh động bằng biểu đồ tự vẽ và đính kèm vào tin nhắn báo cáo.
 
-### ✍️ Content Creator Agent (Trọn gói chữ + hình)
-Đặc vụ này nhận bài báo được chấm điểm cao từ Đặc vụ Săn tin.
-
-**Cấu hình luồng:**
-1. **Claude Opus 4.8** viết lại bài báo đó thành một Kịch bản Tiktok dài 1 phút (Gây cấn, có nút thắt).
-2. Claude tự động suy nghĩ (CoT) ra một câu lệnh (Prompt) mô tả hình ảnh làm Thumbnail (Ảnh bìa).
-3. Nó tự động gọi sang cho Midjourney v7 để vẽ cái ảnh đó.
-4. Cuối cùng, ghép kịch bản chữ + Ảnh bìa lại và tự động ấn nút Đăng (Publish) lên tất cả các nền tảng mạng xã hội. Toàn bộ quy trình diễn ra trong 2 phút!
+### 📊 Đính kèm Biểu đồ vào Báo cáo tự động
+Không chỉ dừng ở báo cáo chữ, chúng ta cần số liệu trực quan.
+- Chèn thêm một Action **QuickChart** (Hoặc một công cụ vẽ biểu đồ API) trước bước Gửi tin.
+- Đẩy dữ liệu tính toán từ Gemini vào QuickChart để nó tạo ra một đường Link hình ảnh Biểu đồ Cột.
+- Truyền đường link đó vào Node Google Chat. Vậy là tin nhắn báo cáo hàng ngày của bạn không chỉ có lời giải thích sắc bén của AI, mà còn đính kèm nguyên một cái biểu đồ doanh thu rực rỡ!
 `;
 
 export const sk_11_1 = `
 ### 🎯 Mục tiêu bài học
-Thiết kế một Đặc vụ Giao dịch (Trading/Alert Agent) biết đọc Biểu đồ nến chứng khoán/vàng thay vì chỉ đọc con số.
+Đập tan nỗi sợ "Tích hợp API". Hiểu cơ chế ống nước truyền tin và tự lấy dữ liệu từ các hệ thống phần mềm khác (như Shopee, Lazada, hoặc giá Vàng).
 
-### 📈 Bot đọc Biểu đồ bằng Vision AI
-Năm 2026, AI nhìn được biểu đồ. Bạn không cần kết nối API bằng code lằng nhằng nữa!
-
-**Luồng hoạt động:**
-1. Hướng camera/screen capture của Agent vào trang web bảng giá chứng khoán (VD: TradingView).
-2. Dùng sức mạnh Đa phương thức (Multimodal Vision) của **Gemini 3.5 Pro**.
-3. **Prompt:** *"Hãy liên tục theo dõi cái biểu đồ này (Mỗi 5 phút một lần). Khi nào bạn nhìn thấy mô hình 'Vai Đầu Vai' đảo chiều xuất hiện, hãy báo tôi ngay lập tức."*
-Agent đóng vai một ông chuyên gia phân tích kỹ thuật ngồi nhìn chằm chằm màn hình thay bạn!
+### 🔗 Nhập môn kết nối API cơ bản
+Nếu hệ thống bạn cần không có sẵn nút bấm trong Flow Google Labs, bạn dùng API.
+- Cứ dùng Meta-Prompting hỏi Gemini: *"Tôi muốn lấy giá Vàng từ một web bằng API. Hãy cho tôi một link API miễn phí, và dạy tôi cách kéo node HTTP Request trong Flow Google Labs để lấy nó."*
+- **Thực hành:** Kéo node **HTTP Request**. Dán đường link API vào. Chọn phương thức "GET". Ấn chạy thử. Bạn sẽ thấy luồng dữ liệu (JSON) chảy về hệ thống của bạn như ma thuật!
 `;
 
 export const sk_11_2 = `
 ### 🎯 Mục tiêu bài học
-Cài đặt "Tuyến phòng thủ cuối cùng" (Guardrails) để Agent không bắn tin nhắn rác hoặc báo động giả mạo.
+Đọc mớ dữ liệu API rối rắm (JSON) và chắt lọc ra đúng con số bạn cần để làm bot cảnh báo (Alert Bot).
 
-### 🚨 Cảnh báo Tự động với Guardrails
-Khi làm Bot cảnh báo vào Telegram/Zalo, nhược điểm lớn nhất là AI đôi khi bị "Ảo giác" (Hallucination), nó báo láo!
-
-**Năm 2026, chúng ta cài Guardrails (Thanh chắn an toàn):**
-- Khi Agent phân tích thấy biểu đồ có biến, trước khi nó nhắn tin hú còi, nó BẮT BUỘC phải chuyển qua một Agent thứ hai (Verification Agent).
-- Verification Agent sẽ double-check (kiểm tra chéo) dữ liệu từ một nguồn khác (Ví dụ: Tra API của Yahoo Finance). Nếu 2 bên khớp nhau, nó mới duyệt cho phép bắn tin nhắn cảnh báo hú còi vào Telegram của sếp. Chắc chắn và chuẩn xác tuyệt đối!
+### 🚨 Bot Cảnh báo Tỷ giá / Chứng khoán
+Dữ liệu API trả về thường là một đống mã code ngoằn ngoèo.
+- Không cần tự căng mắt ra tìm. Hãy quăng thẳng đống dữ liệu đó vào Node **Gemini AI**.
+- **Prompt:** *"Đây là dữ liệu API trả về từ bảng giá chứng khoán. Đừng giải thích lằng nhằng, hãy nhìn vào đống code này và lôi ra cho tôi đúng 1 con số: Giá hiện tại của mã cổ phiếu FPT là bao nhiêu?"*
+- Có con số rồi, dùng tính năng **Điều kiện (Condition/IF)**: Nếu giá < 100.000đ thì bắn tin nhắn Telegram *"Múc ngay sếp ơi!"*.
 `;
 
 export const sk_12_1 = `
 ### 🎯 Mục tiêu bài học
-Tuyệt kỹ tối thượng của kỷ nguyên Tự động hóa: **Multi-Agent Swarms** (Bầy đàn Đặc vụ AI). Cả một công ty ảo chạy bên trong n8n.
+Đẳng cấp tối thượng của Flow Google Labs: Đưa quyền quyết định cho AI. Xây dựng một **Nhân sự Ảo (AI Agent)** tự vận hành mọi quy trình văn phòng.
 
-### 🤝 Quản trị Công ty "Bầy Đàn AI"
-Bạn là Giám đốc (CEO), ngồi trên đỉnh. Bên dưới bạn là Swarms (Bầy đàn) gồm:
-- **Agent Trưởng phòng Marketing:** Chuyên nghĩ chiến dịch, giao task.
-- **Agent Copywriter:** Viết content.
-- **Agent Designer:** Làm hình ảnh.
-- **Agent Reviewer:** Kiểm duyệt, đóng vai khách hàng khó tính để chê bài.
+### 🧠 Xây dựng Agent (Nhân sự Ảo) trên Flow
+Bình thường bạn kéo dây theo một đường thẳng cố định. Giờ đây, bạn gắn một con Agent vào giữa luồng và trao cho nó các "Công cụ" (Tools).
+- Bạn đưa cho Agent 3 quyền: 1. Quyền đọc file Google Drive, 2. Quyền ghi Google Sheets, 3. Quyền gửi Email.
+- **Nhiệm vụ:** *"Khi có người nhắn tin trên Facebook, hãy nói chuyện với họ. Tự bạn hãy phán đoán xem họ muốn gì. Nếu họ hỏi bảng giá, dùng quyền (1) để tìm báo giá. Nếu họ chốt mua, dùng quyền (2) để ghi đơn. Nếu họ muốn phàn nàn, dùng quyền (3) gửi mail cho sếp."*
+`;
 
-**Vận hành:**
-Bạn chỉ gõ 1 câu duy nhất: *"Khởi động chiến dịch Valentine bán Socola."*
-Bầy đàn AI này sẽ tự động họp với nhau (AI nói chuyện với AI). Trưởng phòng sẽ đẻ ra task. Designer vẽ ảnh, Copywriter viết bài. Nếu ảnh xấu, Reviewer sẽ chửi và bắt Designer vẽ lại. Chúng nó tự tranh cãi, tự sửa lỗi cho đến khi ra một chiến dịch hoàn hảo thì mới in ra màn hình báo cáo cho CEO là bạn. Bạn chỉ việc ngồi rung đùi và gật đầu!
+export const sk_12_2 = `
+### 🎯 Mục tiêu bài học
+Quản trị rủi ro. Đặt "vòng kim cô" (Guardrails) cho Nhân sự Ảo để nó không nói bậy hoặc gửi những hóa đơn sai sót.
+
+### 🛡️ Guardrails và Quản lý Bầy đàn Agent
+Khi trao quyền quá nhiều cho AI, nó có thể bị "ảo giác" (Hallucination).
+- Chúng ta thiết kế một luồng Flow gồm 2 Agents.
+- **Agent 1 (Nhân viên Sale):** Soạn báo giá cho khách hàng dựa trên yêu cầu của họ.
+- Thay vì gửi ngay cho khách, kết quả của Agent 1 phải chạy qua **Agent 2 (Trưởng phòng Kiểm duyệt)**.
+- **Luật của Agent 2:** *"Đọc kỹ báo giá của Agent 1. Nếu thấy nó giảm giá quá 10%, HỦY NGAY và báo cáo cho tôi. Chỉ khi nào giá chính xác mới được gọi Node Gmail để gửi đi."*
+Đây là cấu trúc của một Công ty tự động hoàn chỉnh, nơi AI làm việc và tự giám sát lẫn nhau!
 `;

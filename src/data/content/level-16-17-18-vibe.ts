@@ -1,77 +1,63 @@
 export const sk_16_1 = `
 ### 🎯 Mục tiêu bài học
-Nhường toán học và logic phức tạp cho **Claude Opus 4.8** tự suy nghĩ, tự code Hệ thống Thanh toán và Giỏ hàng thông minh.
+Giao trọng trách Kiến trúc sư Phần mềm cho Claude trong Antigravity. Ép AI tự nghĩ ra thuật toán cộng trừ tiền, áp mã giảm giá cho hệ thống Giỏ hàng.
 
-### 🛒 Agentic E-Commerce (Code Giỏ hàng thông minh)
-Hệ thống E-Commerce 2026 không chỉ cộng trừ tiền đơn thuần. Nó phải tự áp mã giảm giá, tính phí ship theo vị trí, quy đổi ngoại tệ.
-
-**Giao nhiệm vụ cho Cursor Agent:**
-> *"Xây dựng tính năng Giỏ hàng. Tôi muốn hệ thống có khả năng nhận diện mã giảm giá (Coupon).
-> Hãy TỰ ĐỘNG chui vào Database (Supabase) tạo 1 cái bảng 'Coupons'. Viết hàm logic: Nếu khách nhập mã 'GIAM50', TỰ ĐỘNG quét xem mã đó có hợp lệ không, có bị hết hạn không, nếu hợp lệ thì trừ 50% tiền giỏ hàng.
-> Làm ơn hãy code và test thử cho đến khi nào nhập mã GIAM50 nó báo xanh và trừ tiền đúng thì mới thôi."*
+### 🛒 E-Commerce Mini: Code Logic Giỏ Hàng
+Hệ thống bán hàng yêu cầu những đoạn code toán học rắc rối (Tính VAT, Phí ship, Giảm giá).
+- **Prompt:** *"Tôi đang làm tính năng Giỏ hàng. Tôi muốn hệ thống có khả năng nhận diện mã giảm giá (Ví dụ: BLACKFRIDAY). Bạn hãy tự thiết kế thuật toán: Nếu khách nhập mã đúng, kiểm tra xem đơn có trên 500k không, nếu có thì trừ 50k. Hãy tự động viết mã Javascript/TypeScript cho Logic này và tích hợp thẳng vào giao diện trang web hiện tại."*
+Claude sẽ đóng vai Kỹ sư Backend, tự động viết các thuật toán tính tiền chuẩn xác đến từng đồng.
 `;
 
 export const sk_16_2 = `
 ### 🎯 Mục tiêu bài học
-Quẳng tài liệu Supabase cho AI. Ép AI tự cấu hình Database, tự tạo bảng, tự viết API mà bạn không cần nhìn vào Database dù chỉ một lần.
+Cơ sở dữ liệu (Database) không còn là nỗi sợ. Quẳng thông tin kết nối (Supabase/Firebase) cho Antigravity Agent, nó sẽ tự động cấu hình từ A đến Z.
 
-### 💾 Đặc vụ Database (Database Agent)
-Kết nối cơ sở dữ liệu từng là nỗi kinh hoàng. Năm 2026, AI tự làm điều đó thông qua AI Agent Node.
-
-**Cách làm:**
-1. Cung cấp chuỗi kết nối Supabase cho AI (Database Connection String).
-2. **Ra lệnh (Prompt):** *"Nhiệm vụ của bạn là Quản trị viên Cơ sở dữ liệu (DBA). Đăng nhập vào Supabase bằng chuỗi này. Tự thiết kế một bảng 'DonHang' gồm các cột cần thiết nhất để bán Trà sữa. Tạo bảng xong thì báo tôi."*
-AI sẽ chạy ngầm một tập lệnh SQL (Code thao tác dữ liệu), tự chui vào máy chủ Supabase của bạn đục đẽo, xây tường gạch, và quay ra báo cáo "Em xây xong rồi sếp".
+### 💾 Đặc vụ Database Tự xây nhà
+Dữ liệu đơn hàng mua xong phải được lưu lại.
+- **Thực hành:** Tạo một tài khoản Supabase, lấy chuỗi kết nối (Connection String).
+- **Prompt:** *"Tôi muốn lưu thông tin khách mua hàng (Tên, SDT, Tổng tiền) vào Database. Đây là mã kết nối Supabase của tôi: [Dán mã vào]. Đóng vai Quản trị viên CSDL (DBA), bạn hãy TỰ ĐỘNG chui vào Terminal cài đặt thư viện kết nối, tự viết code tạo bảng 'DonHang', và code tính năng: Khách ấn nút Thanh Toán thì dữ liệu bay thẳng vào Database."*
+Claude sẽ thao tác ngầm, lập trình chức năng kết nối máy chủ mà bạn không cần phải nhìn thấy một dòng lệnh SQL nào.
 `;
 
 export const sk_17_1 = `
 ### 🎯 Mục tiêu bài học
-Nhúng đặc vụ AI vào sản phẩm của bạn. Đừng gọi API thông thường, hãy gọi API tích hợp sẵn Agentic Workflow.
+Học tuyệt kỹ "Đánh vật với Bug" (Auto-Healing) của Antigravity. Khi code lỗi, tuyệt đối không tự sửa, bắt AI tự gánh hậu quả do nó gây ra!
 
-### 🧠 Tích hợp Agent vào phần mềm (SaaS)
-Năm 2024, Chatbot chỉ biết trả lời bằng chữ. Năm 2026, Chatbot có thể TỰ BẤM NÚT giùm khách.
-
-**Thiết kế chức năng (Agentic Tools):**
-> *"Tôi muốn nhúng một con Chatbot Claude vào trang web bán hàng của tôi.
-> Nhưng tôi không muốn nó chỉ biết nói chuyện. Hãy code cho tôi tính năng: Khi khách nhắn 'Hủy đơn hàng số 123 cho tôi', Chatbot của tôi sẽ HIỂU ý định, TỰ ĐỘNG chui vào cơ sở dữ liệu xóa đơn hàng 123, và báo lại 'Dạ em đã hủy xong'.
-> Hãy cài đặt bộ công cụ (Function Calling / Tool Use) cho con Bot này."*
+### 🐛 Auto-Debugging: Kỹ năng Đọc và Vứt Lỗi
+Đang chạy trang web, tự nhiên màn hình đen xì và hiện ra một đống chữ đỏ loằng ngoằng.
+- Đừng hoảng! Quét copy toàn bộ mớ chữ đỏ đó.
+- Ném lại vào ô Chat của Antigravity.
+- **Prompt (Áp dụng CoT):** *"Mã nguồn bạn vừa viết gây ra lỗi sập web. Đây là chi tiết lỗi báo trên màn hình: [Dán lỗi vào]. HÃY SUY NGHĨ TỪNG BƯỚC: Tự đọc lỗi, tự tìm xem dòng code nào bị sai, phân tích nguyên nhân vì sao sai. Sau đó, HÃY TỰ ĐỘNG CHUI VÀO file đó sửa lại cho đúng. Chạy kiểm tra lại, nếu vẫn lỗi thì tự sửa tiếp cho đến khi web chạy được thì thôi."*
 `;
 
 export const sk_17_2 = `
 ### 🎯 Mục tiêu bài học
-Giao tiếp bảo mật. Dùng Kỹ thuật CoT (Chuỗi tư duy) yêu cầu AI kiểm tra lỗ hổng bảo mật toàn hệ thống trước khi ra mắt.
+Nâng cấp Kỹ thuật Auto-Debugging thành Kỹ năng Quản lý Phiên bản (Git). Lưu lại "điểm lưu game" trước khi nhờ AI sửa lỗi.
 
-### 🔑 Đặc vụ Bảo mật (Security Agent)
-Một lỗ hổng bảo mật năm 2026 có thể làm sập cả hệ thống. Đừng tự giấu API Key bằng tay.
-
-**Kích hoạt Kỹ sư Bảo mật ngầm:**
-> *"Toàn bộ code dự án đã xong. Bây giờ, bật chế độ Đánh giá Bảo mật (Security Audit).
-> HÃY SUY NGHĨ TỪNG BƯỚC: Quét hàng trăm file code của dự án. Tìm xem tôi có vô tình để lộ cái API Key OpenAI hay Supabase nào trong file không? Kiểm tra xem có lỗ hổng rò rỉ dữ liệu (Data leak) nào không? Nếu có, hãy XÓA ngay đoạn mã đó và tự động dời Key sang biến môi trường bí mật (.env). Chạy ngay đi!"*
+### 🔄 Quản lý Rủi ro với Điểm lưu game (Git)
+Khi AI sửa lỗi, đôi khi nó làm hỏng cả những thứ đang chạy tốt (Lỗi hồi quy).
+- Trước khi ra lệnh AI làm một chức năng lớn, hãy yêu cầu: *"Hãy tự động chạy lệnh 'git commit' để lưu lại toàn bộ mã nguồn hiện tại với tên 'Trước khi làm giỏ hàng'."*
+- Lỡ Claude code hỏng bét và không thể sửa được, bạn chỉ cần ra lệnh: *"Bạn làm hỏng hệ thống rồi, không cần sửa nữa. Hãy chạy lệnh 'git quy hồi' (git revert / git reset) để đưa toàn bộ mã nguồn quay ngược lại thời điểm 'Trước khi làm giỏ hàng'."*
+Đây là bài học bắt buộc để bảo vệ công sức hàng giờ của bạn!
 `;
 
 export const sk_18_1 = `
 ### 🎯 Mục tiêu bài học
-AI vẽ sơ đồ toàn bộ hệ thống (Architecture) và tự động xây dựng một phần mềm quản lý doanh nghiệp (SaaS) khổng lồ chỉ từ 1 câu nhắc.
+Xây dựng một phần mềm Hệ thống nội bộ (SaaS) quy mô lớn bằng cách bắt AI vẽ sơ đồ CRUD trước khi gõ phím.
 
-### 🔄 Kiến trúc sư AI đẻ ra phần mềm SaaS
-Phần mềm SaaS (Quản lý kho, quản lý việc, chấm công) vô cùng phức tạp. 
-
-**Tuyệt chiêu Tự động hóa Thiết kế 2026:**
-> *"Tôi muốn làm một phần mềm Quản lý Dự án (SaaS) giống như Trello cho 500 nhân viên dùng. Đóng vai Tổng công trình sư (Chief Architect).
-> Hãy đẻ ra một bản vẽ Thiết kế Hệ thống (System Architecture) chi tiết nhất. Viết rõ cần có bao nhiêu bảng Database (CRUD). Nếu tôi chốt bản thiết kế đó, hãy khởi động 3 Agent (Frontend, Backend, Tester) CÙNG NHAU CODE dự án này và hoàn thành trong vòng 3 tiếng."*
+### 🔄 Bắt AI làm Kiến trúc sư (Thiết kế CRUD)
+Làm phần mềm quản lý công việc (To-do List) cho 100 nhân viên.
+- **Prompt:** *"Tôi muốn làm phần mềm To-do List bằng React và Supabase. Trước khi code, đóng vai Kiến trúc sư Phần mềm (Chief Architect), hãy thiết kế cho tôi 4 chức năng CRUD (Create, Read, Update, Delete) cho bảng 'CongViec'. Cột nào chứa dữ liệu gì? Giao diện thao tác ra sao? Hãy lập bảng phân tích. Nếu tôi đồng ý, bạn mới được bắt đầu lập trình."*
+Bạn trao quyền suy nghĩ kiến trúc hệ thống cho AI, chỉ làm Sếp kiểm duyệt.
 `;
 
 export const sk_18_2 = `
 ### 🎯 Mục tiêu bài học
-Bảo mật phân quyền cực cao (RLS) bằng AI. Hoàn tất quá trình xây dựng dự án. Trở thành Giám đốc công nghệ (CTO) thực thụ.
+Giải quyết bài toán phân quyền phức tạp (Sếp thấy mọi việc, lính chỉ thấy việc của lính) bằng RLS, và tự động tung phần mềm lên mạng.
 
-### 📊 Phân quyền cấp cao (RLS) bằng Agent
-"Sếp vào thấy mọi việc, Lính vào chỉ thấy việc của mình". Đây là bài toán khó nhất.
-
-**Dùng Cursor Agent giải quyết gọn gàng:**
-> *"Hãy thiết lập chính sách Row Level Security (RLS) trên Supabase cho bảng Nhiệm vụ.
-> Yêu cầu: Nếu là User có quyền 'Admin', được quyền XÓA mọi thứ. Nếu là quyền 'Employee', chỉ được quyền SỬA trạng thái công việc của chính mình, không được thấy việc của đứa khác.
-> Tự động viết Rule SQL này và nạp thẳng vào Supabase cho tôi. Chạy một bài test đăng nhập thử 2 tài khoản xem quyền có đúng không rồi báo cáo."*
-
-Chúc mừng! Ở năm 2026, bạn không còn là Thợ gõ code, bạn chính thức là một **Tổng Giám đốc Điều hành các Trí tuệ Nhân tạo** (AI Orchestrator)!
+### 📊 Phân quyền RLS & Đưa dự án lên mạng (Deploy)
+Phân quyền là thứ khó nhất trong làm SaaS.
+- **Prompt Phân quyền:** *"Thiết lập chính sách bảo mật (Row Level Security) trên Supabase cho tôi. Rule 1: Thằng nhân viên chỉ đọc/sửa được Task do nó tạo. Rule 2: Giám đốc được quyền sửa và xóa mọi thứ. Hãy tự động viết mã SQL để thực thi lệnh này."*
+- **Prompt Tung lên mạng:** *"Mọi thứ đã hoàn tất. Đóng vai Kỹ sư DevOps, hãy TỰ ĐỘNG mở Terminal, cài đặt công cụ Vercel CLI, và tự gõ lệnh để đẩy toàn bộ trang web này lên mạng Internet. Cung cấp cho tôi đường link cuối cùng để tôi gửi sếp xem."*
+Chúc mừng! Bạn đã hoàn thành hành trình từ người mù công nghệ trở thành một Tổng Giám đốc AI thực thụ!
 `;
